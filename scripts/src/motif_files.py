@@ -2,8 +2,9 @@
 """
 
 import numpy as np
+from numpy import ma
 import pandas as pd
-import utils
+from . import utils
 
 def cisbp_meta_filter_in_vitro(file, outfile):
     """

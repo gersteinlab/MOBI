@@ -1,6 +1,6 @@
 import os
 import numpy as np
-import utils
+from . import utils
 
 def run_FIMO(motif_dir, genome_file, fimo_output_dir, joblist_file, bgfreq=False, subset=None):
     """Run FIMO
