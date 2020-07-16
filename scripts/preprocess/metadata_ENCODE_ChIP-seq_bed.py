@@ -7,17 +7,17 @@ Output:
 	Clean metadata for certain bio sample, e.g. worm/fly/GM12878/K562
 """
 
-from src import encodeMeta
+from src import encode_meta
 
 # add TF to metafiles
-df = encodeMeta.add_TF(
-    encode_file="/home/jg2447/slayman/data/ENCODE_ChIP_seq_metadata/ENCODE_TF-ChIP-seq_fly.tsv",
-    outfile="/home/jg2447/slayman/data/ENCODE_ChIP_seq_metadata/ENCODE_TF-ChIP-seq_fly_full.tsv",
-    species="dmelanogaster")
+df = encode_meta.add_TF(
+    encode_file="/home/jg2447/slayman/data/ENCODE_ChIP_seq/metadata/ENCODE_TF-ChIP-seq_human.tsv",
+    outfile="/home/jg2447/slayman/data/ENCODE_ChIP_seq/metadata/ENCODE_TF-ChIP-seq_human_TFadded.tsv",
+    species="human")
 
 # subset metafiles for each dataset (human all cell line/GM12878/K562/worm/fly and etc)
-df = encodeMeta.filter_subset(
-    encode_file="/home/jg2447/slayman/data/ENCODE_ChIP_seq_metadata/ENCODE_TF-ChIP-seq_human_full.tsv",
+df = encode_meta.filter_subset(
+    encode_file="/home/jg2447/slayman/data/ENCODE_ChIP_seq_metadata/ENCODE_TF-ChIP-seq_human_TFadded.tsv",
     outfile=None,
     Assembly="hg19"
     Biosample_type="cell line",
@@ -34,5 +34,5 @@ meta = encodeMeta.add_motif(
 # download the ChIP-seq data
 encodeMeta.download_file(
     encode_file=meta,
-    TF_dir="/home/jg2447/slayman/data/ENCODE_ChIP_seq_bed/human_hg19/",
+    TF_dir="/home/jg2447/slayman/data/ENCODE_ChIP_seq/bed/human_hg19/",
     ext=".bed.gz")

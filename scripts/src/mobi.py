@@ -1,67 +1,48 @@
+
 import os
 import shutil
-import uuid
 import numpy as np
 import pandas as pd
-from src.utils import *
-from src.narrowPeak import *
-
-__all__ = [
-    "get_all_summit_file",
-    "get_crowdness_sliding_window",
-    "get_motif_hit",
-    "get_rank_file",
-    "get_motif_enrichment",
-    "summarize_motif_enrichment",
-    "get_bed_from_rank_file",
-    "get_fasta_from_bed",
-    "run_inference_joblist",
-    "run_tomtom_joblist",
-    "inference_output_to_minimal_meme",
-    "get_tomtom_hits",
-    "get_tomtom_summary_data"]
-
+import utils
+import narrow_peak
 
 def get_all_summit_file(TF_files, all_summit_file):
-    """
-    Given a list of TF bs, fetch the summits of bs and save into a single file
+    """Given a list of TF bs, fetch the summits of bs and save into a single file
     output: chr, summit start, summit end
 
     Parameters
-    ----------------
-    TF_files: list of str
+    ----------
+    TF_files : list of str
         ENCODE bed.gz files
         $1 chr, $2 peak start, $10 peak summit
-    all_summit_file: str
+    all_summit_file : str
 
     Returns
-    ----------------
+    -------
     None
     """
 
-    if os.path.exists(all_summit_file):
-        print("skip get all_summit_file")
-        return
-
-    tmp_dir = os_mkdir_tmp()
+    tmp_dir = utils.os.mkdir_tmp()
 
     for tf in TF_files:
-        get_fix_width_region(
-            infile=tf, 
+        narrow_peak.get_fix_width_region(
+            infile=tf,
             outfile=os.path.join(tmp_dir, os.path.basename(tf)),
             width=-1,
             summit_col=10,
             keep_col=None)
 
+    # concat all into one file
+    # keep only coordinates
+    # sort
     os.system("cat %s/* | cut -f-3 | sort -k1,1 -k2,2n > %s" % (tmp_dir, all_summit_file))
-    
+
     shutil.rmtree(tmp_dir)
     return
 
 
-def get_crowdness_sliding_window(TF_files, result_dir, all_summit_file=None, crowdness_n_sliding=250):
-    """
-    Get crowdness score by sliding window method
+def get_crowdness_sliding_window(TF_files, result_dir, all_summit_file, crowdness_n_sliding=250):
+    """Get crowdness score by sliding window method
     input: ENCODE bed.gz files
     input: $1 chr, $2 peak start, $10 peak summit, $7 SPP
     output: $1-3 coor of crowdness_n_crowdness bp around each peak summit, $4 spp, $5 crowdness
@@ -71,43 +52,39 @@ def get_crowdness_sliding_window(TF_files, result_dir, all_summit_file=None, cro
     crowdness_n_sliding bp window
     line 3: if start < 0, set to 0 (<0 not possible in genome coordinate)
     line 5: count summits
-    
+
     Parameters
-    ----------------
-    TF_files: list of str
-    result_dir: str
-    all_summit_file: str or None
-        if not given, generate a new all_summit_file
-    crowdness_n_sliding: int
+    ----------
+    TF_files : list of str
+    all_summit_file : str
+    result_dir : str
+    crowdness_n_sliding : int
         actual length when used to calculate the crowdness
         this will also be the binding site length of the output
 
     Returns
-    ----------------
+    -------
     None
     """
 
-    if not os_mkdir_empty(result_dir, "skip get_crowdness"):
-        return
-
-    tmp_dir1 = os_mkdir_tmp()
-    tmp_dir2 = os_mkdir_tmp()
+    tmp_dir1 = utils.os_mkdir_tmp()
+    tmp_dir2 = utils.os_mkdir_tmp()
 
     for tf in TF_files:
         # trim to the window size
-        get_fix_width_region(
-            infile=tf, 
-            outfile=os.path.join(tmp_dir1, os.path.basename(tf)), 
+        narrow_peak.get_fix_width_region(
+            infile=tf,
+            outfile=os.path.join(tmp_dir1, os.path.basename(tf)),
             width=crowdness_n_sliding,
             summit_col=10,
             keep_col=7)
         # remove abnormal coordinates
-        rm_column_negative(
-            infile=os.path.join(tmp_dir1, os.path.basename(tf)), 
-            outfile=os.path.join(tmp_dir2, os.path.basename(tf)), 
+        narrow_peak.rm_column_negative(
+            infile=os.path.join(tmp_dir1, os.path.basename(tf)),
+            outfile=os.path.join(tmp_dir2, os.path.basename(tf)),
             col=2)
         # intersect with the all_summit files to count summits in the window
-        os.system("\
+        os.system("
             sort -k1,1 -k2,2n %s|\
             bedtools intersect -c -a stdin -b %s|\
             awk '{print $1\"\\t\"$2\"\\t\"$3\"\\t\"$4\"\\t\"$5}' \
@@ -115,48 +92,43 @@ def get_crowdness_sliding_window(TF_files, result_dir, all_summit_file=None, cro
                 os.path.join(tmp_dir2, os.path.basename(tf)),
                 all_summit_file,
                 os.path.join(result_dir, os.path.basename(tf))))
-    
+
     shutil.rmtree(tmp_dir1)
     shutil.rmtree(tmp_dir2)
-
     return
 
 
 def get_motif_hit(TF_files, motif_fimo_files, result_dir):
-    """
-    Count motif occurance in each binding site
+    """Count motif occurance in each binding site
     If motif_fimo_files is given, then this is done via intersecting the FIMO result
     If not, assign pseudo count, which is all 0
 
-    output: 
+    output format:
         add col: motif_count
         add col: TF name
 
     Parameters
-    ----------------
-    TF_files: list of str
+    ----------
+    TF_files : list of str
         bed file
-    motif_fimo_files: list of str, or None
+    motif_fimo_files : list of str, or None
         corresponde to TF_files
-    result_dir: str
+    result_dir : str
 
     Returns
-    ----------------
+    -------
     None
     """
 
-    if not os_mkdir_empty(result_dir, "skip get_motif_hit_fimo_intersect"):
-        return
-
     if motif_fimo_files:
         for tf, motif_fimo in zip(TF_files, motif_fimo_files):
-            #os.system("bedtools intersect -nonamecheck -c -a %s -b %s |\
-            os.system("bedtools intersect -c -a %s -b %s |\
-                       sed -e \"s/$/\t%s/g\" \
-                       > %s/%s"
-                      % (tf, motif_fimo,
-                          os.path.basename(tf).replace(".bed", ""),
-                          result_dir, os.path.basename(tf)))
+            os.system("
+                bedtools intersect -c -a %s -b %s |\
+                sed -e \"s/$/\t%s/g\" \
+                > %s/%s" % (
+                    tf, motif_fimo,
+                    os.path.basename(tf).replace(".bed", ""),
+                    result_dir, os.path.basename(tf)))
     else:
         for tf in TF_files:
             with open(tf, "r") as f1:
@@ -168,74 +140,72 @@ def get_motif_hit(TF_files, motif_fimo_files, result_dir):
 
 
 def get_rank_file(rank_method, TF_files, result_file, bs_half_length=200, rank_linear_alpha=None, rank_exclude_prop=None):
-    """
-    Rank all binding sites according to the ranking criteria
+    """Rank all binding sites according to the ranking criteria
     All TF bs into a single file
     input: $4 spp, $5 crowdness, $6 motif_count(arbitrary), $7 TF name
     output: $1 chr, $2 summit, $3-6 same as $4-7 in input, $8 rank
 
     Parameters
-    ----------------
-    rank_method: {"RankSPP", "RankCrowdness", "RankHotness", "RankLinear_*", "RankExcludeArbitrary_*"}
-    TF_files: list of str
-    result_file: str
-    bs_half_length: int
-    rank_linear_alpha: int or None
-    rank_exclude_prop: float or None
+    ----------
+    rank_method : str
+        one of {"RankSPP", "RankCrowdness", "RankHotness", "RankLinear_*", "RankExcludeArbitrary_*"}
+    TF_files : list of str
+    result_file : str
+    bs_half_length : int
+    rank_linear_alpha : int or None
+    rank_exclude_prop : float or None
 
     Returns
-    ----------------
+    -------
     None
     """
 
     if os.path.exists(result_file):
-        print("skip get_rank_file")
-        return
+        raise OSError("skip get_rank_file")
 
     if rank_method.startswith("RankSPP"):
         for tf in TF_files:
-            os.system("awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
-                       sort -k3,3nr  | \
-                       awk '{print $0\"\\t\"NR}' \
-                       >> %s"
-                      % (bs_half_length, tf,
-                          result_file))
+            os.system("
+                awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
+                sort -k3,3nr  | \
+                awk '{print $0\"\\t\"NR}' \
+                >> %s" % (
+                    bs_half_length, tf, result_file))
 
     elif rank_method.startswith("RankCrowdness"):
         for tf in TF_files:
-            os.system("awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
-                       sort -k4,4n -k3,3nr  | \
-                       awk '{print $0\"\\t\"NR}' \
-                       >> %s"
-                      % (bs_half_length, tf,
-                          result_file))
+            os.system("
+                awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
+                sort -k4,4n -k3,3nr  | \
+                awk '{print $0\"\\t\"NR}' \
+                >> %s" % (
+                    bs_half_length, tf, result_file))
 
     elif rank_method.startswith("RankHotness"):
         for tf in TF_files:
-            os.system("awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
-                       sort -k4,4nr -k3,3nr  | \
-                       awk '{print $0\"\\t\"NR}' \
-                       >> %s"
-                      % (bs_half_length, tf,
-                          result_file))
+            os.system("
+                awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
+                sort -k4,4nr -k3,3nr  | \
+                awk '{print $0\"\\t\"NR}' \
+                >> %s" % (
+                    bs_half_length, tf, result_file))
 
     elif rank_method.startswith("RankLinear"):
         for tf in TF_files:
-            os.system("awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
-                       sort -k3,3nr  | awk '{print $0\"\\t\"NR}' | \
-                       sort -k4,4n -k3,3nr | awk '{print $0\"\\t\"NR}' | \
-                       awk '{print $0\"\\t\"$7+$8*%g}' | \
-                       sort -k9,9n | \
-                       awk '{print $0\"\\t\"NR}' | \
-                       cut -f-6,10- \
-                       >> %s"
-                      % (bs_half_length, tf,
-                          rank_linear_alpha,
-                          result_file))
+            os.system("
+                awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
+                sort -k3,3nr  | awk '{print $0\"\\t\"NR}' | \
+                sort -k4,4n -k3,3nr | awk '{print $0\"\\t\"NR}' | \
+                awk '{print $0\"\\t\"$7+$8*%g}' | \
+                sort -k9,9n | \
+                awk '{print $0\"\\t\"NR}' | \
+                cut -f-6,10- \
+                >> %s" % (
+                    bs_half_length, tf, rank_linear_alpha, result_file))
 
     elif rank_method.startswith("RankExcludeArbitrary"):
 
-        tmp_file = os_mkdir_tmp()
+        tmp_file = utils.os.mkdir_tmp()
 
         for tf in TF_files:
             os.system("cat %s >> %s" % (tf, tmp_file))  # all peaks from all TF
@@ -248,24 +218,21 @@ def get_rank_file(rank_method, TF_files, result_file, bs_half_length=200, rank_l
 
         # remove all peaks that are hotter than the threshold
         for tf in TF_files:
-            os.system("awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
-                       sort -k3,3nr | \
-                       awk '{if($4<=%d){print $0}}' | \
-                       awk '{print $0\"\\t\"NR}' \
-                       >> %s"
-                      % (bs_half_length, tf,
-                          thresh,
-                          result_file))
-
+            os.system("
+                awk '{print $1\"\\t\"$2+%d\"\\t\"$4\"\\t\"$5\"\\t\"$6\"\\t\"$7}' %s | \
+                sort -k3,3nr | \
+                awk '{if($4<=%d){print $0}}' | \
+                awk '{print $0\"\\t\"NR}' \
+                >> %s" % (
+                    bs_half_length, tf, thresh, result_file))
     else:
         raise Exception("Unknown rank method")
     return
 
 
 def get_motif_enrichment(rank_file, n_seq, result_dir, enrichment_method="EnrichmentFraction"):
-    """
-    Get motif enrichment
-    Fraction of binding sites that have motif count >=1 
+    """Get motif enrichment
+    Fraction of binding sites that have motif count >=1
     HalfInsuff: if not enough sequence, use the top half only
 
     Parameters
@@ -279,14 +246,13 @@ def get_motif_enrichment(rank_file, n_seq, result_dir, enrichment_method="Enrich
     ----------------
     None
     """
-    if not os.path.exists(result_dir):
-        os.makedirs(result_dir)
+    os.makedirs(result_dir, exist_ok=True)
 
     if os.path.exists("%s/%s_%d.txt" % (result_dir, enrichment_method, n_seq)):
-        print("skip %s_%d.txt" % (enrichment_method, n_seq))
-        return
+        raise OSError("skip %s_%d.txt" % (enrichment_method, n_seq))
 
-    tmp_file = "/home/jg2447/log/TMP_%d" % uuid.uuid4()
+    tmp_dir = utils.os.mkdir_tmp()
+    tmp_file = os.path.join(tmp_dir, "tmpfile")
 
     # keep all peaks with ranking < n_seq
     # then group by TF
@@ -294,11 +260,10 @@ def get_motif_enrichment(rank_file, n_seq, result_dir, enrichment_method="Enrich
 
     enrichment = pd.DataFrame()
 
-    os.system("awk '{if($7<=%d){print $0}}' %s > %s" %
-              (n_seq, rank_file, tmp_file))
+    os.system("awk '{if($7<=%d){print $0}}' %s > %s" % (n_seq, rank_file, tmp_file))
 
     df = pd.read_csv(tmp_file, sep="\t", header=None)
-    os.remove(tmp_file)
+    shutil.rmtree(tmp_dir)
 
     if enrichment_method == "EnrichmentFractionHalfInsuff":
         tfs = df[5].unique()
@@ -310,7 +275,7 @@ def get_motif_enrichment(rank_file, n_seq, result_dir, enrichment_method="Enrich
             new_df = pd.concat([new_df, tf_df])
         df = new_df.reset_index(drop=True).copy()
     elif enrichment_method == "EnrichmentFraction":
-        pass
+        raise Exception("TBD, not implemented yet")
     elif enrichment_method == "EnrichmentAvgHitPerBS":
         raise Exception("TBD, not implemented yet")
     else:
@@ -320,22 +285,24 @@ def get_motif_enrichment(rank_file, n_seq, result_dir, enrichment_method="Enrich
     df = df.groupby(5).count()
     n_seq_result = (df[4] / df[0])
 
-    n_seq_result.to_csv("%s/%s_%d.txt" %
-                        (result_dir, enrichment_method, n_seq), sep="\t", header=False, float_format="%.3f")   
+    n_seq_result.to_csv(
+        "%s/%s_%d.txt" % (result_dir, enrichment_method, n_seq),
+        sep="\t",
+        header=False,
+        float_format="%.3f")
     return
 
 
 def summarize_motif_enrichment(enrichment_dir):
-    """
-    Compress and summarize enrichment results
+    """Compress and summarize enrichment results
 
     Parameters
-    ----------------
+    ----------
     enrichment_dir: str
         the main dir of enrichment, structure is main/SubFolderByRank/fileByNseq.txt
 
     Returns
-    ----------------
+    -------
     None
     """
 
@@ -357,38 +324,34 @@ def summarize_motif_enrichment(enrichment_dir):
         df.columns = df.columns.astype(int)
         df = df.reindex(sorted(df.columns), axis=1)
         df.to_csv(enrichment_dir+rank_dir+".txt", sep="\t", header=True, index=True, float_format="%.3f")
-        
+
     for rank_dir in enrichment_rank_dirs:
-        edir = enrichment_dir + rank_dir + "/"   
+        edir = enrichment_dir + rank_dir + "/"
         shutil.rmtree(edir)
 
     return
 
 
 def get_bed_from_rank_file(rank_file, inference_n_seq, inference_nbp, result_dir):
-    """
-    split rank file by TF name into individual BED file
+    """Split rank file by TF name into individual BED file
     keep top 2*inference_n_seq sequences(if not enough, keep all)
     each region truncated to +- inference_nbp around summit
 
     Parameters
-    ----------------
+    ----------
     rank_file: str
     inference_n_seq: int
     inference_nbp: int
     result_dir: str
 
     Returns
-    ----------------
+    -------
     None
     """
-
-    os_mkdir_empty(result_dir, "skip split_rank_file")
 
     allow_n_seq = 2 * inference_n_seq
     os.system("awk '{if($7<=%d){print $1\"\\t\"$2-%d\"\\t\"$2+%d >\"%s/\"$6\".bed\"}}' %s" \
               % (allow_n_seq, inference_nbp, inference_nbp, result_dir, rank_file))
-
     return
 
 
@@ -408,13 +371,8 @@ def get_fasta_from_bed(bed_dir, genome_file, result_dir):
     None
     """
 
-    if os.path.exists(result_dir):
-        print("skip get_fasta")
-        return
-    os.makedirs(result_dir)
-    
     files = [i.split(".bed")[0] for i in os.listdir(bed_dir) if i.endswith(".bed")]
-        
+
     for fi in files:
         with open("%s/%s.bed" % (bed_dir, fi), "r") as f:
             flen = len(f.readlines())
@@ -422,7 +380,6 @@ def get_fasta_from_bed(bed_dir, genome_file, result_dir):
                    bedtools getfasta -fi %s -bed stdin -fo %s/%s.fasta" \
                    % (flen//2, bed_dir, fi,\
                    genome_file, result_dir, fi))
-    
     return
 
 
@@ -447,7 +404,7 @@ def run_inference_joblist(inference_tool, fasta_dir, hpc_joblist_file, inference
     """
 
     os_mkdir_empty(inference_motif_dir, "run_inference output dir exist")
-      
+
     tfs = [i.split(".fasta")[0] for i in os.listdir(fasta_dir) if i.endswith(".fasta")]
 
     with open(hpc_joblist_file, "w") as f:
@@ -455,26 +412,53 @@ def run_inference_joblist(inference_tool, fasta_dir, hpc_joblist_file, inference
             if keep_motif_only:
                 outdir = inference_motif_dir.rstrip("/")
                 if inference_tool == "DREME":
-                    f.write("dreme -oc %s/%s/ -k 8 -m 10 -e 1000 -p %s/%s.fasta; mv %s/%s/dreme.txt %s_%s.meme; rm -rf %s/%s/\n" \
-                            % (inference_motif_dir, tf, fasta_dir, tf, outdir, tf, inference_motif_dir, tf))
+                    f.write("
+                        dreme -oc {infer_out_dir}/{tf}/ -k 8 -m 10 -e 1000 -p {fasta_dir}/{tf}.fasta;\
+                        mv {infer_out_dir}/{tf}/dreme.txt {out_dir}_{tf}.meme;\
+                        rm -rf {infer_out_dir}/{tf}/\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir,
+                            outdir=outdir))
                 elif inference_tool == "HOMER":
-                    f.write("findMotifs.pl %s/%s.fasta fasta %s/%s/ -nocheck -nogo -len 8 -noknown -basic -S 10; Rscript /home/jg2447/slayman/motif_inference/scripts/src/MoVRs_Motif2meme.R %s/%s/homerMotifs.motifs8 %s/%s/homerMotifs.meme; ; mv %s/%s/homerMotifs.meme %s_%s.meme; rm -rf %s/%s/\n" \
-                            % (fasta_dir, tf, inference_motif_dir, tf, inference_motif_dir, tf, inference_motif_dir, tf, outdir, tf, inference_motif_dir, tf))
+                    f.write("
+                        findMotifs.pl {fasta_dir}/{tf}.fasta fasta {infer_out_dir}/{tf}/ -nocheck -nogo -len 8 -noknown -basic -S 10;\
+                        Rscript /home/jg2447/slayman/motif_inference/scripts/src/MoVRs_Motif2meme.R {infer_out_dir}/{tf}/homerMotifs.motifs8 {infer_out_dir}/{tf}/homerMotifs.meme;\
+                        mv {infer_out_dir}/{tf}/homerMotifs.meme {out_dir}_{tf}.meme;\
+                        rm -rf {infer_out_dir}/{tf}/\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir,
+                            outdir=outdir))
                 elif inference_tool == "MEME":
-                    f.write("meme -oc %s/%s/ -dna -nmotifs 10 -w 8 -maxsize 150000 -nostatus %s/%s.fasta; mv %s/%s/meme.txt %s_%s.meme; rm -rf %s/%s/\n" \
-                            % (inference_motif_dir, tf, fasta_dir, tf, outdir, tf, inference_motif_dir, tf))
-            else:    
+                    f.write("
+                        meme -oc {infer_out_dir}/{tf}/ -dna -nmotifs 10 -w 8 -maxsize 150000 -nostatus {fasta_dir}/{tf}.fasta\
+                        mv {infer_out_dir}/{tf}/dreme.txt {out_dir}_{tf}.meme;\
+                        rm -rf {infer_out_dir}/{tf}/\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir,
+                            outdir=outdir))
+            else:
                 if inference_tool == "DREME":
-                    f.write("dreme -oc %s/%s/ -k 8 -m 10 -e 1000 -p %s/%s.fasta\n" \
-                            % (inference_motif_dir, tf, fasta_dir, tf))
+                    f.write("
+                        dreme -oc {infer_out_dir}/{tf}/ -k 8 -m 10 -e 1000 -p {fasta_dir}/{tf}.fasta\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir))
                 elif inference_tool == "HOMER":
-                    f.write("findMotifs.pl %s/%s.fasta fasta %s/%s/ -nocheck -nogo -len 8 -noknown -basic -S 10; Rscript /home/jg2447/slayman/motif_inference/scripts/src/MoVRs_Motif2meme.R %s/%s/homerMotifs.motifs8 %s/%s/homerMotifs.meme\n" \
-                            % (fasta_dir, tf, inference_motif_dir, tf))
+                    f.write("
+                        findMotifs.pl {fasta_dir}/{tf}.fasta fasta {infer_out_dir}/{tf}/ -nocheck -nogo -len 8 -noknown -basic -S 10;\
+                        Rscript /home/jg2447/slayman/motif_inference/scripts/src/MoVRs_Motif2meme.R {infer_out_dir}/{tf}/homerMotifs.motifs8\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir))
                 elif inference_tool == "MEME":
-                    f.write("meme -oc %s/%s/ -dna -nmotifs 10 -w 8 -maxsize 150000 -nostatus %s/%s.fasta\n" \
-                            % (inference_motif_dir, tf, fasta_dir, tf))
-
-
+                    f.write("
+                        meme -oc {infer_out_dir}/{tf}/ -dna -nmotifs 10 -w 8 -maxsize 150000 -nostatus {fasta_dir}/{tf}.fasta\n".format(
+                            infer_out_dir=inference_motif_dir,
+                            tf=tf,
+                            fasta_dir=fasta_dir))
     return
 
 
@@ -497,19 +481,30 @@ def run_tomtom_joblist(inference_tool, fasta_dir, hpc_joblist_file, inference_mo
     None
     """
     os_mkdir_empty(inference_tomtom_dir, "run_tomtom output dir exist")
-    
+
     tfs = [i.split(".fasta")[0] for i in os.listdir(fasta_dir) if i.endswith(".fasta")]
-    
+
     with open(hpc_joblist_file, "w") as f:
         for tf in tfs:
             if keep_motif_only:
                 outdir = inference_motif_dir.rstrip("/")
                 outdir2 = inference_tomtom_dir.rstrip("/")
-                f.write("tomtom -no-ssc -oc %s/%s/ -verbosity 1 -min-overlap 1 -dist pearson -evalue -thresh 10 %s_%s.meme %s/%s.meme; mv %s/%s/tomtom.txt %s_%s.tomtom; rm -rf %s/%s/\n" \
-                        % (inference_tomtom_dir, tf, outdir, tf, known_motif_dir, tf, inference_tomtom_dir, tf, outdir2, tf, inference_tomtom_dir, tf))
+                f.write("
+                    tomtom -no-ssc -oc {tomtom_out_dir}/{tf}/ -verbosity 1 -min-overlap 1 -dist pearson -evalue -thresh 10 {outdir}_{tf}.meme {known_dir}/{tf}.meme;\
+                    mv {tomtom_out_dir}/{tf}/tomtom.txt {outdir2}_{tf}.tomtom;\
+                    rm -rf {tomtom_out_dir}/{tf}/\n".format(
+                        tomtom_out_dir=inference_tomtom_dir,
+                        tf=tf,
+                        outdir=outdir,
+                        known_dir=known_motif_dir,
+                        outdir2=outdir2))
             else:
-                f.write("tomtom -no-ssc -oc %s/%s/ -verbosity 1 -min-overlap 1 -dist pearson -evalue -thresh 10 %s/%s/dreme.txt %s/%s.meme\n" \
-                        % (inference_tomtom_dir, tf, inference_motif_dir, tf, known_motif_dir, tf))
+                f.write("
+                    {tomtom_out_dir}/{tf}/ -verbosity 1 -min-overlap 1 -dist pearson -evalue -thresh 10 {outdir}_{tf}.meme {known_dir}/{tf}.meme\n".format(
+                        tomtom_out_dir=inference_tomtom_dir,
+                        tf=tf,
+                        outdir=outdir,
+                        known_dir=known_motif_dir))
     return
 
 
@@ -597,24 +592,24 @@ A %f C %f G %f T %f
     return
 
 
-def _get_inference_motif_order(motif_file):
+def get_inference_motif_order(motif_file):
     """
     seq2ind:
     for each motif sequence,
     return the order of that sequence in the inferred motif file (single pwm with multiple motifs)
 
     Parameters
-    ----------------
-    motif_file: str
+    ----------
+    motif_file : str
 
     Returns
-    ----------------
+    -------
     dict
     """
 
     with open(motif_file, "r") as f:
         lines = f.readlines()
-    
+
     ind = 0
     seq2ind = {}
     for line in lines:
@@ -625,128 +620,115 @@ def _get_inference_motif_order(motif_file):
     return seq2ind
 
 
-def get_tomtom_hits(tomtom_dir, motif_dir, tool, rank, nn, match_type, n_tomtom_motif, tf_subset=None):
-    """
-    Parse the tomtom output directory and report the results
-    
+def get_inference_motif_array(mfile):
+    """return dict {id: motif pwm array}
+
     Parameters
-    ----------------
-    tomtom_dir: str
-    motif_dir: str
-    tool: str
-    rank: str
-    nn: int
-    match_type: {"count", "order", "p-value", "order_p-value", "known_hit"}
-    n_tomtom_motif: list of int
-        the nth infered motif to be counted, [0] is top 1 and [0,1,2,3,4] is top 5
-    
+    ----------
+    mfile : str
+        path to motif meme file
+
     Returns
-    ----------------
-    np.array
-        length of array = number of TF
+    -------
+    dict
+        {id: motif pwm array}
+
     """
-
-    # get available TFs
-    tfs = [i for i in os.listdir(tomtom_dir) if i.startswith("%s_%s_%s" % (tool, rank, nn))]
-    if rank.startswith("RankLinear"):
-        tfs = [i.split("_")[4] for i in tfs]
-    else:
-        tfs = [i.split("_")[3] for i in tfs]
-    tfs = [i.replace(".tomtom", "") for i in tfs]
-    tfs = np.unique(tfs)
-
-    # if given subset, only use TFs in the subset
-    if tf_subset:
-        tfs = np.array([i for i in tfs if i in tf_subset])
-    
-    result_tf = []
-    result = []
-    for i in range(len(tfs)):
-
-        # get inferred motifs order
-        seq2ind_DREME = _get_inference_motif_order("%s/DREME_%s_%s_%s.meme" % (motif_dir, rank, nn, tfs[i]))
-        seq2ind_HOMER = _get_inference_motif_order("%s/HOMER_%s_%s_%s.meme" % (motif_dir, rank, nn, tfs[i]))
-        seq2ind_MEME = _get_inference_motif_order("%s/MEME_%s_%s_%s.meme" % (motif_dir, rank, nn, tfs[i]))
-
-        # use the min number of inference motif across all tools' result
-        n_min_motif = min(len(seq2ind_DREME), len(seq2ind_HOMER), len(seq2ind_MEME))
-        n_motif = np.array(n_tomtom_motif)[np.array(n_tomtom_motif) < n_min_motif]
-        # skip if no motifs
-        if len(n_motif) == 0:
-            continue
-
-        # focus on the one currently been run
-        if tool == "DREME":
-            seq2ind = seq2ind_DREME
-        elif tool == "HOMER":
-            seq2ind = seq2ind_HOMER
-        elif tool == "MEME":
-            seq2ind = seq2ind_MEME      
-
-        # read raw tomtom output
-        df = pd.read_csv("%s/%s_%s_%s_%s.tomtom" % (tomtom_dir, tool, rank, nn, tfs[i]), sep="\t")
-        try:
-            spp = pd.read_csv("%s/%s_RankSPP_100_%s.tomtom" % (tomtom_dir, tool, tfs[i]), sep="\t")
-        except Exception:
-            continue
-        
-        # keep P-value < 0.05 if the statistics is not relative to p-value
-        if (match_type != "p-value") and (match_type != "order_p-value"):
-            df = df[df['p-value'] <= 0.05]
-
-        # for each query, only keep the known motif match with most significant level (i.e. smallest p-value)
-        if df.shape[0] != 0:
-            # match_df = df[df['Target ID'].str.startswith(tfs[i])].copy() # use this line if target is mix of motifs
-            match_df = df.copy() # use this line if target is single motif
-            match_df = match_df.sort_values('p-value').drop_duplicates("#Query ID") 
-        else:
-            match_df = pd.DataFrame([])
-
-        # keep the top n or nth motif(define by range n_tomtom_motif)
-        if match_df.shape[0] != 0:
-            match_ind = [seq2ind[i] for i in match_df["#Query ID"].values]
-            match_df_ind = [i for i in range(len(match_ind)) if match_ind[i] in n_tomtom_motif]
-            match_df = match_df.iloc[match_df_ind,:].copy()
-
-        # results base on match_type
-        
-        # for no hits
-        if match_df.shape[0] == 0:
-            result.append(0)    
-        else:
-            match_ind = [seq2ind[i] for i in match_df["#Query ID"].values]
-            match_ind_pt = 10 - np.array(match_ind)
-            p_value_pt = -np.log(match_df['p-value'].values)
-
-            if match_type == "count":
-                result.append(match_df.shape[0])
-            elif match_type == "order":
-                result.append(np.sum(match_ind_pt))
-            elif match_type == "p-value":
-                result.append(np.sum(p_value_pt))
-            elif match_type == "order_p-value":
-                result.append(np.sum(match_ind_pt * p_value_pt))
-            elif match_type == "known_hit":
-                result.append(len(match_df["Target ID"].unique()))
-        
-        # record the used TF
-        # some TF might be skip b/c no motifs
-        result_tf.append(tfs[i])
-
-    return((np.array(result_tf), np.array(result)))
+    motifs = []
+    motif_names = []
+    with open(mfile, "r") as f:
+        lines = f.readlines()
+        for k in range(len(lines)):
+            if lines[k].startswith("letter-probability"):
+                motif = np.array(lines)[k+1:k+9] # fix length 8
+                motif_array = []
+                for i in motif:
+                    motif_array.append(i.rstrip().split(" "))
+                motif = np.array(motif_array).astype(float)
+                motifs.append(motif)
+            if lines[k].startswith("MOTIF"):
+                name = lines[k].split(" ")[1]
+                motif_names.append(name)
+    n2a = {}
+    for i,j in zip(motifs, motif_names):
+        n2a[j] = i
+    return(n2a)
 
 
-def get_tomtom_summary_data(tomtom_summary_dir, nbp_list, rank_list, tool, top, mtype="count", improve=True, tf_subset=None):
-    """
-    Retrieve tomtom summary data of different experiments
+def get_tomtom_result(meme_file_list, tomtom_file_list, top_nn):
+    """calculate accuracy, coverage, entropy of top nn inferred motif, entropy of top nn significant inferred motif.
 
     Parameters
-    ----------------
+    ----------
+    meme_file_list : list of str
+        list of paths to all inferred motifs
+    tomtom_file_list : list of str
+        list of paths to all inferred motifs tomtom result, order should be matched with meme_file_list
+    top_nn : int
+        number of top motif that should be keep
+
+    Returns
+    -------
+    DataFrame
+        row: TFs
+        columns: accuracy, coverage, top_entropy, top_entropy_list
+    """
+
+    accuracy = []
+    coverage = []
+    top_entropy = []
+    top_sig_entropy = []
+
+    for meme_file, tomtom_file in zip(meme_file_list, tomtom_file_list):
+        #### calculate accuracy and coverage
+        tomtom_df = pd.read_csv(tomtom_file, sep="\t")
+        tomtom_df = tomtom_df.sort_values('p-value').drop_duplicates("#Query ID") # for one predict motif, only use the best matched known motif
+        orders = [n2i[jj] for jj in tomtom_df["#Query ID"].values] # get inferred orders for each query inferred motif
+        tomtom_df_ind = [jj for jj in range(len(orders)) if orders[jj] in list(range(top_nn))] # only keep predict motif that is in the top 5
+        tomtom_df = tomtom_df.iloc[tomtom_df_ind,:].copy() # all top 5 inferred motif result
+        tomtom_df_sig = tomtom_df[tomtom_df['p-value'] <= 0.05].copy() # significant result only
+
+        accuracy.append(tomtom_df_sig.shape[0])
+        coverage.append(len(tomtom_df_sig["Target ID"].unique()))
+
+        #### entropy measurement
+        # get top 5 motif pwm array
+        n2i = get_inference_motif_order(meme_file)
+        n2a = get_inference_motif_array(meme_file)
+        i2n = {}
+        for j in n2i.keys():
+            i2n[n2i[j]] = j
+        motif_array = [n2a[i2n[j]].reshape(-1) for j in range(top_nn)]
+
+        top_entropy_list = [motif_entropy(n2a[ii]) for ii in tomtom_df["#Query ID"].values]
+        top_sig_entropy_list = [motif_entropy(n2a[ii]) for ii in tomtom_df_sig["#Query ID"].values]
+
+        top_entropy.append(np.mean(top_entropy_list) if top_entropy_list else np.nan)
+        top_sig_entropy.append(np.mean(top_sig_entropy_list) if top_sig_entropy_list else np.nan)
+
+        # order_pt = 5 - np.array([n2i[jj] for jj in tomtom_df_sig["#Query ID"].values]) # score for significant matches, accouning order and accuracy
+        # pvalue_pt = -np.log(tomtom_df_sig['p-value'].values)
+        # order_pt_result = np.sum(order_pt)
+        # pvalue_pt_result = np.sum(pvalue_pt)
+        # order_p-value_pt_result = np.sum(order_pt * pvalue_pt)
+
+    tfs = [os.path.basename(i).replace(".meme", "") for i in meme_file]
+    result = pd.DataFrame([tfs, accuracy, coverage, top_entropy, top_sig_entropy]).T
+    result.columns = ["TF", "accuracy", "coverage", "top_entropy", "top_sig_entropy"]
+    return(result)
+
+
+def get_tomtom_summary_data(tomtom_summary_dir, nbp_list, rank_list, tool, suffix, improve=True, tf_subset=None, measurement="accuracy"):
+    """Retrieve tomtom summary data of different experiments
+
+    Parameters
+    ----------
     tomtom_summary_dir: str
     nbp_list: list of int
     rank_list: list of str
-    tool: {"DREME", "MEME", "HOMER"}
-    top: {"top5", "top1"}
+    tool: str
+        {"DREME", "MEME", "HOMER"}
+    suffix: str
     improve: boolean
         if true return improvement comparing to the convention, which is RankSPP and nbp=100
         require "RankSPP" in rank_list and 100 in nbp_list
@@ -763,26 +745,24 @@ def get_tomtom_summary_data(tomtom_summary_dir, nbp_list, rank_list, tool, top, 
     for nn in nbp_list:
         rank_data = []
         for rank in rank_list:
-            
             data = pd.read_csv(
-                    "%s/%s_%s_%d_%s_%s.txt" % (
-                        tomtom_summary_dir, tool, rank, nn, mtype, top),
-                    sep="\t", header=None)
+                    "%s/%s_%s_%d_%s.txt" % (
+                        tomtom_summary_dir, tool, rank, nn, top),
+                    sep="\t")
 
-            if tf_subset is not None:    
-                data = data[data[0].isin(tf_subset)][1].values
+            if tf_subset:
+                data = data[data["TF"].isin(tf_subset)][measurement].values
             else:
-                data = data[1].values
-            
-            rank_data.append(data.mean()) # mean of all TF, then all rank
-        nn_data.append(rank_data) # then all nn
-    
+                data = data[measurement].values
+
+            rank_data.append(data.mean()) # mean of all TF within one rank, append for all rank
+        nn_data.append(rank_data) # append for all nn
+
     df = pd.DataFrame(nn_data)
     df.columns = rank_list
     df.index = nbp_list
-    
-    # get improvement    
+
+    # get improvement
     if improve:
         df = (df - df.loc[100, "RankSPP"]) / df.loc[100, "RankSPP"]
-    
     return df

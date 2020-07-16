@@ -7,17 +7,11 @@ import os
 import gzip
 import numpy as np
 
-__all__ = ["filter_chr_name",
-           "get_subset",
-           "get_fix_width_region",
-           "rm_column_negative"]
-
 def filter_chr_name(infile, outfile, chr_names):
-    """
-    Filter records in the given chromosomes
+    """Filter records in the given chromosomes
 
     Parameters
-    ----------------
+    ----------
     input_dir: str
         contain a list of .bed file. Assume first column representing the chromosome
     output_dir: str
@@ -26,7 +20,7 @@ def filter_chr_name(infile, outfile, chr_names):
         list of chromosome names to keep
 
     Returns
-    ----------------
+    -------
     None
     """
 
@@ -39,8 +33,7 @@ def filter_chr_name(infile, outfile, chr_names):
 
 
 def get_subset(infile, outfile, data_proportion, sort_column=7, read_method="zcat"):
-    """
-    Get a subset(could be all) of sites from the given file. 
+    """Get a subset(could be all) of sites from the given file.
     Input will be sorted (by SPP score, which is col 7, if the original file is from ENCODE ChIP-seq)
     Only the top sites will be kept
     Output files in (unzip) bed format, sorted
@@ -84,8 +77,7 @@ def get_subset(infile, outfile, data_proportion, sort_column=7, read_method="zca
 
 
 def get_fix_width_region(infile, outfile, width, summit_col=10, keep_col=[4,5,6,7,8,9,10], read_method="cat"):
-    """
-    Truncate each binding site to a fixed length or even only the summit.
+    """Truncate each binding site to a fixed length or even only the summit.
     Outfile format: chr, start, end, kept_column
 
     Parameters

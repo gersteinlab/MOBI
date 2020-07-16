@@ -33,16 +33,16 @@ for tf in tf_list:
         html = urlopen("http://www.factorbook.org/"+meme_url)
         soup = BeautifulSoup(html, features='lxml')
         html_str = soup.text
-        pwm_strs = re.findall(r'\"pwm\": \[((.|\n)*?)\"sites\"', html_str)       
+        pwm_strs = re.findall(r'\"pwm\": \[((.|\n)*?)\"sites\"', html_str)
         if len(pwm_strs) > 0:
             for pwm in pwm_strs:
                 pwm_str = pwm[0]
                 pwm_str = pwm_str.replace("\n", "").replace(" ", "").replace("],[", "],\n[").replace("[", "").replace("],", "").replace("]", "").replace(",", " ")
                 with open("./tmp_motif.txt", "w") as f:
                     f.write(pwm_str)
-                os.system("matrix2meme -dna < ./tmp_motif.txt > /home/jg2447/slayman/data/motif_factorbook/meme_human/%s--%d.meme" % (tf, mid))
+                os.system("matrix2meme -dna < ./tmp_motif.txt > /home/jg2447/slayman/data/motif/factorbook/meme_human/%s--%d.meme" % (tf, mid))
                 mid = mid + 1
 
 motif_utils.stack_motif(
-    sep_motif_dir="/home/jg2447/slayman/data/motif_factorbook/meme_human/",
-    stack_motif_dir="/home/jg2447/slayman/data/motif_factorbook/meme_human_stack/")
+    sep_motif_dir="/home/jg2447/slayman/data/motif/factorbook/meme_human/",
+    stack_motif_dir="/home/jg2447/slayman/data/motif/factorbook/meme_human_stack/")
