@@ -10,8 +10,11 @@ Output:
 
 import os
 import shutil
+import sys
+sys.path.append("/home/jg2447/slayman/motif_inference/MOBI/scripts")
+
 from src import motif_files
-from src import utils
+from src import os_func
 
 # get cisbp df
 cisbp_df = motif_files.cisbp_meta_filter_in_vitro(
@@ -19,7 +22,7 @@ cisbp_df = motif_files.cisbp_meta_filter_in_vitro(
     outfile=None)
 
 # pwm to meme: cp pwm to tmp dir, format convert, remove tmp dir
-tmp_dir = utils.os.mkdir_tmp()
+tmp_dir = os_func.mkdir_tmp()
 for i in range(cisbp_df.shape[0]):
     shutil.copy2(
         "/home/jg2447/slayman/data/motif/raw/CISBP_Homo_sapiens/pwms_all_motifs/%s.txt" % cisbp_df.iloc[i, 1],

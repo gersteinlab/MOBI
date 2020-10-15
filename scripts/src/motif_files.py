@@ -4,7 +4,7 @@
 import numpy as np
 from numpy import ma
 import pandas as pd
-from . import utils
+from . import os_func
 
 def cisbp_meta_filter_in_vitro(file, outfile):
     """
@@ -59,7 +59,7 @@ def stack_motif(sep_motif_dir, stack_motif_dir, split_str="--"):
         ".meme") and not i.startswith(".")]
     u_motif = np.unique([i.split(split_str)[0] for i in all_motif])
 
-    utils.os.mkdir_empty(stack_motif_dir, "Stack motif dir existed")
+    os_func.mkdir_empty(stack_motif_dir, "Stack motif dir existed")
 
     # Stack motif of same TF
     # delete the redundant same motifs
@@ -117,4 +117,5 @@ def motif_entropy(motif):
     """
     log_term = ma.log(motif).filled(0)
     e_array = motif * log_term
-    return(-e_array.sum())
+    result = np.mean(-np.sum(e_array, axis=1))
+    return(result)

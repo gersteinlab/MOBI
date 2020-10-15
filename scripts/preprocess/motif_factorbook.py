@@ -14,7 +14,10 @@ import shutil
 import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-from src import motif_utils
+import sys
+sys.path.append("/home/jg2447/slayman/motif_inference/MOBI/scripts")
+
+from src import motif_files
 
 
 html = urlopen("http://www.factorbook.org/human/chipseq/tf/")
@@ -43,6 +46,6 @@ for tf in tf_list:
                 os.system("matrix2meme -dna < ./tmp_motif.txt > /home/jg2447/slayman/data/motif/factorbook/meme_human/%s--%d.meme" % (tf, mid))
                 mid = mid + 1
 
-motif_utils.stack_motif(
+motif_files.stack_motif(
     sep_motif_dir="/home/jg2447/slayman/data/motif/factorbook/meme_human/",
     stack_motif_dir="/home/jg2447/slayman/data/motif/factorbook/meme_human_stack/")

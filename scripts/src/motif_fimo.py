@@ -1,6 +1,6 @@
 import os
 import numpy as np
-from . import utils
+from . import os_func
 
 def run_FIMO(motif_dir, genome_file, fimo_output_dir, joblist_file, bgfreq=False, subset=None):
     """Run FIMO
@@ -24,7 +24,7 @@ def run_FIMO(motif_dir, genome_file, fimo_output_dir, joblist_file, bgfreq=False
     None
     """
 
-    utils.os.mkdir_empty(fimo_output_dir, msg="skip fimo")
+    os_func.mkdir_empty(fimo_output_dir, msg="skip fimo")
 
     if isinstance(subset, (list, np.ndarray)):
         motif_files = [motif_dir+i for i in os.listdir(motif_dir) if i.endswith(".meme") and not i.startswith(".") and (i.replace(".meme", "") in subset)]
@@ -56,7 +56,7 @@ def reformat_FIMO_result_to_bed(fimo_output_dir, output_dir):
     -------
     """
 
-    utils.os.mkdir_empty(output_dir, msg="skip reformat_fimo")
+    os_func.mkdir_empty(output_dir, msg="skip reformat_fimo")
 
     motif_files = [i.replace(".meme", "") for i in os.listdir(fimo_output_dir) if i.endswith(".meme") and not i.startswith(".")]
     for motif in motif_files:
@@ -84,7 +84,7 @@ def filter_FIMO_result(input_dir, output_dir, fimo_p=0.0001, fimo_q=None):
     None
     """
 
-    utils.os.mkdir_empty(output_dir, msg="filter fimo")
+    os_func.mkdir_empty(output_dir, msg="filter fimo")
 
     motif_files = [i for i in os.listdir(input_dir) if i.endswith(".bed") and not i.startswith(".")]
     for motif in motif_files:

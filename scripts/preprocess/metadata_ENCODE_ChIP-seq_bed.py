@@ -2,10 +2,13 @@
 Filter for ENCODE samples
 
 Input:
-	Metadata file from ENCODE
+    Metadata file from ENCODE
 Output:
-	Clean metadata for certain bio sample, e.g. worm/fly/GM12878/K562
+    Clean metadata for certain bio sample, e.g. worm/fly/GM12878/K562
 """
+
+import sys
+sys.path.append("/home/jg2447/slayman/motif_inference/MOBI/scripts")
 
 from src import encode_meta
 
@@ -26,13 +29,13 @@ df = encode_meta.filter_subset(
     # if filtering for specific cell line, use Biosample_term_name = "GM12878"
 
 # add motif info
-meta = encodeMeta.add_motif(
+meta = encode_meta.add_motif(
     encode_file=df,
     motif_dir="/home/jg2447/slayman/data/FIMO/human_stack/FIMOp_0.000100_chr/",
     outfile="/home/jg2447/slayman/motif_inference/result/metadata/human-All.txt")
 
 # download the ChIP-seq data
-encodeMeta.download_file(
+encode_meta.download_file(
     encode_file=meta,
-    TF_dir="/home/jg2447/slayman/data/ENCODE_ChIP_seq/bed/human_hg19/",
+    download_dir="/home/jg2447/slayman/data/ENCODE_ChIP_seq/bed/human_hg19/",
     ext=".bed.gz")

@@ -1,7 +1,10 @@
 import os
 import shutil
-from src import utils
-from src import narrowPeak
+import sys
+sys.path.append("/home/jg2447/slayman/motif_inference/MOBI/scripts")
+
+from src import os_func
+from src import narrow_peak
 from src import motif_fimo
 
 fimo_output_dir = "/home/jg2447/scratch60/fimo_output_human/"
@@ -27,16 +30,16 @@ motif_fimo.filter_FIMO_result(
     fimo_q=None)
 
 # keep only regions in chromosome, discard scaffolds
-utils.os.mkdir_empty("%s/FIMOp_0.000100_chr/" % main_result_dir)
+os_func.mkdir_empty("%s/FIMOp_0.000100_chr/" % main_result_dir)
 for i in os.listdir("%s/FIMOp_0.000100/" % main_result_dir):
-    narrowPeak.filter_chr_name(
+    narrow_peak.filter_chr_name(
         "%s/FIMOp_0.000100/%s" % (main_result_dir, i),
         "%s/FIMOp_0.000100_chr/%s" % (main_result_dir, i),
         human_genome_name)
 shutil.rmtree("%s/FIMOp_0.000100/" % main_result_dir)
 
 # remove files with no significant hit regions
-utils.os.remove_size_zero_file("%s/FIMOp_0.000100_chr/" % main_result_dir)
+os_func.remove_size_zero_file("%s/FIMOp_0.000100_chr/" % main_result_dir)
 
 """
 Also run for worm and fly,

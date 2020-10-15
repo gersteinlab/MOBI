@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.append("/home/jg2447/slayman/motif_inference/MOBI/scripts")
+
 from src import motif_fimo
 
 # run FIMO with slurm
