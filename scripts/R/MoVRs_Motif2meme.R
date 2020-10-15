@@ -1,6 +1,9 @@
 #!/usr/bin/Rscript
 #... converts a Homer trainingset??motifs.homer PWM/PFM file into MEME format
 
+# This file is from https://github.com/BrendelGroup/MoVRs/blob/master/scripts/MoVRs_Motif2meme.R
+
+
 motif2meme <- function(inFile,outFile) {
   library(tools)
   #establishing the number of distinct motifs in the file and parsing it accordingly
