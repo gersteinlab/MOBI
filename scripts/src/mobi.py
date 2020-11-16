@@ -622,7 +622,8 @@ def get_inference_motif_order(motif_file):
     for line in lines:
         if line.startswith("MOTIF"):
             seq = line.split(" ")[1]
-            seq2ind[seq] = ind
+            if seq not in seq2ind.keys():
+                seq2ind[seq] = ind
             ind += 1
     return seq2ind
 
@@ -765,7 +766,7 @@ def get_tomtom_summary_data(tomtom_summary_dir, nbp_list, rank_list, tool, suffi
         for rank in rank_list:
             data = pd.read_csv("%s/%s_%s_%d_%s.txt" % (tomtom_summary_dir, tool, rank, nn, suffix), sep="\t")
 
-            if tf_subset:
+            if tf_subset is not None:
                 data = data[data["TF"].isin(tf_subset)][measurement].values
             else:
                 data = data[measurement].values
