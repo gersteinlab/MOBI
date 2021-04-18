@@ -5,10 +5,10 @@ MOtif inference with advanced BInding site selection.
 We applied our method and inferred motifs for samples we've collected from ENCODE. You could download all the motifs here.
 | Sample                   | TFs  | Download Links|
 |:------------------------:|:----:|:-------------:|
-| *Drosophila melanogaster*| 452  | [Download](https://github.com/gaotc200/MOBI/raw/master/download/MOBI.Fly.tar.gz)|
-| *Caenorhabditis elegans* | 283  | [Download](https://github.com/gaotc200/MOBI/raw/master/download/MOBI.Worm.tar.gz)|
-| GM12878                  | 136  | [Download](https://github.com/gaotc200/MOBI/raw/master/download/MOBI.GM12878.tar.gz)|
-| K562                     | 336  | [Download](https://github.com/gaotc200/MOBI/raw/master/download/MOBI.K562.tar.gz)|
+| *Drosophila melanogaster*| 452  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Fly.tar.gz)|
+| *Caenorhabditis elegans* | 283  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Worm.tar.gz)|
+| GM12878                  | 136  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.GM12878.tar.gz)|
+| K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.K562.tar.gz)|
 
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
