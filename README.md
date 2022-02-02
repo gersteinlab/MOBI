@@ -37,15 +37,15 @@ Modify line 7-14 in file MOBI.py accordingly (will be updated to argument). Then
 We applied MOBI to the 4 samples from ENCODE respectively with their best parameters and infer the motifs. You could download all our predicted motifs here.
 | Sample                   | TFs  | Download Links|
 |:------------------------:|:----:|:-------------:|
-| *Drosophila melanogaster*| 451  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Fly.tar.gz)|
-| *Caenorhabditis elegans* | 283  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Worm.tar.gz)|
-| GM12878                  | 136  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.GM12878.tar.gz)|
-| K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.K562.tar.gz)|
+| *Drosophila melanogaster*| 451  | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/fly.tar.gz)|
+| *Caenorhabditis elegans* | 283  | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/worm.tar.gz)|
+| GM12878                  | 136  | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878.tar.gz)|
+| K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562.tar.gz)|
 
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
 ### Methods overview
-![fig1](https://github.com/gaotc200/MOBI/blob/master/img/Fig1.png "Fig1")
+![fig1](https://github.com/gersteinlab/MOBI/blob/master/img/fig1.png "Fig1")
 
 As shown in this figure, we postulate there are several TF binding modes. In the result of a typical ChIP-seq experiment targeting a certain TF (here shown in red), the identified binding sites could either contain the target motif (fig. A) or not (fig. B). The ideal binding sites for motif inference should be those from scenario one.  
 
