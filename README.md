@@ -2,14 +2,12 @@
 MOtif inference with advanced BInding site selection.  
 
 ### Requirement
-To run the main script:
 - python3
 - pybedtools
 - numpy
 - pandas
 
-To run the inference step, you need to have DREME/MEME/STREME/HOMER properly installed.  
-You can test this by `meme -version` or other equivalent commands.  
+To run the inference step, **you need to have DREME/MEME/STREME/HOMER properly installed**. See [here](https://meme-suite.org/meme/doc/download.html) for meme-suite installation. You can test by `meme -version` or other equivalent commands.  
 
 ### Run the example
 1. Download the github and unzip into `MOBI/`, go to the folder `cd MOBI/`.
