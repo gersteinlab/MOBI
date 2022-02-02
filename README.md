@@ -37,7 +37,7 @@ Modify line 7-14 in file MOBI.py accordingly (will be updated to argument). Then
 We applied MOBI to the 4 samples from ENCODE respectively with their best parameters and infer the motifs. You could download all our predicted motifs here.
 | Sample                   | TFs  | Download Links|
 |:------------------------:|:----:|:-------------:|
-| *Drosophila melanogaster*| 452  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Fly.tar.gz)|
+| *Drosophila melanogaster*| 451  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Fly.tar.gz)|
 | *Caenorhabditis elegans* | 283  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.Worm.tar.gz)|
 | GM12878                  | 136  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.GM12878.tar.gz)|
 | K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/tree/master/download/MOBI.K562.tar.gz)|
