@@ -40,8 +40,7 @@ We applied MOBI to the 4 samples from ENCODE respectively with their best parame
 | *Drosophila melanogaster*| 451  | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/fly.tar.gz)|
 | *Caenorhabditis elegans* | 283  | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/worm.tar.gz)|
 | GM12878                  | 136  | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/GM12878.tar.gz)|
-| K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/K562.tar.gz
-)|
+| K562                     | 336  | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/K562.tar.gz)|
 
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
