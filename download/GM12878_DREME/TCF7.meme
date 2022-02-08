@@ -1,0 +1,121 @@
+# DREME 5.3.3
+#     command: dreme -oc ../result/mobi/GM12878/inference_raw/DREME/RankLinear1.0_10_TCF7/ -k 8 -m 5 -e 1000 -verbosity 1 -p ../result/mobi/GM12878/fasta/RankLinear1.0_10/TCF7.fasta
+#   positives: 250 from ../result/mobi/GM12878/fasta/RankLinear1.0_10/TCF7.fasta (Tue Nov 09 16:28:20 EST 2021)
+#   negatives: 250 from shuffled positives
+#        host: gpu20.farnam.hpc.yale.internal
+#        when: Sun Nov 14 23:35:09 EST 2021
+
+MEME version 5.3.3
+
+ALPHABET "DNA" DNA-LIKE
+A "Adenine" CC0000 ~ T "Thymine" 008000
+C "Cytosine" 0000CC ~ G "Guanine" FFB300
+N "Any base" = ACGT
+X = ACGT
+. = ACGT
+V "Not T" = ACG
+H "Not G" = ACT
+D "Not C" = AGT
+B "Not A" = CGT
+M "Amino" = AC
+R "Purine" = AG
+W "Weak" = AT
+S "Strong" = CG
+Y "Pyrimidine" = CT
+K "Keto" = GT
+U = T
+END ALPHABET
+
+strands: + -
+
+Background letter frequencies (from dataset):
+A 0.294 C 0.210 G 0.207 T 0.289
+
+
+MOTIF CCACATSA DREME-1
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CCACATSA   TSATGTGG         35          0   8.1e-012   2.1e-008
+#         CCACATCA   TGATGTGG         28          0   1.7e-009   4.4e-006
+#         CCACATGA   TCATGTGG          7          0   7.5e-003   2.0e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 36 E= 2.1e-008
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.805556 0.194444 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF CTTTGATC DREME-2
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CTTTGATC   GATCAAAG         15          0   2.5e-005   6.0e-002
+#         CTTTGATC   GATCAAAG         15          0   2.5e-005   6.0e-002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 15 E= 6.0e-002
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000 0.000000
+
+
+MOTIF ACWTCAAA DREME-3
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ACWTCAAA   TTTGAWGT         17          1   5.6e-005   1.3e-001
+#         ACTTCAAA   TTTGAAGT         10          1   5.4e-003   1.3e+001
+#         ACATCAAA   TTTGATGT          7          0   7.5e-003   1.8e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 17 E= 1.3e-001
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.411765 0.000000 0.000000 0.588235
+0.000000 0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF ATGAAAGG DREME-4
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ATGAAAGG   CCTTTCAT          5          0   3.1e-002   7.0e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 5 E= 7.0e+001
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+MOTIF CCACAACA DREME-5
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CCACAACA   TGTTGTGG          4          0   6.2e-002   1.4e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 4 E= 1.4e+002
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+# Stopping reason: target motif count reached
+#    Running time: 1.65 seconds

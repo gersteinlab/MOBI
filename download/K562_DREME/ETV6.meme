@@ -1,0 +1,121 @@
+# DREME 5.3.3
+#     command: dreme -oc ../result/mobi/K562/inference_raw/DREME/RankLinear0.3_10_ETV6/ -k 8 -m 5 -e 1000 -verbosity 1 -p ../result/mobi/K562/fasta/RankLinear0.3_10/ETV6.fasta
+#   positives: 250 from ../result/mobi/K562/fasta/RankLinear0.3_10/ETV6.fasta (Tue Nov 09 16:27:49 EST 2021)
+#   negatives: 250 from shuffled positives
+#        host: c26n05.farnam.hpc.yale.internal
+#        when: Tue Nov 16 15:30:34 EST 2021
+
+MEME version 5.3.3
+
+ALPHABET "DNA" DNA-LIKE
+A "Adenine" CC0000 ~ T "Thymine" 008000
+C "Cytosine" 0000CC ~ G "Guanine" FFB300
+N "Any base" = ACGT
+X = ACGT
+. = ACGT
+V "Not T" = ACG
+H "Not G" = ACT
+D "Not C" = AGT
+B "Not A" = CGT
+M "Amino" = AC
+R "Purine" = AG
+W "Weak" = AT
+S "Strong" = CG
+Y "Pyrimidine" = CT
+K "Keto" = GT
+U = T
+END ALPHABET
+
+strands: + -
+
+Background letter frequencies (from dataset):
+A 0.246 C 0.250 G 0.264 T 0.240
+
+
+MOTIF CTTCCTSY DREME-1
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CTTCCTSY   RSAGGAAG         40          1   3.8e-012   1.0e-008
+#         CTTCCTGT   ACAGGAAG         13          0   1.0e-004   2.7e-001
+#         CTTCCTCT   AGAGGAAG          9          0   1.8e-003   4.8e+000
+#         CTTCCTGC   GCAGGAAG          8          0   3.7e-003   9.7e+000
+#         CTTCCTCC   GGAGGAAG         10          1   5.4e-003   1.4e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 40 E= 1.0e-008
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.475000 0.525000 0.000000
+0.000000 0.450000 0.000000 0.550000
+
+
+MOTIF CCAGGAAG DREME-2
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CCAGGAAG   CTTCCTGG         11          1   2.9e-003   7.1e+000
+#         CCAGGAAG   CTTCCTGG         11          1   2.9e-003   7.1e+000
+
+letter-probability matrix: alength= 4 w= 8 nsites= 11 E= 7.1e+000
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+MOTIF ACTTCCCC DREME-3
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ACTTCCCC   GGGGAAGT          5          0   3.1e-002   7.4e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 5 E= 7.4e+001
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+
+
+MOTIF AAACGGAA DREME-4
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AAACGGAA   TTCCGTTT          4          0   6.2e-002   1.5e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 4 E= 1.5e+002
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF AGATAAGG DREME-5
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AGATAAGG   CCTTATCT          4          0   6.2e-002   1.5e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 4 E= 1.5e+002
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+# Stopping reason: target motif count reached
+#    Running time: 0.70 seconds
