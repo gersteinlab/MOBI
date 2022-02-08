@@ -1,0 +1,2077 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.3.3 (Release date: Sun Feb 7 15:39:52 2021 -0800)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= ../result/final_prediction/fly/fasta/RankLinear8.0_60/Stat92E.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+chr3R:6409899-6410399    1.0000    500  chr4:1183445-1183945     1.0000    500  
+chr3L:16162581-16163081  1.0000    500  chr4:1224001-1224501     1.0000    500  
+chr2L:21574335-21574835  1.0000    500  chr3R:4235364-4235864    1.0000    500  
+chr3L:546446-546946      1.0000    500  chrX:6710417-6710917     1.0000    500  
+chrX:10800555-10801055   1.0000    500  chr3L:7814088-7814588    1.0000    500  
+chr2R:5683395-5683895    1.0000    500  chr2R:13018158-13018658  1.0000    500  
+chr3R:17897437-17897937  1.0000    500  chr2L:11062485-11062985  1.0000    500  
+chr3L:14540122-14540622  1.0000    500  chr2R:7014016-7014516    1.0000    500  
+chr2L:17377625-17378125  1.0000    500  chr4:304859-305359       1.0000    500  
+chr3L:7859312-7859812    1.0000    500  chr3L:11259426-11259926  1.0000    500  
+chr3R:19626447-19626947  1.0000    500  chr3R:29781350-29781850  1.0000    500  
+chrX:3730446-3730946     1.0000    500  chr2R:23724515-23725015  1.0000    500  
+chr3R:14650305-14650805  1.0000    500  chr2R:19164304-19164804  1.0000    500  
+chr3R:30799817-30800317  1.0000    500  chrX:12738431-12738931   1.0000    500  
+chrX:12752895-12753395   1.0000    500  chrX:3774670-3775170     1.0000    500  
+chr2L:9567750-9568250    1.0000    500  chr3L:6551362-6551862    1.0000    500  
+chr3R:23339964-23340464  1.0000    500  chrX:6860832-6861332     1.0000    500  
+chr3R:7106798-7107298    1.0000    500  chr3R:21620456-21620956  1.0000    500  
+chr4:57051-57551         1.0000    500  chr4:851841-852341       1.0000    500  
+chr3L:20193004-20193504  1.0000    500  chrX:7700898-7701398     1.0000    500  
+chrX:1263248-1263748     1.0000    500  chr2R:6115812-6116312    1.0000    500  
+chr3R:23336725-23337225  1.0000    500  chr2R:13007327-13007827  1.0000    500  
+chr2L:3719975-3720475    1.0000    500  chr3L:14758464-14758964  1.0000    500  
+chr3L:11256900-11257400  1.0000    500  chr2L:17448875-17449375  1.0000    500  
+chr2R:18352073-18352573  1.0000    500  chr2L:21260081-21260581  1.0000    500  
+chr3L:549526-550026      1.0000    500  chr4:247987-248487       1.0000    500  
+chr3L:9567456-9567956    1.0000    500  chr3R:5078195-5078695    1.0000    500  
+chr2L:18149471-18149971  1.0000    500  chr3L:130673-131173      1.0000    500  
+chr3R:8813812-8814312    1.0000    500  chr4:305058-305558       1.0000    500  
+chr4:787954-788454       1.0000    500  chr3R:4745425-4745925    1.0000    500  
+chr4:1026059-1026559     1.0000    500  chr3R:23787707-23788207  1.0000    500  
+chrX:2648348-2648848     1.0000    500  chr3R:18915621-18916121  1.0000    500  
+chr2R:10542595-10543095  1.0000    500  chrX:16104043-16104543   1.0000    500  
+chrX:17076729-17077229   1.0000    500  chrX:8058889-8059389     1.0000    500  
+chr2L:17381812-17382312  1.0000    500  chr2R:21379896-21380396  1.0000    500  
+chr2R:18316374-18316874  1.0000    500  chr3R:22781979-22782479  1.0000    500  
+chr2L:18144198-18144698  1.0000    500  chr3R:14710707-14711207  1.0000    500  
+chr3R:14019008-14019508  1.0000    500  chrX:521891-522391       1.0000    500  
+chr2L:12004960-12005460  1.0000    500  chrX:6706094-6706594     1.0000    500  
+chr3R:16249078-16249578  1.0000    500  chrX:6733401-6733901     1.0000    500  
+chr2R:19268357-19268857  1.0000    500  chrX:130620-131120       1.0000    500  
+chr2R:9446368-9446868    1.0000    500  chr3R:26103725-26104225  1.0000    500  
+chrX:16104349-16104849   1.0000    500  chr3R:14285844-14286344  1.0000    500  
+chr3R:20264227-20264727  1.0000    500  chr4:1318797-1319297     1.0000    500  
+chr4:136289-136789       1.0000    500  chr3L:10897478-10897978  1.0000    500  
+chr2R:6172159-6172659    1.0000    500  chr2R:6119766-6120266    1.0000    500  
+chr2L:16351753-16352253  1.0000    500  chr3R:24570704-24571204  1.0000    500  
+chr2R:20597264-20597764  1.0000    500  chr3R:13014603-13015103  1.0000    500  
+chrX:19578762-19579262   1.0000    500  chr2L:11474886-11475386  1.0000    500  
+chr3L:7815674-7816174    1.0000    500  chr2R:11602852-11603352  1.0000    500  
+chr2R:5109289-5109789    1.0000    500  chr2R:13047377-13047877  1.0000    500  
+chr2L:9495771-9496271    1.0000    500  chr2R:20597471-20597971  1.0000    500  
+chr3R:23729547-23730047  1.0000    500  chr2L:12506958-12507458  1.0000    500  
+chr3R:20265742-20266242  1.0000    500  chr3L:10664888-10665388  1.0000    500  
+chr3R:21582068-21582568  1.0000    500  chr3R:31725086-31725586  1.0000    500  
+chr4:625486-625986       1.0000    500  chr3R:21618701-21619201  1.0000    500  
+chr3R:25122259-25122759  1.0000    500  chr2L:14396063-14396563  1.0000    500  
+chr3L:10660254-10660754  1.0000    500  chr2L:13296576-13297076  1.0000    500  
+chrM:16972-17472         1.0000    500  chr4:415537-416037       1.0000    500  
+chr3R:31223335-31223835  1.0000    500  chr3R:14285556-14286056  1.0000    500  
+chrM:814-1314            1.0000    500  chr3R:6413757-6414257    1.0000    500  
+chr3L:3380718-3381218    1.0000    500  chr3L:628869-629369      1.0000    500  
+chr2R:18529690-18530190  1.0000    500  chr3R:4745626-4746126    1.0000    500  
+chrX:9578632-9579132     1.0000    500  chr2L:16491937-16492437  1.0000    500  
+chrM:3786-4286           1.0000    500  chr2R:21474568-21475068  1.0000    500  
+chr3L:17668278-17668778  1.0000    500  chrX:13371324-13371824   1.0000    500  
+chr3R:14026607-14027107  1.0000    500  chr3R:11460575-11461075  1.0000    500  
+chrX:16424099-16424599   1.0000    500  chr2L:16530771-16531271  1.0000    500  
+chr2L:23512612-23513112  1.0000    500  chr2R:1513653-1514153    1.0000    500  
+chr2L:5207340-5207840    1.0000    500  chr2R:18800661-18801161  1.0000    500  
+chr2L:6724179-6724679    1.0000    500  chr2R:18356857-18357357  1.0000    500  
+chr3R:17706125-17706625  1.0000    500  chr3L:8441624-8442124    1.0000    500  
+chr2R:10734453-10734953  1.0000    500  chr2R:11358581-11359081  1.0000    500  
+chr3L:1349684-1350184    1.0000    500  chr2R:13823700-13824200  1.0000    500  
+chr2R:10101851-10102351  1.0000    500  chr2L:12545941-12546441  1.0000    500  
+chr3L:2635897-2636397    1.0000    500  chr4:960141-960641       1.0000    500  
+chrX:15312539-15313039   1.0000    500  chr3L:17994728-17995228  1.0000    500  
+chrX:10802119-10802619   1.0000    500  chr2L:19157037-19157537  1.0000    500  
+chr2L:2197637-2198137    1.0000    500  chr2L:7976591-7977091    1.0000    500  
+chr2L:19791029-19791529  1.0000    500  chrX:21281391-21281891   1.0000    500  
+chrM:3095-3595           1.0000    500  chr2L:8100352-8100852    1.0000    500  
+chr3R:9352577-9353077    1.0000    500  chr3L:18002772-18003272  1.0000    500  
+chr2L:12506643-12507143  1.0000    500  chr4:44535-45035         1.0000    500  
+chrM:328-828             1.0000    500  chr4:557129-557629       1.0000    500  
+chr2R:14486710-14487210  1.0000    500  chr2L:11806308-11806808  1.0000    500  
+chr3R:4738914-4739414    1.0000    500  chr3L:14673968-14674468  1.0000    500  
+chr2R:23746067-23746567  1.0000    500  chr3L:11561774-11562274  1.0000    500  
+chr4:570623-571123       1.0000    500  chr2L:2037912-2038412    1.0000    500  
+chr3R:15293119-15293619  1.0000    500  chrX:11714193-11714693   1.0000    500  
+chr3L:17994983-17995483  1.0000    500  chr4:1196802-1197302     1.0000    500  
+chr2L:5209410-5209910    1.0000    500  chr3R:20253991-20254491  1.0000    500  
+chr2R:22561330-22561830  1.0000    500  chrX:20158936-20159436   1.0000    500  
+chrM:2179-2679           1.0000    500  chr3L:16377650-16378150  1.0000    500  
+chr3L:5655437-5655937    1.0000    500  chr3L:17967421-17967921  1.0000    500  
+chr3R:28889231-28889731  1.0000    500  chr2R:9712476-9712976    1.0000    500  
+chr4:63253-63753         1.0000    500  chr2R:18531263-18531763  1.0000    500  
+chr3L:21013477-21013977  1.0000    500  chr3L:11285613-11286113  1.0000    500  
+chrX:22432848-22433348   1.0000    500  chr2R:11198507-11199007  1.0000    500  
+chr3L:16052691-16053191  1.0000    500  chrM:12635-13135         1.0000    500  
+chr3R:14052454-14052954  1.0000    500  chr3L:16165867-16166367  1.0000    500  
+chr3R:31059344-31059844  1.0000    500  chr3R:30805720-30806220  1.0000    500  
+chrX:8412276-8412776     1.0000    500  chr2R:17269276-17269776  1.0000    500  
+chr3R:8357562-8358062    1.0000    500  chr4:313875-314375       1.0000    500  
+chrM:9595-10095          1.0000    500  chrM:5882-6382           1.0000    500  
+chr2R:19229633-19230133  1.0000    500  chrM:4297-4797           1.0000    500  
+chr2L:9176355-9176855    1.0000    500  chr4:1031000-1031500     1.0000    500  
+chr3R:30805920-30806420  1.0000    500  chr3R:4232596-4233096    1.0000    500  
+chr3R:4232392-4232892    1.0000    500  chr3L:16159859-16160359  1.0000    500  
+chrM:12265-12765         1.0000    500  chr3R:21630465-21630965  1.0000    500  
+chr2R:11182591-11183091  1.0000    500  chr2L:16520104-16520604  1.0000    500  
+chr3R:16209259-16209759  1.0000    500  chr3R:14057137-14057637  1.0000    500  
+chrM:9818-10318          1.0000    500  chr3R:9940668-9941168    1.0000    500  
+chrM:4518-5018           1.0000    500  chr3L:8704754-8705254    1.0000    500  
+chrM:6778-7278           1.0000    500  chrX:2042182-2042682     1.0000    500  
+chrM:96-596              1.0000    500  chrM:4720-5220           1.0000    500  
+chrX:19682887-19683387   1.0000    500  chrM:11242-11742         1.0000    500  
+chr4:670704-671204       1.0000    500  chr2R:10429817-10430317  1.0000    500  
+chr2L:246883-247383      1.0000    500  chrX:3378566-3379066     1.0000    500  
+chrX:12664867-12665367   1.0000    500  chrM:11034-11534         1.0000    500  
+chr2L:9176758-9177258    1.0000    500  chr4:570825-571325       1.0000    500  
+chr4:209840-210340       1.0000    500  chr2R:23617654-23618154  1.0000    500  
+chrM:13945-14445         1.0000    500  chrX:2294732-2295232     1.0000    500  
+chr2L:5980192-5980692    1.0000    500  chrM:13026-13526         1.0000    500  
+chr2L:16533449-16533949  1.0000    500  chr2L:6722812-6723312    1.0000    500  
+chr3L:16955413-16955913  1.0000    500  chr3L:21008979-21009479  1.0000    500  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc ../result/final_prediction/fly/inference_raw/MEME/RankLinear8.0_60_Stat92E/ -dna -nmotifs 5 -w 8 -maxsize 250000 -nostatus ../result/final_prediction/fly/fasta/RankLinear8.0_60/Stat92E.fasta 
+
+model:  mod=         zoops    nmotifs=         5    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=            8    maxw=            8
+nsites: minsites=        2    maxsites=      250    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=          125000    N=             250
+sample: seed=            0    hsfrac=          0
+        searchsize= 100000    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.306 C 0.194 G 0.186 T 0.313 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.306 C 0.194 G 0.186 T 0.313 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF ACACACAC MEME-1	width =   8  sites = 101  llr = 906  E-value = 1.9e-026
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  7:9:9:8:
+pos.-specific     C  :a:a:a:a
+probability       G  3:::1:1:
+matrix            T  ::1:::1:
+
+         bits    2.4  * *    
+                 2.2  * *    
+                 1.9  * * * *
+                 1.7  * * * *
+Relative         1.5  * * * *
+Entropy          1.2  * *** *
+(12.9 bits)      1.0 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           ACACACAC
+consensus            G       
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+chr2L:6722812-6723312       152  1.24e-05 ctgcacagtc acacacac ctgcacaccc
+chrX:2294732-2295232        128  1.24e-05 ATGACGacat acacacac acacacacac
+chrX:3378566-3379066        210  1.24e-05 GCGTacacac acacacac acatacaTGA
+chrX:19682887-19683387      273  1.24e-05 GCGCTCTCTC ACACACAC AAGAGCACCT
+chr3R:14057137-14057637     493  1.24e-05 acacacacat acacacac           
+chr3R:21630465-21630965     471  1.24e-05 TTGGTCAATT ACACACAC TTGGCTTCTT
+chr3R:30805920-30806420     257  1.24e-05 tggcttacac acacacac actcgcacac
+chr2R:19229633-19230133     179  1.24e-05 cacaccacac acacacac acacacCCGA
+chr3R:30805720-30806220     204  1.24e-05 GTTCTCCCCC ACACACAC ACACTCGCAC
+chr3L:16052691-16053191     267  1.24e-05 acgcacgcgc acacacac gcaAAGAAAA
+chr3L:21013477-21013977      57  1.24e-05 TTCAACTTAC ACACACAC ATCTGTAAAA
+chr2R:9712476-9712976       255  1.24e-05 cctctcacat acacacac GCTCGCGTGT
+chr3L:16377650-16378150     255  1.24e-05 ccccacacag acacacac gcacacTCGT
+chrX:20158936-20159436      146  1.24e-05 TCCCACACTC ACACACAC AGGAGCACAC
+chr2R:22561330-22561830     208  1.24e-05 cacacaacac acacacac acacatacgc
+chrX:11714193-11714693       31  1.24e-05 acacggatgg acacacac acacttactc
+chr2L:2037912-2038412        41  1.24e-05 gacaacaacc acacacac aggcgcaAGT
+chr2R:23746067-23746567     215  1.24e-05 AAACCGATTG ACACACAC GCGATACAGA
+chr2L:11806308-11806808       1  1.24e-05          . acacacac acacaaacac
+chr3L:18002772-18003272     482  1.24e-05 ACCCTCACAC ACACACAC TAATGGGAAA
+chr2L:19791029-19791529     297  1.24e-05 AGAGAGGGAA ACACACAC TCAGCTTCCT
+chr2L:7976591-7977091       222  1.24e-05 cgacggacgc acacacac acacacgcgc
+chr2L:2197637-2198137       354  1.24e-05 CACACCACAA ACACACAC AACAAACCAA
+chr3L:2635897-2636397       249  1.24e-05 caagcgcggc acacacac gcacacaggg
+chr2L:12545941-12546441     416  1.24e-05 cagctcgctc acacacac agcgacgcac
+chr3L:1349684-1350184       293  1.24e-05 ACGAACTCAC ACACACAC GCGTTCGATG
+chr2R:11358581-11359081     347  1.24e-05 GTCTGCATCG ACACACAC ACACCAATGC
+chr3L:8441624-8442124       292  1.24e-05 cctactacgc acacacac atgcacgccc
+chr2L:16530771-16531271     152  1.24e-05 CGGTACTCAC ACACACAC ACAAGCAGAG
+chr3L:17668278-17668778     329  1.24e-05 acacacgcac acacacac TGCTAGGCGG
+chr3R:25122259-25122759     216  1.24e-05 CAACTGAAAC ACACACAC TTAGACTTAG
+chr2R:11602852-11603352     408  1.24e-05 AGTCATGCAC ACACACAC ACATGCATTT
+chrX:19578762-19579262      232  1.24e-05 GCTTGCACAC ACACACAC TCACGCTCGT
+chr2L:16351753-16352253     139  1.24e-05 acaatcccac acacacac gcacgcacac
+chrX:16104349-16104849      131  1.24e-05 ACGTTCGTTC ACACACAC AACCACTATA
+chrX:521891-522391          453  1.24e-05 TCCGCCACCC ACACACAC TCGCCCACCC
+chrX:16104043-16104543      437  1.24e-05 ACGTTCGTTC ACACACAC AACCACTATA
+chrX:2648348-2648848        174  1.24e-05 ATATTTGcac acacacac acacaccacg
+chr3R:30799817-30800317     446  1.24e-05 acacacacgc acacacaC TGGGGCACAT
+chrX:3730446-3730946        345  1.24e-05 acacacacac acacacac TTGCCATAAT
+chr2R:7014016-7014516        72  1.24e-05 ACTCCCACGA ACACACAC GTGATAGCCT
+chr2R:5683395-5683895       265  1.24e-05 acacacacac acacacac acacaccaca
+chr3L:21008979-21009479     399  2.00e-05 TAATCTGAGC GCACACAC ATTTAAAAAT
+chr2L:16533449-16533949      94  2.00e-05 TTCTTGGGCC GCACACAC ATACAACGAC
+chr2L:9176758-9177258       321  2.00e-05 AGTTGAAAAA GCACACAC AATATTAATA
+chr3R:16209259-16209759     219  2.00e-05 TGAGGTCTCA GCACACAC Agagaccgga
+chrX:8412276-8412776        200  2.00e-05 GCTTACTCAC GCACACAC TTGTGCGCTT
+chr3L:17994983-17995483     458  2.00e-05 CCAGAAAAAA GCACACAC TCACAGTCAA
+chr3L:11561774-11562274     282  2.00e-05 cggcacgcac gcacacac gcacgcacgc
+chr2R:18356857-18357357     159  2.00e-05 ACTAAATCAC GCACACAC AGATACGCGG
+chrX:6706094-6706594        331  2.00e-05 CACTATACTT GCACACAC GGTACGAATA
+chr4:1026059-1026559        467  2.00e-05 ATATTCTGGT GCACACAC ATCTATACAA
+chr3L:130673-131173         345  2.00e-05 TGTTGTTGTT GCACACAC TCATCCGCTT
+chr2R:13007327-13007827     493  2.00e-05 aaaaacacac gcacacac           
+chr2R:11198507-11199007     167  2.75e-05 GTATACGAAA ACACGCAC GGAATCAAAG
+chr2R:21474568-21475068     279  2.75e-05 ATAAAACAGC ACACGCAC ATTACAGCGC
+chrX:12738431-12738931      142  2.75e-05 AAAAAGAGAG ACACGCAC GTTGCAATTT
+chr2R:23724515-23725015     477  2.75e-05 CGAGAAAAAC ACACGCAC AAGCGATTTA
+chr3R:14052454-14052954     334  4.78e-05 TTGTAAATTT ACACACGC CCCTTTCTTT
+chr2R:18531263-18531763     262  4.78e-05 ATCATTCACC ACACACGC CCCGACCATG
+chr3R:28889231-28889731     214  4.78e-05 TTTCCAATGC ACTCACAC AGAGCCACAA
+chrX:21281391-21281891      471  4.78e-05 AACGGCACTT ACTCACAC CGGAGTAAAA
+chrX:10802119-10802619      382  4.78e-05 AATCACACAA ACACACGC GCACACCTGG
+chr3R:21618701-21619201     315  4.78e-05 CGTGAATTTT ACTCACAC ACCCGGACAA
+chr3R:14019008-14019508     475  4.78e-05 CCACAAAAAC ACTCACAC CTCTCCGTTT
+chr3R:5078195-5078695        76  4.78e-05 TTAAATATCT ACACACGC AACGCGAAAA
+chrM:4720-5220               22  6.05e-05 ATTAATGTCT ACACACTC AAATCACCCT
+chrM:4518-5018              224  6.05e-05 ATTAATGTCT ACACACTC AAATCACCCT
+chrM:4297-4797              445  6.05e-05 ATTAATGTCT ACACACTC AAATCACCCT
+chrX:15312539-15313039      178  6.05e-05 TAACAAGCAT ACACACTC AGCCGAAGGC
+chr3L:628869-629369         427  6.05e-05 AGCTCTTTAT ACACACTC TTTTGGCGGC
+chr3R:20265742-20266242      65  6.05e-05 ATTTTCCGCC ACACACTC ACACTCACTT
+chr2L:18149471-18149971     430  6.05e-05 AGATCCACTC ACACACTC ACAATTGAGT
+chr3R:4738914-4739414       275  6.83e-05 CAAGAAAAAC ACCCACAC GTACATTTAT
+chr2L:13296576-13297076     354  6.83e-05 actcactaac acccacac acaAATGCAT
+chrX:130620-131120          272  6.83e-05 ACCCTTATCT ACCCACAC CAGCAGTTTT
+chr2R:10101851-10102351       6  7.29e-05      GAGTC GCACGCAC ACAGCCCCAA
+chr2L:9495771-9496271       241  8.52e-05 CTCCTGTCCC GCTCACAC TTTCCGCCTG
+chr2L:11062485-11062985     236  8.52e-05 AGTTAAACAA GCTCACAC CTCACCCACT
+chrX:12664867-12665367      303  9.78e-05 TTGCTATCTC GCCCACAC CAACGCATTT
+chr4:1031000-1031500        439  9.78e-05 acaatctatt gcccacac gccgcccaaa
+chr3L:11285613-11286113     299  1.38e-04 GGCACTGTGG ACacatac atacgtacat
+chr3R:20253991-20254491      67  1.38e-04 TTGCACACAT ACACATAC CAGCACACCC
+chr2R:18800661-18801161     356  1.38e-04 CAATCGAAGG ACACACAG CACTAAGTGA
+chr3R:11460575-11461075     273  1.38e-04 AATCAGATAA ACACACAG CGAAAAATGT
+chr3R:14650305-14650805     284  1.38e-04 TTACACGTAC ACACATAC ATACATATGT
+chr2R:10542595-10543095     409  1.50e-04 GGGGGCGCAA ACACTCAC AAACACCTAT
+chr2R:17269276-17269776      73  1.55e-04 TATACCGTTG GCACACCC TAACATAATT
+chr3L:16162581-16163081     473  1.55e-04 TCTGCCAAAG GCACACCC CAAGCCCCCC
+chr3R:9352577-9353077       493  1.74e-04 TCTCTTTATT GCACACAG           
+chrX:6860832-6861332        124  1.74e-04 atacatacat gcacatac atacatacat
+chrX:3774670-3775170         83  1.74e-04 GAAAGCATAT GCACATAC AAACACACAA
+chr3R:4745626-4746126       208  1.82e-04 CATTTCGTTA GCACTCAC TTGGTTCAGA
+chr3R:4745425-4745925       409  1.82e-04 CATTTCGTTA GCACTCAC TTGGTTCAGA
+chr2L:5209410-5209910       422  2.30e-04 CTTAGGTGCT ACACACAT TGTTTGTCCA
+chr2L:19157037-19157537     385  2.30e-04 TCTGTACGAA ACACACAT ATTACGAGTC
+chr2R:13047377-13047877     103  2.30e-04 AGATTACCTG ACTCACGC CAGCGGTTGT
+chr3R:23787707-23788207     241  2.30e-04 ACTTAACTCC ACTCACGC AGGGGTTCTG
+chr3R:31059344-31059844     385  2.48e-04 actctttatc actcactc tGCGGTTCTA
+chr2L:6724179-6724679        37  2.68e-04 AGCGGCGTAA GCTCGCAC CTGCTGCTCG
+chr2L:21260081-21260581     146  2.90e-04 GTTTATGTAG GCACGCTC CATATCTGCT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chr2L:6722812-6723312             1.2e-05  151_[+1]_341
+chrX:2294732-2295232              1.2e-05  127_[+1]_365
+chrX:3378566-3379066              1.2e-05  209_[+1]_283
+chrX:19682887-19683387            1.2e-05  272_[+1]_220
+chr3R:14057137-14057637           1.2e-05  492_[+1]
+chr3R:21630465-21630965           1.2e-05  470_[+1]_22
+chr3R:30805920-30806420           1.2e-05  256_[+1]_236
+chr2R:19229633-19230133           1.2e-05  178_[+1]_314
+chr3R:30805720-30806220           1.2e-05  203_[+1]_289
+chr3L:16052691-16053191           1.2e-05  266_[+1]_226
+chr3L:21013477-21013977           1.2e-05  56_[+1]_436
+chr2R:9712476-9712976             1.2e-05  254_[+1]_238
+chr3L:16377650-16378150           1.2e-05  254_[+1]_238
+chrX:20158936-20159436            1.2e-05  145_[+1]_347
+chr2R:22561330-22561830           1.2e-05  207_[+1]_285
+chrX:11714193-11714693            1.2e-05  30_[+1]_462
+chr2L:2037912-2038412             1.2e-05  40_[+1]_452
+chr2R:23746067-23746567           1.2e-05  214_[+1]_278
+chr2L:11806308-11806808           1.2e-05  [+1]_492
+chr3L:18002772-18003272           1.2e-05  481_[+1]_11
+chr2L:19791029-19791529           1.2e-05  296_[+1]_196
+chr2L:7976591-7977091             1.2e-05  221_[+1]_271
+chr2L:2197637-2198137             1.2e-05  353_[+1]_139
+chr3L:2635897-2636397             1.2e-05  248_[+1]_244
+chr2L:12545941-12546441           1.2e-05  415_[+1]_77
+chr3L:1349684-1350184             1.2e-05  292_[+1]_200
+chr2R:11358581-11359081           1.2e-05  346_[+1]_146
+chr3L:8441624-8442124             1.2e-05  291_[+1]_201
+chr2L:16530771-16531271           1.2e-05  151_[+1]_341
+chr3L:17668278-17668778           1.2e-05  328_[+1]_164
+chr3R:25122259-25122759           1.2e-05  215_[+1]_277
+chr2R:11602852-11603352           1.2e-05  407_[+1]_85
+chrX:19578762-19579262            1.2e-05  231_[+1]_261
+chr2L:16351753-16352253           1.2e-05  138_[+1]_354
+chrX:16104349-16104849            1.2e-05  130_[+1]_362
+chrX:521891-522391                1.2e-05  452_[+1]_40
+chrX:16104043-16104543            1.2e-05  436_[+1]_56
+chrX:2648348-2648848              1.2e-05  173_[+1]_319
+chr3R:30799817-30800317           1.2e-05  445_[+1]_47
+chrX:3730446-3730946              1.2e-05  344_[+1]_148
+chr2R:7014016-7014516             1.2e-05  71_[+1]_421
+chr2R:5683395-5683895             1.2e-05  264_[+1]_228
+chr3L:21008979-21009479             2e-05  398_[+1]_94
+chr2L:16533449-16533949             2e-05  93_[+1]_399
+chr2L:9176758-9177258               2e-05  320_[+1]_172
+chr3R:16209259-16209759             2e-05  218_[+1]_274
+chrX:8412276-8412776                2e-05  199_[+1]_293
+chr3L:17994983-17995483             2e-05  457_[+1]_35
+chr3L:11561774-11562274             2e-05  281_[+1]_211
+chr2R:18356857-18357357             2e-05  158_[+1]_334
+chrX:6706094-6706594                2e-05  330_[+1]_162
+chr4:1026059-1026559                2e-05  466_[+1]_26
+chr3L:130673-131173                 2e-05  344_[+1]_148
+chr2R:13007327-13007827             2e-05  492_[+1]
+chr2R:11198507-11199007           2.8e-05  166_[+1]_326
+chr2R:21474568-21475068           2.8e-05  278_[+1]_214
+chrX:12738431-12738931            2.8e-05  141_[+1]_351
+chr2R:23724515-23725015           2.8e-05  476_[+1]_16
+chr3R:14052454-14052954           4.8e-05  333_[+1]_159
+chr2R:18531263-18531763           4.8e-05  261_[+1]_231
+chr3R:28889231-28889731           4.8e-05  213_[+1]_279
+chrX:21281391-21281891            4.8e-05  470_[+1]_22
+chrX:10802119-10802619            4.8e-05  381_[+1]_111
+chr3R:21618701-21619201           4.8e-05  314_[+1]_178
+chr3R:14019008-14019508           4.8e-05  474_[+1]_18
+chr3R:5078195-5078695             4.8e-05  75_[+1]_417
+chrM:4720-5220                      6e-05  21_[+1]_471
+chrM:4518-5018                      6e-05  223_[+1]_269
+chrM:4297-4797                      6e-05  444_[+1]_48
+chrX:15312539-15313039              6e-05  177_[+1]_315
+chr3L:628869-629369                 6e-05  426_[+1]_66
+chr3R:20265742-20266242             6e-05  64_[+1]_428
+chr2L:18149471-18149971             6e-05  429_[+1]_63
+chr3R:4738914-4739414             6.8e-05  274_[+1]_218
+chr2L:13296576-13297076           6.8e-05  353_[+1]_139
+chrX:130620-131120                6.8e-05  271_[+1]_221
+chr2R:10101851-10102351           7.3e-05  5_[+1]_487
+chr2L:9495771-9496271             8.5e-05  240_[+1]_252
+chr2L:11062485-11062985           8.5e-05  235_[+1]_257
+chrX:12664867-12665367            9.8e-05  302_[+1]_190
+chr4:1031000-1031500              9.8e-05  438_[+1]_54
+chr3L:11285613-11286113           0.00014  298_[+1]_194
+chr3R:20253991-20254491           0.00014  66_[+1]_426
+chr2R:18800661-18801161           0.00014  355_[+1]_137
+chr3R:11460575-11461075           0.00014  272_[+1]_220
+chr3R:14650305-14650805           0.00014  283_[+1]_209
+chr2R:10542595-10543095           0.00015  408_[+1]_84
+chr2R:17269276-17269776           0.00016  72_[+1]_420
+chr3L:16162581-16163081           0.00016  472_[+1]_20
+chr3R:9352577-9353077             0.00017  492_[+1]
+chrX:6860832-6861332              0.00017  123_[+1]_369
+chrX:3774670-3775170              0.00017  82_[+1]_410
+chr3R:4745626-4746126             0.00018  207_[+1]_285
+chr3R:4745425-4745925             0.00018  408_[+1]_84
+chr2L:5209410-5209910             0.00023  421_[+1]_71
+chr2L:19157037-19157537           0.00023  384_[+1]_108
+chr2R:13047377-13047877           0.00023  102_[+1]_390
+chr3R:23787707-23788207           0.00023  240_[+1]_252
+chr3R:31059344-31059844           0.00025  384_[+1]_108
+chr2L:6724179-6724679             0.00027  36_[+1]_456
+chr2L:21260081-21260581           0.00029  145_[+1]_347
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF ACACACAC width=8 seqs=101
+chr2L:6722812-6723312    (  152) ACACACAC  1 
+chrX:2294732-2295232     (  128) ACACACAC  1 
+chrX:3378566-3379066     (  210) ACACACAC  1 
+chrX:19682887-19683387   (  273) ACACACAC  1 
+chr3R:14057137-14057637  (  493) ACACACAC  1 
+chr3R:21630465-21630965  (  471) ACACACAC  1 
+chr3R:30805920-30806420  (  257) ACACACAC  1 
+chr2R:19229633-19230133  (  179) ACACACAC  1 
+chr3R:30805720-30806220  (  204) ACACACAC  1 
+chr3L:16052691-16053191  (  267) ACACACAC  1 
+chr3L:21013477-21013977  (   57) ACACACAC  1 
+chr2R:9712476-9712976    (  255) ACACACAC  1 
+chr3L:16377650-16378150  (  255) ACACACAC  1 
+chrX:20158936-20159436   (  146) ACACACAC  1 
+chr2R:22561330-22561830  (  208) ACACACAC  1 
+chrX:11714193-11714693   (   31) ACACACAC  1 
+chr2L:2037912-2038412    (   41) ACACACAC  1 
+chr2R:23746067-23746567  (  215) ACACACAC  1 
+chr2L:11806308-11806808  (    1) ACACACAC  1 
+chr3L:18002772-18003272  (  482) ACACACAC  1 
+chr2L:19791029-19791529  (  297) ACACACAC  1 
+chr2L:7976591-7977091    (  222) ACACACAC  1 
+chr2L:2197637-2198137    (  354) ACACACAC  1 
+chr3L:2635897-2636397    (  249) ACACACAC  1 
+chr2L:12545941-12546441  (  416) ACACACAC  1 
+chr3L:1349684-1350184    (  293) ACACACAC  1 
+chr2R:11358581-11359081  (  347) ACACACAC  1 
+chr3L:8441624-8442124    (  292) ACACACAC  1 
+chr2L:16530771-16531271  (  152) ACACACAC  1 
+chr3L:17668278-17668778  (  329) ACACACAC  1 
+chr3R:25122259-25122759  (  216) ACACACAC  1 
+chr2R:11602852-11603352  (  408) ACACACAC  1 
+chrX:19578762-19579262   (  232) ACACACAC  1 
+chr2L:16351753-16352253  (  139) ACACACAC  1 
+chrX:16104349-16104849   (  131) ACACACAC  1 
+chrX:521891-522391       (  453) ACACACAC  1 
+chrX:16104043-16104543   (  437) ACACACAC  1 
+chrX:2648348-2648848     (  174) ACACACAC  1 
+chr3R:30799817-30800317  (  446) ACACACAC  1 
+chrX:3730446-3730946     (  345) ACACACAC  1 
+chr2R:7014016-7014516    (   72) ACACACAC  1 
+chr2R:5683395-5683895    (  265) ACACACAC  1 
+chr3L:21008979-21009479  (  399) GCACACAC  1 
+chr2L:16533449-16533949  (   94) GCACACAC  1 
+chr2L:9176758-9177258    (  321) GCACACAC  1 
+chr3R:16209259-16209759  (  219) GCACACAC  1 
+chrX:8412276-8412776     (  200) GCACACAC  1 
+chr3L:17994983-17995483  (  458) GCACACAC  1 
+chr3L:11561774-11562274  (  282) GCACACAC  1 
+chr2R:18356857-18357357  (  159) GCACACAC  1 
+chrX:6706094-6706594     (  331) GCACACAC  1 
+chr4:1026059-1026559     (  467) GCACACAC  1 
+chr3L:130673-131173      (  345) GCACACAC  1 
+chr2R:13007327-13007827  (  493) GCACACAC  1 
+chr2R:11198507-11199007  (  167) ACACGCAC  1 
+chr2R:21474568-21475068  (  279) ACACGCAC  1 
+chrX:12738431-12738931   (  142) ACACGCAC  1 
+chr2R:23724515-23725015  (  477) ACACGCAC  1 
+chr3R:14052454-14052954  (  334) ACACACGC  1 
+chr2R:18531263-18531763  (  262) ACACACGC  1 
+chr3R:28889231-28889731  (  214) ACTCACAC  1 
+chrX:21281391-21281891   (  471) ACTCACAC  1 
+chrX:10802119-10802619   (  382) ACACACGC  1 
+chr3R:21618701-21619201  (  315) ACTCACAC  1 
+chr3R:14019008-14019508  (  475) ACTCACAC  1 
+chr3R:5078195-5078695    (   76) ACACACGC  1 
+chrM:4720-5220           (   22) ACACACTC  1 
+chrM:4518-5018           (  224) ACACACTC  1 
+chrM:4297-4797           (  445) ACACACTC  1 
+chrX:15312539-15313039   (  178) ACACACTC  1 
+chr3L:628869-629369      (  427) ACACACTC  1 
+chr3R:20265742-20266242  (   65) ACACACTC  1 
+chr2L:18149471-18149971  (  430) ACACACTC  1 
+chr3R:4738914-4739414    (  275) ACCCACAC  1 
+chr2L:13296576-13297076  (  354) ACCCACAC  1 
+chrX:130620-131120       (  272) ACCCACAC  1 
+chr2R:10101851-10102351  (    6) GCACGCAC  1 
+chr2L:9495771-9496271    (  241) GCTCACAC  1 
+chr2L:11062485-11062985  (  236) GCTCACAC  1 
+chrX:12664867-12665367   (  303) GCCCACAC  1 
+chr4:1031000-1031500     (  439) GCCCACAC  1 
+chr3L:11285613-11286113  (  299) ACACATAC  1 
+chr3R:20253991-20254491  (   67) ACACATAC  1 
+chr2R:18800661-18801161  (  356) ACACACAG  1 
+chr3R:11460575-11461075  (  273) ACACACAG  1 
+chr3R:14650305-14650805  (  284) ACACATAC  1 
+chr2R:10542595-10543095  (  409) ACACTCAC  1 
+chr2R:17269276-17269776  (   73) GCACACCC  1 
+chr3L:16162581-16163081  (  473) GCACACCC  1 
+chr3R:9352577-9353077    (  493) GCACACAG  1 
+chrX:6860832-6861332     (  124) GCACATAC  1 
+chrX:3774670-3775170     (   83) GCACATAC  1 
+chr3R:4745626-4746126    (  208) GCACTCAC  1 
+chr3R:4745425-4745925    (  409) GCACTCAC  1 
+chr2L:5209410-5209910    (  422) ACACACAT  1 
+chr2L:19157037-19157537  (  385) ACACACAT  1 
+chr2R:13047377-13047877  (  103) ACTCACGC  1 
+chr3R:23787707-23788207  (  241) ACTCACGC  1 
+chr3R:31059344-31059844  (  385) ACTCACTC  1 
+chr2L:6724179-6724679    (   37) GCTCGCAC  1 
+chr2L:21260081-21260581  (  146) GCACGCTC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 123250 bayes= 11.3934 E= 1.9e-026 
+   128  -1330     47  -1330 
+ -1330    237  -1330  -1330 
+   147   -197  -1330   -166 
+ -1330    237  -1330  -1330 
+   156  -1330   -143   -340 
+ -1330    229  -1330   -266 
+   144   -329   -165   -181 
+ -1330    229   -265   -398 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 101 E= 1.9e-026 
+ 0.742574  0.000000  0.257426  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.851485  0.049505  0.000000  0.099010 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.900990  0.000000  0.069307  0.029703 
+ 0.000000  0.950495  0.000000  0.049505 
+ 0.831683  0.019802  0.059406  0.089109 
+ 0.000000  0.950495  0.029703  0.019802 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif ACACACAC MEME-1 regular expression
+--------------------------------------------------------------------------------
+[AG]CACACAC
+--------------------------------------------------------------------------------
+
+
+
+
+Time 24.56 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF TGTGTGTG MEME-2	width =   8  sites =  76  llr = 698  E-value = 3.9e-007
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  :1::::::
+pos.-specific     C  ::::1:1:
+probability       G  :919:9:a
+matrix            T  a:91919:
+
+         bits    2.4        *
+                 2.2        *
+                 1.9    *   *
+                 1.7  * * * *
+Relative         1.5 **** ***
+Entropy          1.2 ********
+(13.2 bits)      1.0 ********
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           TGTGTGTG
+consensus                    
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+chr2R:10429817-10430317     199  1.15e-05 tgcttgtttg tgtgtgtg tgGACAGTGA
+chr3R:14057137-14057637     406  1.15e-05 AATTAAGTGT TGTGTGTG CGTCCAATTG
+chr3R:21630465-21630965     273  1.15e-05 CCACGGTGTG TGTGTGTG TTGGAGGGGG
+chr3L:16159859-16160359     176  1.15e-05 AGTCGGCGTG TGTGTGTG AGTAAACTTG
+chr3R:30805920-30806420      89  1.15e-05 GTTGCATTTG TGTGTGTG CTTCGCATTT
+chr2L:9176355-9176855       298  1.15e-05 TGTGCGTGCG TGTGTGTG AGTGCGTGTC
+chr3R:8357562-8358062       206  1.15e-05 CTCGAgtgtg tgtgtgtg tttgtgcgag
+chrX:8412276-8412776        234  1.15e-05 CTTACGGTTC TGTGTGTG CGTGTATGTA
+chr3R:30805720-30806220     289  1.15e-05 GTTGCATTTG TGTGTGTG CTTCGCATTT
+chr2R:22561330-22561830     492  1.15e-05 ctCGCCtgcg tgtgtgtg c         
+chr3R:15293119-15293619      78  1.15e-05 AATTTCAAGG TGTGTGTG ACTAAGCCGT
+chr2R:23746067-23746567     480  1.15e-05 AGGTTACGTA TGTGTGTG CGTGTGTTTG
+chr3L:18002772-18003272     381  1.15e-05 TAATCGGGCG TGTGTGTG AGAACTACGC
+chr2L:8100352-8100852       108  1.15e-05 tgtatgtgtg tgtgtgtg GAAAATCTAC
+chr2L:19791029-19791529     162  1.15e-05 CAGGTGAGAG TGTGTGTG TGAGTGTGGC
+chr2L:2197637-2198137       149  1.15e-05 GTGTGCTTGG TGTGTGTG TTCTCTTGGC
+chrX:15312539-15313039      271  1.15e-05 tgtgtatgCG TGTGTGTG TGGAGGAGCG
+chr4:960141-960641          219  1.15e-05 cagacaactg tgtgtgtg cacacgtatc
+chr3L:1349684-1350184        24  1.15e-05 CGCGAGCGGG TGTGTGTG TGTGTGCGCG
+chr2L:6724179-6724679       326  1.15e-05 AGCGAACGTG TGTGTGTG TAGTAAAATA
+chr3L:10660254-10660754     340  1.15e-05 CATGTGTGCG TGTGTGTG TACGGCTTTT
+chr3R:21618701-21619201     261  1.15e-05 AGCGCGCgtg tgtgtgtg tatgtgtgtg
+chr3L:10664888-10665388      86  1.15e-05 GGCCTATCtg tgtgtgtg tacgtgtgtg
+chr4:1318797-1319297        266  1.15e-05 tccccttaaa tgtgtgtg aggtggatgg
+chrX:17076729-17077229      116  1.15e-05 TTTGCCTGTG TGTGTGTG ATTGTGAGTA
+chr3R:21620456-21620956     225  1.15e-05 ATTGGGCCCA TGTGTGTG TTTACAGTTT
+chr2R:19164304-19164804     134  1.15e-05 cgcgtgtttc tgtgtgtg cgtgtgtggc
+chrX:3730446-3730946        493  1.15e-05 CAAAGATGTG TGTGTGTG           
+chr3R:17897437-17897937     310  1.15e-05 Agtgtgtgcg tgtgtgtg tgCTTCCTGT
+chr2R:13018158-13018658     218  1.15e-05 TGAGTGTGTG TGTGTGTG CTCTGCTCAT
+chr3L:21008979-21009479     248  1.86e-05 TTTCTAAGAA TGTGCGTG AGAATTTCAC
+chr2L:6722812-6723312       198  1.86e-05 TGCCCACGCG TGTGCGtg tgtaggtgta
+chr3R:28889231-28889731     300  1.86e-05 aatgtgtgcg tgtgcgtg CCAGCTGTAT
+chr3R:20253991-20254491     295  1.86e-05 AGAATTAATA TGTGCGTG TGTATGTATG
+chr2L:11806308-11806808     348  1.86e-05 AAGAGCTGTA TGTGCGTG CATCTCCTCG
+chr4:247987-248487          369  1.86e-05 cgcgtatatg tgtgcgtg ttgttctaga
+chr2L:5980192-5980692       153  3.26e-05 GCGCCTGGAG TGGGTGTG TGAGCGAGAC
+chr3L:17967421-17967921      38  3.26e-05 GGGGGGCGCT TGTGTGCG CTAAATTTCG
+chr3L:16377650-16378150     284  3.26e-05 TGCTGCTGTT TGTGTGCG AGGGCATTTG
+chrX:21281391-21281891       24  3.26e-05 CGTGCGCGAG TGTGTGCG TTTTTGTTTT
+chr2L:19157037-19157537     419  3.26e-05 GGCTTAAAAG TGGGTGTG AAAACAAATT
+chrX:16424099-16424599       27  3.26e-05 TGCTTTGGTA TGGGTGTG TGGCTAGGTT
+chr3L:7815674-7816174       449  3.26e-05 tgtgtttgtg tgggtgtg tgtttgCTTA
+chr4:209840-210340          425  7.08e-05 ATAGTGTTTC TATGTGTG GCCCAGCCAG
+chrM:4518-5018              173  7.08e-05 TTCAATCTTA TGTGTTTG CTGTATTAAG
+chrM:4297-4797              394  7.08e-05 TTCAATCTTA TGTGTTTG CTGTATTAAG
+chr3R:31059344-31059844      32  7.08e-05 AAAAGAGACG TGTGTTTG TGTATGCGTG
+chr2L:2037912-2038412       375  7.08e-05 TACACATATA TATGTGTG TACTGTAGCA
+chrX:10802119-10802619      308  7.08e-05 CACACATGTG TATGTGTG AATGTTGTTT
+chr3R:25122259-25122759     269  7.08e-05 TCGAAATGGA TATGTGTG GATTGTATCT
+chr2R:20597471-20597971      52  7.08e-05 TGTCTCCAAA TATGTGTG AATAATGTGG
+chr2R:11602852-11603352      66  7.08e-05 TATCAAAACA TGTGTTTG AGTTCTTTTC
+chr2R:20597264-20597764     259  7.08e-05 TGTCTCCAAA TATGTGTG AATAATGTGG
+chr2L:18144198-18144698      98  7.08e-05 AATCAACGAG TATGTGTG TACGTATGTA
+chr3R:22781979-22782479      77  7.08e-05 CGAGAGTGTC TGTGTTTG TGTACTTTCT
+chr3R:5078195-5078695       328  7.08e-05 TAGATCTAAA TATGTGTG AAAACTGTTG
+chrX:12752895-12753395      330  7.08e-05 GTTTGATATC TGTGTTTG TCTCGAATTG
+chrX:12738431-12738931       72  7.08e-05 TGTGCATATG TATGTGTG TTCCTTTTTC
+chr3L:14540122-14540622     129  7.08e-05 TATTTAATCC TATGTGTG TCTAGCTTTC
+chr3L:7814088-7814588        39  7.08e-05 GTTTATCGTA TATGTGTG AATTCATTCA
+chrX:6710417-6710917        208  7.08e-05 GGAAGCAAAT TGTGTTTG GTCTTATTCG
+chr3L:546446-546946         382  7.08e-05 GGAACCGGCT TGTGTTTG CTTTAATTTG
+chr2L:16530771-16531271     245  7.79e-05 GTGTTTTATC CGTGTGTG TTTTTTTTTT
+chrX:130620-131120          317  7.79e-05 GATTGTCGGG CGTGTGTG AGTTTTATTT
+chr3R:6409899-6410399       389  7.79e-05 CCCCTTTCCA CGTGTGTG TATAGTGCTT
+chrX:2294732-2295232        178  9.72e-05 AGTTTGCACG TGTTTGTG CAAAGTGTTT
+chrX:11714193-11714693      262  9.72e-05 CTGTTGTTGT TGTTTGTG CTTTTTTCGT
+chr3L:11561774-11562274     454  9.72e-05 CTTCTTCACT TGTTTGTG CACTTTGTTG
+chr3R:20264227-20264727     216  9.72e-05 TTGATTTGTT TGTTTGTG TGCAGGAGTT
+chr3R:8813812-8814312       366  9.72e-05 AATATCTGGG TGTTTGTG AAATCGCAGC
+chr3L:9567456-9567956       391  9.72e-05 GTTTAGCACT TGTTTGTG AAATTTACAC
+chr2L:16520104-16520604      62  1.06e-04 TTTTGTTTGC TGTGCGCG AAAGCGACGA
+chr2R:13823700-13824200     448  1.30e-04 ATTAAAACgc tgtgcttg ttactcttgc
+chrX:16104043-16104543       77  1.30e-04 agtttgagtt tgtgcttg ctttggttAT
+chr3R:14650305-14650805     246  1.30e-04 GATTACAATA TGTGCTTG GGAGGAACAA
+chrX:19578762-19579262       29  1.50e-04 GGCTTTTCCT TGGGTGCG GACTAGGCAC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chr2R:10429817-10430317           1.1e-05  198_[+2]_294
+chr3R:14057137-14057637           1.1e-05  405_[+2]_87
+chr3R:21630465-21630965           1.1e-05  272_[+2]_220
+chr3L:16159859-16160359           1.1e-05  175_[+2]_317
+chr3R:30805920-30806420           1.1e-05  88_[+2]_404
+chr2L:9176355-9176855             1.1e-05  297_[+2]_195
+chr3R:8357562-8358062             1.1e-05  205_[+2]_287
+chrX:8412276-8412776              1.1e-05  233_[+2]_259
+chr3R:30805720-30806220           1.1e-05  288_[+2]_204
+chr2R:22561330-22561830           1.1e-05  491_[+2]_1
+chr3R:15293119-15293619           1.1e-05  77_[+2]_415
+chr2R:23746067-23746567           1.1e-05  479_[+2]_13
+chr3L:18002772-18003272           1.1e-05  380_[+2]_112
+chr2L:8100352-8100852             1.1e-05  107_[+2]_385
+chr2L:19791029-19791529           1.1e-05  161_[+2]_331
+chr2L:2197637-2198137             1.1e-05  148_[+2]_344
+chrX:15312539-15313039            1.1e-05  270_[+2]_222
+chr4:960141-960641                1.1e-05  218_[+2]_274
+chr3L:1349684-1350184             1.1e-05  23_[+2]_469
+chr2L:6724179-6724679             1.1e-05  325_[+2]_167
+chr3L:10660254-10660754           1.1e-05  339_[+2]_153
+chr3R:21618701-21619201           1.1e-05  260_[+2]_232
+chr3L:10664888-10665388           1.1e-05  85_[+2]_407
+chr4:1318797-1319297              1.1e-05  265_[+2]_227
+chrX:17076729-17077229            1.1e-05  115_[+2]_377
+chr3R:21620456-21620956           1.1e-05  224_[+2]_268
+chr2R:19164304-19164804           1.1e-05  133_[+2]_359
+chrX:3730446-3730946              1.1e-05  492_[+2]
+chr3R:17897437-17897937           1.1e-05  309_[+2]_183
+chr2R:13018158-13018658           1.1e-05  217_[+2]_275
+chr3L:21008979-21009479           1.9e-05  247_[+2]_245
+chr2L:6722812-6723312             1.9e-05  197_[+2]_295
+chr3R:28889231-28889731           1.9e-05  299_[+2]_193
+chr3R:20253991-20254491           1.9e-05  294_[+2]_198
+chr2L:11806308-11806808           1.9e-05  347_[+2]_145
+chr4:247987-248487                1.9e-05  368_[+2]_124
+chr2L:5980192-5980692             3.3e-05  152_[+2]_340
+chr3L:17967421-17967921           3.3e-05  37_[+2]_455
+chr3L:16377650-16378150           3.3e-05  283_[+2]_209
+chrX:21281391-21281891            3.3e-05  23_[+2]_469
+chr2L:19157037-19157537           3.3e-05  418_[+2]_74
+chrX:16424099-16424599            3.3e-05  26_[+2]_466
+chr3L:7815674-7816174             3.3e-05  448_[+2]_44
+chr4:209840-210340                7.1e-05  424_[+2]_68
+chrM:4518-5018                    7.1e-05  172_[+2]_320
+chrM:4297-4797                    7.1e-05  393_[+2]_99
+chr3R:31059344-31059844           7.1e-05  31_[+2]_461
+chr2L:2037912-2038412             7.1e-05  374_[+2]_118
+chrX:10802119-10802619            7.1e-05  307_[+2]_185
+chr3R:25122259-25122759           7.1e-05  268_[+2]_224
+chr2R:20597471-20597971           7.1e-05  51_[+2]_441
+chr2R:11602852-11603352           7.1e-05  65_[+2]_427
+chr2R:20597264-20597764           7.1e-05  258_[+2]_234
+chr2L:18144198-18144698           7.1e-05  97_[+2]_395
+chr3R:22781979-22782479           7.1e-05  76_[+2]_416
+chr3R:5078195-5078695             7.1e-05  327_[+2]_165
+chrX:12752895-12753395            7.1e-05  329_[+2]_163
+chrX:12738431-12738931            7.1e-05  71_[+2]_421
+chr3L:14540122-14540622           7.1e-05  128_[+2]_364
+chr3L:7814088-7814588             7.1e-05  38_[+2]_454
+chrX:6710417-6710917              7.1e-05  207_[+2]_285
+chr3L:546446-546946               7.1e-05  381_[+2]_111
+chr2L:16530771-16531271           7.8e-05  244_[+2]_248
+chrX:130620-131120                7.8e-05  316_[+2]_176
+chr3R:6409899-6410399             7.8e-05  388_[+2]_104
+chrX:2294732-2295232              9.7e-05  177_[+2]_315
+chrX:11714193-11714693            9.7e-05  261_[+2]_231
+chr3L:11561774-11562274           9.7e-05  453_[+2]_39
+chr3R:20264227-20264727           9.7e-05  215_[+2]_277
+chr3R:8813812-8814312             9.7e-05  365_[+2]_127
+chr3L:9567456-9567956             9.7e-05  390_[+2]_102
+chr2L:16520104-16520604           0.00011  61_[+2]_431
+chr2R:13823700-13824200           0.00013  447_[+2]_45
+chrX:16104043-16104543            0.00013  76_[+2]_416
+chr3R:14650305-14650805           0.00013  245_[+2]_247
+chrX:19578762-19579262            0.00015  28_[+2]_464
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF TGTGTGTG width=8 seqs=76
+chr2R:10429817-10430317  (  199) TGTGTGTG  1 
+chr3R:14057137-14057637  (  406) TGTGTGTG  1 
+chr3R:21630465-21630965  (  273) TGTGTGTG  1 
+chr3L:16159859-16160359  (  176) TGTGTGTG  1 
+chr3R:30805920-30806420  (   89) TGTGTGTG  1 
+chr2L:9176355-9176855    (  298) TGTGTGTG  1 
+chr3R:8357562-8358062    (  206) TGTGTGTG  1 
+chrX:8412276-8412776     (  234) TGTGTGTG  1 
+chr3R:30805720-30806220  (  289) TGTGTGTG  1 
+chr2R:22561330-22561830  (  492) TGTGTGTG  1 
+chr3R:15293119-15293619  (   78) TGTGTGTG  1 
+chr2R:23746067-23746567  (  480) TGTGTGTG  1 
+chr3L:18002772-18003272  (  381) TGTGTGTG  1 
+chr2L:8100352-8100852    (  108) TGTGTGTG  1 
+chr2L:19791029-19791529  (  162) TGTGTGTG  1 
+chr2L:2197637-2198137    (  149) TGTGTGTG  1 
+chrX:15312539-15313039   (  271) TGTGTGTG  1 
+chr4:960141-960641       (  219) TGTGTGTG  1 
+chr3L:1349684-1350184    (   24) TGTGTGTG  1 
+chr2L:6724179-6724679    (  326) TGTGTGTG  1 
+chr3L:10660254-10660754  (  340) TGTGTGTG  1 
+chr3R:21618701-21619201  (  261) TGTGTGTG  1 
+chr3L:10664888-10665388  (   86) TGTGTGTG  1 
+chr4:1318797-1319297     (  266) TGTGTGTG  1 
+chrX:17076729-17077229   (  116) TGTGTGTG  1 
+chr3R:21620456-21620956  (  225) TGTGTGTG  1 
+chr2R:19164304-19164804  (  134) TGTGTGTG  1 
+chrX:3730446-3730946     (  493) TGTGTGTG  1 
+chr3R:17897437-17897937  (  310) TGTGTGTG  1 
+chr2R:13018158-13018658  (  218) TGTGTGTG  1 
+chr3L:21008979-21009479  (  248) TGTGCGTG  1 
+chr2L:6722812-6723312    (  198) TGTGCGTG  1 
+chr3R:28889231-28889731  (  300) TGTGCGTG  1 
+chr3R:20253991-20254491  (  295) TGTGCGTG  1 
+chr2L:11806308-11806808  (  348) TGTGCGTG  1 
+chr4:247987-248487       (  369) TGTGCGTG  1 
+chr2L:5980192-5980692    (  153) TGGGTGTG  1 
+chr3L:17967421-17967921  (   38) TGTGTGCG  1 
+chr3L:16377650-16378150  (  284) TGTGTGCG  1 
+chrX:21281391-21281891   (   24) TGTGTGCG  1 
+chr2L:19157037-19157537  (  419) TGGGTGTG  1 
+chrX:16424099-16424599   (   27) TGGGTGTG  1 
+chr3L:7815674-7816174    (  449) TGGGTGTG  1 
+chr4:209840-210340       (  425) TATGTGTG  1 
+chrM:4518-5018           (  173) TGTGTTTG  1 
+chrM:4297-4797           (  394) TGTGTTTG  1 
+chr3R:31059344-31059844  (   32) TGTGTTTG  1 
+chr2L:2037912-2038412    (  375) TATGTGTG  1 
+chrX:10802119-10802619   (  308) TATGTGTG  1 
+chr3R:25122259-25122759  (  269) TATGTGTG  1 
+chr2R:20597471-20597971  (   52) TATGTGTG  1 
+chr2R:11602852-11603352  (   66) TGTGTTTG  1 
+chr2R:20597264-20597764  (  259) TATGTGTG  1 
+chr2L:18144198-18144698  (   98) TATGTGTG  1 
+chr3R:22781979-22782479  (   77) TGTGTTTG  1 
+chr3R:5078195-5078695    (  328) TATGTGTG  1 
+chrX:12752895-12753395   (  330) TGTGTTTG  1 
+chrX:12738431-12738931   (   72) TATGTGTG  1 
+chr3L:14540122-14540622  (  129) TATGTGTG  1 
+chr3L:7814088-7814588    (   39) TATGTGTG  1 
+chrX:6710417-6710917     (  208) TGTGTTTG  1 
+chr3L:546446-546946      (  382) TGTGTTTG  1 
+chr2L:16530771-16531271  (  245) CGTGTGTG  1 
+chrX:130620-131120       (  317) CGTGTGTG  1 
+chr3R:6409899-6410399    (  389) CGTGTGTG  1 
+chrX:2294732-2295232     (  178) TGTTTGTG  1 
+chrX:11714193-11714693   (  262) TGTTTGTG  1 
+chr3L:11561774-11562274  (  454) TGTTTGTG  1 
+chr3R:20264227-20264727  (  216) TGTTTGTG  1 
+chr3R:8813812-8814312    (  366) TGTTTGTG  1 
+chr3L:9567456-9567956    (  391) TGTTTGTG  1 
+chr2L:16520104-16520604  (   62) TGTGCGCG  1 
+chr2R:13823700-13824200  (  448) TGTGCTTG  1 
+chrX:16104043-16104543   (   77) TGTGCTTG  1 
+chr3R:14650305-14650805  (  246) TGTGCTTG  1 
+chrX:19578762-19579262   (   29) TGGGTGCG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 123250 bayes= 12.1035 E= 3.9e-007 
+ -1289   -230  -1289    162 
+  -108  -1289    220  -1289 
+ -1289  -1289   -150    158 
+ -1289  -1289    231   -199 
+ -1289    -56  -1289    147 
+ -1289  -1289    220   -111 
+ -1289   -156  -1289    158 
+ -1289  -1289    242  -1289 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 76 E= 3.9e-007 
+ 0.000000  0.039474  0.000000  0.960526 
+ 0.144737  0.000000  0.855263  0.000000 
+ 0.000000  0.000000  0.065789  0.934211 
+ 0.000000  0.000000  0.921053  0.078947 
+ 0.000000  0.131579  0.000000  0.868421 
+ 0.000000  0.000000  0.855263  0.144737 
+ 0.000000  0.065789  0.000000  0.934211 
+ 0.000000  0.000000  1.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TGTGTGTG MEME-2 regular expression
+--------------------------------------------------------------------------------
+TGTGTGTG
+--------------------------------------------------------------------------------
+
+
+
+
+Time 47.00 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GGGRKGGG MEME-3	width =   8  sites =  35  llr = 362  E-value = 1.5e-004
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::3::::
+pos.-specific     C  :1:2::::
+probability       G  a7a55aaa
+matrix            T  :3::4:::
+
+         bits    2.4 * *  ***
+                 2.2 * *  ***
+                 1.9 * *  ***
+                 1.7 * *  ***
+Relative         1.5 * *  ***
+Entropy          1.2 * *  ***
+(14.9 bits)      1.0 *** ****
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           GGGGGGGG
+consensus             T AT   
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+chr2L:16533449-16533949       8  1.43e-06    acaaAAG GGGGGGGG ATAGGATGGG
+chr3L:17967421-17967921      17  1.43e-06 TTTTCGAGGG GGGGGGGG GAAGGGGGGC
+chr2R:10101851-10102351     143  1.43e-06 ggggtttggg gggggggg gggggTTCTT
+chr2R:18316374-18316874     165  1.43e-06 tgtgtgtgtg GGGGGGGG GAGGGGGGAG
+chr3R:7106798-7107298       244  1.43e-06 ggggggtggg gggggggg gcggACCGAG
+chrX:3730446-3730946        134  1.43e-06 ggggggcggg gggggggg ggggAAGGGC
+chr2R:5683395-5683895       370  1.43e-06 ggggctgggg gggggggg ggTGTTGGCA
+chr3R:17706125-17706625     426  3.84e-06 GGAAGGGGTG GGGGTGGG GGATTTACCA
+chr3L:628869-629369         401  3.84e-06 ACAGAGTTGT GGGGTGGG AGTGGATAAG
+chr3R:23729547-23730047     458  3.84e-06 GATTCCAAGG GGGGTGGG GGTTATATAT
+chr2L:9567750-9568250       452  3.84e-06 AGATCCTTTC GGGGTGGG TGACTAGCCT
+chr3R:17897437-17897937      54  3.84e-06 CACGAAAGGG GGGGTGGG GGGAAGTGAA
+chr3L:17994983-17995483     343  7.69e-06 ATGCGGTAAG GGGCGGGG GTTTTGGGGG
+chr2R:11602852-11603352     444  7.69e-06 GGGGAAGATG GGGAGGGG GGAGCAGGAT
+chr4:1318797-1319297         82  7.69e-06 ctatatgaga gggagggg aaatttccca
+chrX:2294732-2295232         59  1.01e-05 AGTGCTGTGA GTGGGGGG ATCTTTGTTT
+chr2L:246883-247383          81  1.01e-05 AGACGGCTGA GTGGGGGG CCGTGTGCCG
+chr3R:6409899-6410399       106  1.01e-05 AGGGGATTCT GTGGGGGG AGTAGCCTGC
+chr3R:4745626-4746126       287  1.66e-05 CTGTCCTCGG GGGCTGGG AGTGGGTTCG
+chr3R:14285556-14286056     476  1.66e-05 TGAAATCGAC GGGATGGG ATATGATAAT
+chr3R:14285844-14286344     188  1.66e-05 TGAAATCGAC GGGATGGG ATATGATAAT
+chr3R:4745425-4745925       488  1.66e-05 CTGTCCTCGG GGGCTGGG AGTGG     
+chr3R:23336725-23337225     293  1.66e-05 CAGGAACAGG GGGCTGGG CCCACCGGAA
+chr3L:7814088-7814588       463  1.66e-05 ATGCGGCGAG GGGATGGG GGCATCTGTG
+chrX:10800555-10801055       20  1.66e-05 GGGTATTTTT GGGATGGG AAGTTAGGCC
+chr3R:28889231-28889731     359  2.06e-05 GCTGAAAGGG GTGGTGGG TGATACAGGG
+chrX:2042182-2042682        142  2.21e-05 GAAAGCGATT GCGGGGGG CGAAGAACTG
+chr3L:10660254-10660754      36  2.21e-05 AAATTGCACT GCGGGGGG TGAAGAGGAG
+chr3L:2635897-2636397        86  2.86e-05 CCTGCCGATT GTGAGGGG AAAATGTGAA
+chr3L:7815674-7816174       426  2.86e-05 GCACGACGCC GTGAGGGG TTTCTtgtgt
+chr2R:6172159-6172659       368  2.86e-05 attgttctaa gtgagggg gtgaccggtt
+chrX:2648348-2648848        335  2.86e-05 TGTATCTTTA GTGCGGGG ATCACTTTTC
+chr2R:18800661-18801161     337  3.01e-05 GCCCATTAGT GGGGCGGG ACAATCGAAG
+chr3L:8704754-8705254       108  4.35e-05 TACGTCCATC GTGATGGG TTAAAAGTGC
+chr3L:14673968-14674468     398  4.35e-05 CAGTGGAAGC GTGCTGGG CCCATAACCC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chr2L:16533449-16533949           1.4e-06  7_[+3]_485
+chr3L:17967421-17967921           1.4e-06  16_[+3]_476
+chr2R:10101851-10102351           1.4e-06  142_[+3]_350
+chr2R:18316374-18316874           1.4e-06  164_[+3]_328
+chr3R:7106798-7107298             1.4e-06  243_[+3]_249
+chrX:3730446-3730946              1.4e-06  133_[+3]_359
+chr2R:5683395-5683895             1.4e-06  369_[+3]_123
+chr3R:17706125-17706625           3.8e-06  425_[+3]_67
+chr3L:628869-629369               3.8e-06  400_[+3]_92
+chr3R:23729547-23730047           3.8e-06  457_[+3]_35
+chr2L:9567750-9568250             3.8e-06  451_[+3]_41
+chr3R:17897437-17897937           3.8e-06  53_[+3]_439
+chr3L:17994983-17995483           7.7e-06  342_[+3]_150
+chr2R:11602852-11603352           7.7e-06  443_[+3]_49
+chr4:1318797-1319297              7.7e-06  81_[+3]_411
+chrX:2294732-2295232                1e-05  58_[+3]_434
+chr2L:246883-247383                 1e-05  80_[+3]_412
+chr3R:6409899-6410399               1e-05  105_[+3]_387
+chr3R:4745626-4746126             1.7e-05  286_[+3]_206
+chr3R:14285556-14286056           1.7e-05  475_[+3]_17
+chr3R:14285844-14286344           1.7e-05  187_[+3]_305
+chr3R:4745425-4745925             1.7e-05  487_[+3]_5
+chr3R:23336725-23337225           1.7e-05  292_[+3]_200
+chr3L:7814088-7814588             1.7e-05  462_[+3]_30
+chrX:10800555-10801055            1.7e-05  19_[+3]_473
+chr3R:28889231-28889731           2.1e-05  358_[+3]_134
+chrX:2042182-2042682              2.2e-05  141_[+3]_351
+chr3L:10660254-10660754           2.2e-05  35_[+3]_457
+chr3L:2635897-2636397             2.9e-05  85_[+3]_407
+chr3L:7815674-7816174             2.9e-05  425_[+3]_67
+chr2R:6172159-6172659             2.9e-05  367_[+3]_125
+chrX:2648348-2648848              2.9e-05  334_[+3]_158
+chr2R:18800661-18801161             3e-05  336_[+3]_156
+chr3L:8704754-8705254             4.4e-05  107_[+3]_385
+chr3L:14673968-14674468           4.4e-05  397_[+3]_95
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GGGRKGGG width=8 seqs=35
+chr2L:16533449-16533949  (    8) GGGGGGGG  1 
+chr3L:17967421-17967921  (   17) GGGGGGGG  1 
+chr2R:10101851-10102351  (  143) GGGGGGGG  1 
+chr2R:18316374-18316874  (  165) GGGGGGGG  1 
+chr3R:7106798-7107298    (  244) GGGGGGGG  1 
+chrX:3730446-3730946     (  134) GGGGGGGG  1 
+chr2R:5683395-5683895    (  370) GGGGGGGG  1 
+chr3R:17706125-17706625  (  426) GGGGTGGG  1 
+chr3L:628869-629369      (  401) GGGGTGGG  1 
+chr3R:23729547-23730047  (  458) GGGGTGGG  1 
+chr2L:9567750-9568250    (  452) GGGGTGGG  1 
+chr3R:17897437-17897937  (   54) GGGGTGGG  1 
+chr3L:17994983-17995483  (  343) GGGCGGGG  1 
+chr2R:11602852-11603352  (  444) GGGAGGGG  1 
+chr4:1318797-1319297     (   82) GGGAGGGG  1 
+chrX:2294732-2295232     (   59) GTGGGGGG  1 
+chr2L:246883-247383      (   81) GTGGGGGG  1 
+chr3R:6409899-6410399    (  106) GTGGGGGG  1 
+chr3R:4745626-4746126    (  287) GGGCTGGG  1 
+chr3R:14285556-14286056  (  476) GGGATGGG  1 
+chr3R:14285844-14286344  (  188) GGGATGGG  1 
+chr3R:4745425-4745925    (  488) GGGCTGGG  1 
+chr3R:23336725-23337225  (  293) GGGCTGGG  1 
+chr3L:7814088-7814588    (  463) GGGATGGG  1 
+chrX:10800555-10801055   (   20) GGGATGGG  1 
+chr3R:28889231-28889731  (  359) GTGGTGGG  1 
+chrX:2042182-2042682     (  142) GCGGGGGG  1 
+chr3L:10660254-10660754  (   36) GCGGGGGG  1 
+chr3L:2635897-2636397    (   86) GTGAGGGG  1 
+chr3L:7815674-7816174    (  426) GTGAGGGG  1 
+chr2R:6172159-6172659    (  368) GTGAGGGG  1 
+chrX:2648348-2648848     (  335) GTGCGGGG  1 
+chr2R:18800661-18801161  (  337) GGGGCGGG  1 
+chr3L:8704754-8705254    (  108) GTGATGGG  1 
+chr3L:14673968-14674468  (  398) GTGCTGGG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 123250 bayes= 13.8068 E= 1.5e-004 
+ -1177  -1177    242  -1177 
+ -1177   -176    182    -13 
+ -1177  -1177    242  -1177 
+   -10    -18    154  -1177 
+ -1177   -276    154     45 
+ -1177  -1177    242  -1177 
+ -1177  -1177    242  -1177 
+ -1177  -1177    242  -1177 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 35 E= 1.5e-004 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.057143  0.657143  0.285714 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.285714  0.171429  0.542857  0.000000 
+ 0.000000  0.028571  0.542857  0.428571 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGGRKGGG MEME-3 regular expression
+--------------------------------------------------------------------------------
+G[GT]G[GA][GT]GGG
+--------------------------------------------------------------------------------
+
+
+
+
+Time 69.22 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GGSRGMGR MEME-4	width =   8  sites =  73  llr = 653  E-value = 1.1e+000
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::6:5:4
+pos.-specific     C  :35::5:2
+probability       G  a754a:a4
+matrix            T  ::::::::
+
+         bits    2.4 *   * * 
+                 2.2 *   * * 
+                 1.9 *   * * 
+                 1.7 *   * * 
+Relative         1.5 *** * * 
+Entropy          1.2 *** * * 
+(12.9 bits)      1.0 ******* 
+                 0.7 ********
+                 0.5 ********
+                 0.2 ********
+                 0.0 --------
+
+Multilevel           GGGAGCGA
+consensus             CCG A G
+sequence                     
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+chr2R:23617654-23618154       2  1.49e-06          T GGGGGCGG TTCTTTTTTT
+chrX:3730446-3730946        125  1.49e-06 TTGGTTGAAg gggggcgg gggggggggg
+chr3R:17897437-17897937      22  1.49e-06 GGTAGGCAGA GGGGGCGG TGCTGGCGTT
+chr4:415537-416037          305  5.51e-06 AAGGAGTTGC GGCGGCGG CAGCGAAAAA
+chr2L:17381812-17382312      56  5.51e-06 GCGGAAAACG GGGAGCGG AGTGGATTGG
+chr3R:5078195-5078695       216  5.51e-06 AACCATACTT GGCGGCGG TCAAAAGCAG
+chr2R:18352073-18352573     292  5.51e-06 GAAAATTTTA GGGAGCGG CATATTATAA
+chr2L:17377625-17378125     304  5.51e-06 TAGCCATGTG GGCGGCGG ATTCTCCACC
+chr3L:10664888-10665388     256  8.07e-06 GCCGCAAAAA GGCAGCGG CGTCGACGTC
+chr2L:16533449-16533949      63  1.29e-05 CGGCTGGAGA GGGGGAGG GGTGGCGGAC
+chr2R:11182591-11183091     195  1.29e-05 GGAAACGAGA GGGGGCGA GCCAGGTAAA
+chr3L:21013477-21013977     224  1.29e-05 TGGAGAAGAA GGGGGAGG AAAAGAGGAG
+chr2R:13047377-13047877       6  1.29e-05      GGCAT GGGGGCGA GAGTCTGGCA
+chr2R:18316374-18316874     176  1.29e-05 GGGGGGGGAG GGGGGAGG GGTATGGAAT
+chrX:12752895-12753395      376  1.29e-05 GTTGGAAAAA GGGGGAGG TTCCTGGCCC
+chr3R:14650305-14650805       2  1.29e-05          C GGGGGCGA ATTGCTGGAC
+chr2R:19229633-19230133     229  2.58e-05 CTTTGCGAGC GGGAGCGA AAAGAGAGCT
+chr3L:5655437-5655937       462  2.58e-05 GCAGCGAAAT GGGAGCGA GCGAAGTGAA
+chr3R:15293119-15293619     407  2.58e-05 AAAAGAGACA GGGAGAGG GTGAGAAAAG
+chr2L:2037912-2038412       306  2.58e-05 GAGTGGGAGT GGGAGAGG TAGTTACCTT
+chr3R:20265742-20266242     222  2.58e-05 AAGGAGCAAC GGCGGAGG CCTCGATAAG
+chrX:521891-522391          148  2.58e-05 TTAGGAGGTG GGCGGAGG GGACTCAAAC
+chr2L:18144198-18144698      43  2.58e-05 GATTGTTTAT GGCGGCGA TGAATTGAAA
+chrX:8058889-8059389        325  2.58e-05 AATGGAAATT GGGAGAGG GCGCGAAGTC
+chr3R:23336725-23337225      10  2.58e-05  agcagcagc ggcGGAGG GAAAAAAGGT
+chr3R:7106798-7107298       454  2.58e-05 gcgacgacga ggcggagg tcgagtgctg
+chr3R:28889231-28889731       9  3.72e-05   ACAACAAC GGCAGCGA CAGCGACGCT
+chr3L:17967421-17967921      29  3.72e-05 GGGGGGGAAG GGGGGCGC TTGTGTGCGC
+chr2R:22561330-22561830      99  3.72e-05 CGCCGTCGTC GGCAGCGA CGTCGACGTC
+chr4:557129-557629          187  3.72e-05 TGTGGCAGAT GGCAGCGA GAGGAACGGA
+chr3L:628869-629369         276  3.72e-05 TGATGATTAA GGCAGCGA TGATGAATGA
+chr2R:10542595-10543095     399  3.72e-05 GCACAGGAGA GGGGGCGC AAACACTCAC
+chr3L:9567456-9567956       422  3.72e-05 TCGAATAAAA GGCAGAGG AAAGAAACGC
+chr3L:20193004-20193504     361  3.72e-05 TGGAGATACT GGCAGCGA GCGGCATCAG
+chr3R:23339964-23340464     492  3.72e-05 GGAGGGCAAA GCGGGCGG C         
+chr2L:6722812-6723312       293  4.11e-05 AACATCATAG GGGGGAGA TGTCAGCTAG
+chr3R:16209259-16209759     308  4.95e-05 GCAGCAGCCA GCGAGCGG CGATGAACAA
+chr3L:1349684-1350184        15  4.95e-05 CCTGCTCAAC GCGAGCGG GTGTGTGTGT
+chr2R:1513653-1514153       122  4.95e-05 GTGTTTCATT GGGAGCGC TTGTTCGTTG
+chr3L:11259426-11259926     413  4.95e-05 CCGTTGACAG GCGAGCGG AAAAAGATTT
+chr2R:10429817-10430317     159  5.99e-05 gtgtgcgaga gggagaga gtgctgccag
+chr3L:16159859-16160359      14  5.99e-05 GCGAAAAGGA GGCGGAGA AACGAATCCG
+chr3R:31059344-31059844      72  5.99e-05 GGCGACAAAA GGGAGAGA AGTAAAATAA
+chr2R:18800661-18801161      86  5.99e-05 TTTGTCTCGC GGCGGAGA GGCCCAGGAA
+chr2R:21474568-21475068     323  5.99e-05 AGAGGAGATG GGCGGAGA AGAAGACACA
+chr3L:10660254-10660754      59  5.99e-05 AGGAGAACGA GGGAGAGA GGATTATGAA
+chr2R:10734453-10734953      82  6.52e-05 AAATTTCCCA GGCAGCGC TCTTCTAGAC
+chr3R:16249078-16249578     330  6.52e-05 GTAGGAAAAT GCCAGCGG GCAACCTTGG
+chr4:57051-57551            120  6.52e-05 TGTTACTTCT GGCAGCGC TTAAATACTT
+chr2L:5980192-5980692        95  7.94e-05 TTTCGAGTGG GGCAGAGA GTGAGCGAGC
+chr2R:23746067-23746567      85  7.94e-05 AATAATATCT GGCAGAGA AAACGCGCAA
+chr2L:19157037-19157537      27  7.94e-05 GTATCGCTGC GGCAGAGA AGTCGACGCC
+chrX:9578632-9579132        364  7.94e-05 CAGAGCCGTC GGCAGAGA CAGATAAAAA
+chrX:19578762-19579262      251  7.94e-05 CACGCTCGTC GGGGGAGC AGACAAATAC
+chrX:12664867-12665367      409  9.95e-05 GGGAGACCGA GCGAGCGA GCCAGGCAGG
+chrX:3378566-3379066         81  9.95e-05 CGCGTCACGT GCGAGCGA GAGCGGCGGT
+chr2L:19791029-19791529     331  9.95e-05 AAAATAATAT GGGAGAGC GAAAAAAAAT
+chr2L:2197637-2198137        46  9.95e-05 TCGTGCGAGT GCGAGCGA GACAGGCAGC
+chr2R:13823700-13824200     273  9.95e-05 gGTCCTCCAA GCCGGAGG GCGTTGGGGA
+chr2R:18356857-18357357     189  9.95e-05 CGACCAGAGA GCGAGAGG CCAACAACAC
+chr4:1318797-1319297        352  9.95e-05 gtattagtga gcgagagg gggtcttttt
+chr3R:14285844-14286344     327  9.95e-05 CTCATCGGCA GCCGGCGA CGCCTTTTAT
+chr2L:12004960-12005460      46  9.95e-05 CGGCAATTCT GCCGGCGA TGGCCCCCAA
+chr2L:246883-247383         108  1.14e-04 GGCCTTTGGC GGCAGAGC TGTCAGCGTC
+chr3L:11256900-11257400     145  1.14e-04 GTCAAAATAT GCCAGAGG TTTTTTTTAT
+chr3L:16052691-16053191     146  1.18e-04 GCATTGTTTT GCGGgaga gcgagtgtga
+chr2L:16520104-16520604     159  1.22e-04 GCCGAAACGT GCGAGCGC GGAAGAGAGT
+chr2R:10101851-10102351     182  1.22e-04 CATGCTGTCG GCCGGCGC AGATAAGGTT
+chr2L:7976591-7977091       319  1.33e-04 CAGACGATGG GCGAGAGA GAAAGAGAGA
+chr4:960141-960641          153  1.33e-04 ttgttcgaga gcgagaga gcggagagcg
+chr4:1026059-1026559        332  1.36e-04 tacaAATTTG GCCAGCGC CCGAATTTAA
+chrX:16424099-16424599      380  1.52e-04 CTTCTCGATT GCGAGAGC AGCTGCGAAT
+chr2R:6115812-6116312       445  1.52e-04 ATTTCCAGAT GCCGGAGC TGAGTGTATA
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chr2R:23617654-23618154           1.5e-06  1_[+4]_491
+chrX:3730446-3730946              1.5e-06  124_[+4]_368
+chr3R:17897437-17897937           1.5e-06  21_[+4]_471
+chr4:415537-416037                5.5e-06  304_[+4]_188
+chr2L:17381812-17382312           5.5e-06  55_[+4]_437
+chr3R:5078195-5078695             5.5e-06  215_[+4]_277
+chr2R:18352073-18352573           5.5e-06  291_[+4]_201
+chr2L:17377625-17378125           5.5e-06  303_[+4]_189
+chr3L:10664888-10665388           8.1e-06  255_[+4]_237
+chr2L:16533449-16533949           1.3e-05  62_[+4]_430
+chr2R:11182591-11183091           1.3e-05  194_[+4]_298
+chr3L:21013477-21013977           1.3e-05  223_[+4]_269
+chr2R:13047377-13047877           1.3e-05  5_[+4]_487
+chr2R:18316374-18316874           1.3e-05  175_[+4]_317
+chrX:12752895-12753395            1.3e-05  375_[+4]_117
+chr3R:14650305-14650805           1.3e-05  1_[+4]_491
+chr2R:19229633-19230133           2.6e-05  228_[+4]_264
+chr3L:5655437-5655937             2.6e-05  461_[+4]_31
+chr3R:15293119-15293619           2.6e-05  406_[+4]_86
+chr2L:2037912-2038412             2.6e-05  305_[+4]_187
+chr3R:20265742-20266242           2.6e-05  221_[+4]_271
+chrX:521891-522391                2.6e-05  147_[+4]_345
+chr2L:18144198-18144698           2.6e-05  42_[+4]_450
+chrX:8058889-8059389              2.6e-05  324_[+4]_168
+chr3R:23336725-23337225           2.6e-05  9_[+4]_483
+chr3R:7106798-7107298             2.6e-05  453_[+4]_39
+chr3R:28889231-28889731           3.7e-05  8_[+4]_484
+chr3L:17967421-17967921           3.7e-05  28_[+4]_464
+chr2R:22561330-22561830           3.7e-05  98_[+4]_394
+chr4:557129-557629                3.7e-05  186_[+4]_306
+chr3L:628869-629369               3.7e-05  275_[+4]_217
+chr2R:10542595-10543095           3.7e-05  398_[+4]_94
+chr3L:9567456-9567956             3.7e-05  421_[+4]_71
+chr3L:20193004-20193504           3.7e-05  360_[+4]_132
+chr3R:23339964-23340464           3.7e-05  491_[+4]_1
+chr2L:6722812-6723312             4.1e-05  292_[+4]_200
+chr3R:16209259-16209759           4.9e-05  307_[+4]_185
+chr3L:1349684-1350184             4.9e-05  14_[+4]_478
+chr2R:1513653-1514153             4.9e-05  121_[+4]_371
+chr3L:11259426-11259926           4.9e-05  412_[+4]_80
+chr2R:10429817-10430317             6e-05  158_[+4]_334
+chr3L:16159859-16160359             6e-05  13_[+4]_479
+chr3R:31059344-31059844             6e-05  71_[+4]_421
+chr2R:18800661-18801161             6e-05  85_[+4]_407
+chr2R:21474568-21475068             6e-05  322_[+4]_170
+chr3L:10660254-10660754             6e-05  58_[+4]_434
+chr2R:10734453-10734953           6.5e-05  81_[+4]_411
+chr3R:16249078-16249578           6.5e-05  329_[+4]_163
+chr4:57051-57551                  6.5e-05  119_[+4]_373
+chr2L:5980192-5980692             7.9e-05  94_[+4]_398
+chr2R:23746067-23746567           7.9e-05  84_[+4]_408
+chr2L:19157037-19157537           7.9e-05  26_[+4]_466
+chrX:9578632-9579132              7.9e-05  363_[+4]_129
+chrX:19578762-19579262            7.9e-05  250_[+4]_242
+chrX:12664867-12665367            9.9e-05  408_[+4]_84
+chrX:3378566-3379066              9.9e-05  80_[+4]_412
+chr2L:19791029-19791529           9.9e-05  330_[+4]_162
+chr2L:2197637-2198137             9.9e-05  45_[+4]_447
+chr2R:13823700-13824200           9.9e-05  272_[+4]_220
+chr2R:18356857-18357357           9.9e-05  188_[+4]_304
+chr4:1318797-1319297              9.9e-05  351_[+4]_141
+chr3R:14285844-14286344           9.9e-05  326_[+4]_166
+chr2L:12004960-12005460           9.9e-05  45_[+4]_447
+chr2L:246883-247383               0.00011  107_[+4]_385
+chr3L:11256900-11257400           0.00011  144_[+4]_348
+chr3L:16052691-16053191           0.00012  145_[+4]_347
+chr2L:16520104-16520604           0.00012  158_[+4]_334
+chr2R:10101851-10102351           0.00012  181_[+4]_311
+chr2L:7976591-7977091             0.00013  318_[+4]_174
+chr4:960141-960641                0.00013  152_[+4]_340
+chr4:1026059-1026559              0.00014  331_[+4]_161
+chrX:16424099-16424599            0.00015  379_[+4]_113
+chr2R:6115812-6116312             0.00015  444_[+4]_48
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GGSRGMGR width=8 seqs=73
+chr2R:23617654-23618154  (    2) GGGGGCGG  1 
+chrX:3730446-3730946     (  125) GGGGGCGG  1 
+chr3R:17897437-17897937  (   22) GGGGGCGG  1 
+chr4:415537-416037       (  305) GGCGGCGG  1 
+chr2L:17381812-17382312  (   56) GGGAGCGG  1 
+chr3R:5078195-5078695    (  216) GGCGGCGG  1 
+chr2R:18352073-18352573  (  292) GGGAGCGG  1 
+chr2L:17377625-17378125  (  304) GGCGGCGG  1 
+chr3L:10664888-10665388  (  256) GGCAGCGG  1 
+chr2L:16533449-16533949  (   63) GGGGGAGG  1 
+chr2R:11182591-11183091  (  195) GGGGGCGA  1 
+chr3L:21013477-21013977  (  224) GGGGGAGG  1 
+chr2R:13047377-13047877  (    6) GGGGGCGA  1 
+chr2R:18316374-18316874  (  176) GGGGGAGG  1 
+chrX:12752895-12753395   (  376) GGGGGAGG  1 
+chr3R:14650305-14650805  (    2) GGGGGCGA  1 
+chr2R:19229633-19230133  (  229) GGGAGCGA  1 
+chr3L:5655437-5655937    (  462) GGGAGCGA  1 
+chr3R:15293119-15293619  (  407) GGGAGAGG  1 
+chr2L:2037912-2038412    (  306) GGGAGAGG  1 
+chr3R:20265742-20266242  (  222) GGCGGAGG  1 
+chrX:521891-522391       (  148) GGCGGAGG  1 
+chr2L:18144198-18144698  (   43) GGCGGCGA  1 
+chrX:8058889-8059389     (  325) GGGAGAGG  1 
+chr3R:23336725-23337225  (   10) GGCGGAGG  1 
+chr3R:7106798-7107298    (  454) GGCGGAGG  1 
+chr3R:28889231-28889731  (    9) GGCAGCGA  1 
+chr3L:17967421-17967921  (   29) GGGGGCGC  1 
+chr2R:22561330-22561830  (   99) GGCAGCGA  1 
+chr4:557129-557629       (  187) GGCAGCGA  1 
+chr3L:628869-629369      (  276) GGCAGCGA  1 
+chr2R:10542595-10543095  (  399) GGGGGCGC  1 
+chr3L:9567456-9567956    (  422) GGCAGAGG  1 
+chr3L:20193004-20193504  (  361) GGCAGCGA  1 
+chr3R:23339964-23340464  (  492) GCGGGCGG  1 
+chr2L:6722812-6723312    (  293) GGGGGAGA  1 
+chr3R:16209259-16209759  (  308) GCGAGCGG  1 
+chr3L:1349684-1350184    (   15) GCGAGCGG  1 
+chr2R:1513653-1514153    (  122) GGGAGCGC  1 
+chr3L:11259426-11259926  (  413) GCGAGCGG  1 
+chr2R:10429817-10430317  (  159) GGGAGAGA  1 
+chr3L:16159859-16160359  (   14) GGCGGAGA  1 
+chr3R:31059344-31059844  (   72) GGGAGAGA  1 
+chr2R:18800661-18801161  (   86) GGCGGAGA  1 
+chr2R:21474568-21475068  (  323) GGCGGAGA  1 
+chr3L:10660254-10660754  (   59) GGGAGAGA  1 
+chr2R:10734453-10734953  (   82) GGCAGCGC  1 
+chr3R:16249078-16249578  (  330) GCCAGCGG  1 
+chr4:57051-57551         (  120) GGCAGCGC  1 
+chr2L:5980192-5980692    (   95) GGCAGAGA  1 
+chr2R:23746067-23746567  (   85) GGCAGAGA  1 
+chr2L:19157037-19157537  (   27) GGCAGAGA  1 
+chrX:9578632-9579132     (  364) GGCAGAGA  1 
+chrX:19578762-19579262   (  251) GGGGGAGC  1 
+chrX:12664867-12665367   (  409) GCGAGCGA  1 
+chrX:3378566-3379066     (   81) GCGAGCGA  1 
+chr2L:19791029-19791529  (  331) GGGAGAGC  1 
+chr2L:2197637-2198137    (   46) GCGAGCGA  1 
+chr2R:13823700-13824200  (  273) GCCGGAGG  1 
+chr2R:18356857-18357357  (  189) GCGAGAGG  1 
+chr4:1318797-1319297     (  352) GCGAGAGG  1 
+chr3R:14285844-14286344  (  327) GCCGGCGA  1 
+chr2L:12004960-12005460  (   46) GCCGGCGA  1 
+chr2L:246883-247383      (  108) GGCAGAGC  1 
+chr3L:11256900-11257400  (  145) GCCAGAGG  1 
+chr3L:16052691-16053191  (  146) GCGGGAGA  1 
+chr2L:16520104-16520604  (  159) GCGAGCGC  1 
+chr2R:10101851-10102351  (  182) GCCGGCGC  1 
+chr2L:7976591-7977091    (  319) GCGAGAGA  1 
+chr4:960141-960641       (  153) GCGAGAGA  1 
+chr4:1026059-1026559     (  332) GCCAGCGC  1 
+chrX:16424099-16424599   (  380) GCGAGAGC  1 
+chr2R:6115812-6116312    (  445) GCCGGAGC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 123250 bayes= 12.7572 E= 1.1e+000 
+ -1283  -1283    242  -1283 
+ -1283     63    191  -1283 
+ -1283    122    156  -1283 
+    87  -1283    123  -1283 
+ -1283  -1283    242  -1283 
+    65    142  -1283  -1283 
+ -1283  -1283    242  -1283 
+    42    -12    114  -1283 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 73 E= 1.1e+000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.301370  0.698630  0.000000 
+ 0.000000  0.452055  0.547945  0.000000 
+ 0.561644  0.000000  0.438356  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.479452  0.520548  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.410959  0.178082  0.410959  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GGSRGMGR MEME-4 regular expression
+--------------------------------------------------------------------------------
+G[GC][GC][AG]G[CA]G[AG]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 91.36 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GCWGCHGC MEME-5	width =   8  sites =  56  llr = 537  E-value = 3.3e-008
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 Description
+--------------------------------------------------------------------------------
+Simplified        A  ::4::2::
+pos.-specific     C  :a2:a33a
+probability       G  a::a:17:
+matrix            T  ::4::3::
+
+         bits    2.4 ** **  *
+                 2.2 ** **  *
+                 1.9 ** **  *
+                 1.7 ** **  *
+Relative         1.5 ** ** **
+Entropy          1.2 ** ** **
+(13.8 bits)      1.0 ** ** **
+                 0.7 ** ** **
+                 0.5 ** ** **
+                 0.2 ***** **
+                 0.0 --------
+
+Multilevel           GCTGCTGC
+consensus              A  CC 
+sequence                  A  
+                             
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value              Site
+-------------             ----- ---------            --------
+chrX:12664867-12665367       34  2.85e-06 ATTCTTTGTT GCTGCCGC TTCGATGAAA
+chr2R:17269276-17269776     233  2.85e-06 ACAGGCGACA GCTGCCGC ACATTTTGGA
+chr2L:7976591-7977091       413  2.85e-06 cgttgctgtt gctgccgc cgttgttgtt
+chrX:9578632-9579132        318  2.85e-06 TACGATTCTC GCTGCCGC TAGCGAAAAA
+chr2R:11198507-11199007      20  5.64e-06 AAGTGCGAGT GCAGCCGC CACAACAAGT
+chr2L:2037912-2038412        15  5.64e-06 actcgcacat gcagccgc acacaggaga
+chr4:247987-248487          238  5.64e-06 ttggcactat gcagccgc cacttttttg
+chr2L:5980192-5980692       475  1.20e-05 ataccgaCCG GCTGCTGC TGAACTTTTC
+chrX:20158936-20159436      416  1.20e-05 AAGTGTTGTT GCCGCCGC CTTGTTATTT
+chr2R:22561330-22561830     451  1.20e-05 cgctgtcgct gctgctgc actgcctctg
+chr3R:17706125-17706625     491  1.20e-05 GGGGAAAAAC GCCGCCGC TG        
+chrX:16424099-16424599      442  1.20e-05 cgtcgttgcc gccgccgc cgccgTTGTT
+chr3R:6413757-6414257       102  1.20e-05 GACTTACTTA GCTGCTGC CGTTATGCTA
+chr2R:6119766-6120266       153  1.20e-05 TTTAGCTCTC GCTGCTGC TTTTAATCGC
+chrX:8058889-8059389         94  1.20e-05 gagtgagaga gCCGCCGC ACCGCAATCG
+chr3R:23787707-23788207     106  1.20e-05 AGTTTGTCGC GCTGCTGC AGTGAAGGAA
+chr3R:30799817-30800317     347  1.20e-05 GATGCATGAT GCTGCTGC TTCGCCCTGT
+chr3R:17897437-17897937     186  1.20e-05 tgttgctgtt gctgctgc tgctgttcgt
+chr2R:10429817-10430317     424  1.65e-05 tttttgtgct gcagctgc gcgtcgcaac
+chr4:1318797-1319297        150  1.65e-05 attagtggct gcagctgc attagtgcct
+chr3R:8813812-8814312       390  1.65e-05 CAGCACAAAT GCAGCtgc atttatatat
+chr2L:246883-247383          46  2.66e-05 TATATCACGT GCTGCGGC AGTGGATGGG
+chr2L:16520104-16520604     206  2.66e-05 AGAGTAAAAA GCTGCGGC CTGAAGAGAA
+chr3L:21013477-21013977     241  2.66e-05 GAAAAGAGGA GCTGCAGC AGAGACATGA
+chr2R:9712476-9712976       209  2.66e-05 CGTAAAATAA GCTGCAGc acaacgcaca
+chr2L:19157037-19157537      46  2.66e-05 GTCGACGCCT GCCGCTGC CATTTCACGT
+chr3L:1349684-1350184       480  2.66e-05 cGTAAAGCTC GCCGCTGC ACTGGTGTTG
+chrX:6733401-6733901        463  2.66e-05 ACTTTATGAG GCTGCGGC TTAAAGTTGT
+chr3R:16249078-16249578     430  2.66e-05 CGCGCGCTAC GCTGCGGC CGTTGtccga
+chr3R:16209259-16209759     298  3.37e-05 CAAGCAGCAA GCAGCAGC CAGCGAGCGG
+chr3L:16052691-16053191     335  3.37e-05 agaagaagca gcagcagc agcagtacaa
+chrX:11714193-11714693      166  3.37e-05 GGCAACAACA GCAGCAGC AGAAAATTTC
+chr2L:19791029-19791529      91  3.37e-05 TTAAGGAAAA Gcagcagc agacagacag
+chr2L:12545941-12546441     369  3.37e-05 acacacagcc gcagcagc agcgcacaca
+chr3L:10660254-10660754     253  3.37e-05 TCCTGCTCGA GCAGCAGC ACATGTAAAC
+chr3L:10664888-10665388     432  3.37e-05 GAGTTCCGCA GCAGCAGC GCAGCGGCAG
+chr2R:11602852-11603352     486  3.37e-05 TAGCGCAAAA GCAGCAGC AACAACA   
+chr3R:23336725-23337225       2  3.37e-05          a gcagcagc ggcGGAGGGA
+chr4:570623-571123           15  4.11e-05 ACAAGTTGTG GCCGCAGC CTCAAGTGTG
+chr3L:130673-131173         445  4.11e-05 TCCGCTTTGA GCTGCCCC TTCGCTTTTC
+chrX:1263248-1263748         78  4.11e-05 CTAAGTTCCC GCTGCCCC TTCTTATCGC
+chr3L:14540122-14540622     207  4.11e-05 TCTCCTCTCC GCTGCCCC CACAGGCCAC
+chr2L:2197637-2198137        59  4.40e-05 AGCGAGACAG GCAGCCCC GACCCACCGC
+chrX:19682887-19683387       65  5.07e-05 AGCAGGACGA GCTGCTCC TGGGCCACCA
+chr3L:2635897-2636397       415  5.07e-05 CGTCATCCGT GCCGCCCC CCGCCCTGCG
+chr3L:20193004-20193504     459  5.07e-05 GGATGAGCTA GCTGCTCC CGGAGAACTG
+chr3L:17994983-17995483     423  5.54e-05 CAAACAAATG GCAGCTCC CCTCACAAAA
+chr3R:4745626-4746126       350  5.54e-05 TCCAGTCGTT GCAGCTCC TCAGAGGCGG
+chr2R:18352073-18352573     230  5.54e-05 ATATACAAAA GCAGCTCC TCAATTTGGC
+chrM:96-596                 462  6.59e-05 AAAAAGTGGA GCCGCTCC TTTCCATTTT
+chrM:328-828                230  6.59e-05 AAAAAGTGGA GCCGCTCC TTTCCATTTT
+chr3R:9352577-9353077        58  6.59e-05 ATTATTTATG GCTGCGCC CCACTACACA
+chrX:19578762-19579262       87  6.59e-05 AGGCGGTGAT GCTGCGCC AGTTGTTGGT
+chr3R:7106798-7107298       338  6.59e-05 GGCTCCTACG GCTGCACC CGTCCCTGTC
+chr2R:6115812-6116312       228  7.33e-05 AAACTAACCA GCAGCGCC GACTGCGAAT
+chr2L:6722812-6723312       361  7.80e-05 GGCCGGTTTG GCCGCGCC CATCGGTCTT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chrX:12664867-12665367            2.9e-06  33_[+5]_459
+chr2R:17269276-17269776           2.9e-06  232_[+5]_260
+chr2L:7976591-7977091             2.9e-06  412_[+5]_80
+chrX:9578632-9579132              2.9e-06  317_[+5]_175
+chr2R:11198507-11199007           5.6e-06  19_[+5]_473
+chr2L:2037912-2038412             5.6e-06  14_[+5]_478
+chr4:247987-248487                5.6e-06  237_[+5]_255
+chr2L:5980192-5980692             1.2e-05  474_[+5]_18
+chrX:20158936-20159436            1.2e-05  415_[+5]_77
+chr2R:22561330-22561830           1.2e-05  450_[+5]_42
+chr3R:17706125-17706625           1.2e-05  490_[+5]_2
+chrX:16424099-16424599            1.2e-05  441_[+5]_51
+chr3R:6413757-6414257             1.2e-05  101_[+5]_391
+chr2R:6119766-6120266             1.2e-05  152_[+5]_340
+chrX:8058889-8059389              1.2e-05  93_[+5]_399
+chr3R:23787707-23788207           1.2e-05  105_[+5]_387
+chr3R:30799817-30800317           1.2e-05  346_[+5]_146
+chr3R:17897437-17897937           1.2e-05  185_[+5]_307
+chr2R:10429817-10430317           1.7e-05  423_[+5]_69
+chr4:1318797-1319297              1.7e-05  149_[+5]_343
+chr3R:8813812-8814312             1.7e-05  389_[+5]_103
+chr2L:246883-247383               2.7e-05  45_[+5]_447
+chr2L:16520104-16520604           2.7e-05  205_[+5]_287
+chr3L:21013477-21013977           2.7e-05  240_[+5]_252
+chr2R:9712476-9712976             2.7e-05  208_[+5]_284
+chr2L:19157037-19157537           2.7e-05  45_[+5]_447
+chr3L:1349684-1350184             2.7e-05  479_[+5]_13
+chrX:6733401-6733901              2.7e-05  462_[+5]_30
+chr3R:16249078-16249578           2.7e-05  429_[+5]_63
+chr3R:16209259-16209759           3.4e-05  297_[+5]_195
+chr3L:16052691-16053191           3.4e-05  334_[+5]_158
+chrX:11714193-11714693            3.4e-05  165_[+5]_327
+chr2L:19791029-19791529           3.4e-05  90_[+5]_402
+chr2L:12545941-12546441           3.4e-05  368_[+5]_124
+chr3L:10660254-10660754           3.4e-05  252_[+5]_240
+chr3L:10664888-10665388           3.4e-05  431_[+5]_61
+chr2R:11602852-11603352           3.4e-05  485_[+5]_7
+chr3R:23336725-23337225           3.4e-05  1_[+5]_491
+chr4:570623-571123                4.1e-05  14_[+5]_478
+chr3L:130673-131173               4.1e-05  444_[+5]_48
+chrX:1263248-1263748              4.1e-05  77_[+5]_415
+chr3L:14540122-14540622           4.1e-05  206_[+5]_286
+chr2L:2197637-2198137             4.4e-05  58_[+5]_434
+chrX:19682887-19683387            5.1e-05  64_[+5]_428
+chr3L:2635897-2636397             5.1e-05  414_[+5]_78
+chr3L:20193004-20193504           5.1e-05  458_[+5]_34
+chr3L:17994983-17995483           5.5e-05  422_[+5]_70
+chr3R:4745626-4746126             5.5e-05  349_[+5]_143
+chr2R:18352073-18352573           5.5e-05  229_[+5]_263
+chrM:96-596                       6.6e-05  461_[+5]_31
+chrM:328-828                      6.6e-05  229_[+5]_263
+chr3R:9352577-9353077             6.6e-05  57_[+5]_435
+chrX:19578762-19579262            6.6e-05  86_[+5]_406
+chr3R:7106798-7107298             6.6e-05  337_[+5]_155
+chr2R:6115812-6116312             7.3e-05  227_[+5]_265
+chr2L:6722812-6723312             7.8e-05  360_[+5]_132
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GCWGCHGC width=8 seqs=56
+chrX:12664867-12665367   (   34) GCTGCCGC  1 
+chr2R:17269276-17269776  (  233) GCTGCCGC  1 
+chr2L:7976591-7977091    (  413) GCTGCCGC  1 
+chrX:9578632-9579132     (  318) GCTGCCGC  1 
+chr2R:11198507-11199007  (   20) GCAGCCGC  1 
+chr2L:2037912-2038412    (   15) GCAGCCGC  1 
+chr4:247987-248487       (  238) GCAGCCGC  1 
+chr2L:5980192-5980692    (  475) GCTGCTGC  1 
+chrX:20158936-20159436   (  416) GCCGCCGC  1 
+chr2R:22561330-22561830  (  451) GCTGCTGC  1 
+chr3R:17706125-17706625  (  491) GCCGCCGC  1 
+chrX:16424099-16424599   (  442) GCCGCCGC  1 
+chr3R:6413757-6414257    (  102) GCTGCTGC  1 
+chr2R:6119766-6120266    (  153) GCTGCTGC  1 
+chrX:8058889-8059389     (   94) GCCGCCGC  1 
+chr3R:23787707-23788207  (  106) GCTGCTGC  1 
+chr3R:30799817-30800317  (  347) GCTGCTGC  1 
+chr3R:17897437-17897937  (  186) GCTGCTGC  1 
+chr2R:10429817-10430317  (  424) GCAGCTGC  1 
+chr4:1318797-1319297     (  150) GCAGCTGC  1 
+chr3R:8813812-8814312    (  390) GCAGCTGC  1 
+chr2L:246883-247383      (   46) GCTGCGGC  1 
+chr2L:16520104-16520604  (  206) GCTGCGGC  1 
+chr3L:21013477-21013977  (  241) GCTGCAGC  1 
+chr2R:9712476-9712976    (  209) GCTGCAGC  1 
+chr2L:19157037-19157537  (   46) GCCGCTGC  1 
+chr3L:1349684-1350184    (  480) GCCGCTGC  1 
+chrX:6733401-6733901     (  463) GCTGCGGC  1 
+chr3R:16249078-16249578  (  430) GCTGCGGC  1 
+chr3R:16209259-16209759  (  298) GCAGCAGC  1 
+chr3L:16052691-16053191  (  335) GCAGCAGC  1 
+chrX:11714193-11714693   (  166) GCAGCAGC  1 
+chr2L:19791029-19791529  (   91) GCAGCAGC  1 
+chr2L:12545941-12546441  (  369) GCAGCAGC  1 
+chr3L:10660254-10660754  (  253) GCAGCAGC  1 
+chr3L:10664888-10665388  (  432) GCAGCAGC  1 
+chr2R:11602852-11603352  (  486) GCAGCAGC  1 
+chr3R:23336725-23337225  (    2) GCAGCAGC  1 
+chr4:570623-571123       (   15) GCCGCAGC  1 
+chr3L:130673-131173      (  445) GCTGCCCC  1 
+chrX:1263248-1263748     (   78) GCTGCCCC  1 
+chr3L:14540122-14540622  (  207) GCTGCCCC  1 
+chr2L:2197637-2198137    (   59) GCAGCCCC  1 
+chrX:19682887-19683387   (   65) GCTGCTCC  1 
+chr3L:2635897-2636397    (  415) GCCGCCCC  1 
+chr3L:20193004-20193504  (  459) GCTGCTCC  1 
+chr3L:17994983-17995483  (  423) GCAGCTCC  1 
+chr3R:4745626-4746126    (  350) GCAGCTCC  1 
+chr2R:18352073-18352573  (  230) GCAGCTCC  1 
+chrM:96-596              (  462) GCCGCTCC  1 
+chrM:328-828             (  230) GCCGCTCC  1 
+chr3R:9352577-9353077    (   58) GCTGCGCC  1 
+chrX:19578762-19579262   (   87) GCTGCGCC  1 
+chr3R:7106798-7107298    (  338) GCTGCACC  1 
+chr2R:6115812-6116312    (  228) GCAGCGCC  1 
+chr2L:6722812-6723312    (  361) GCCGCGCC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 8 n= 123250 bayes= 12.7735 E= 3.3e-008 
+ -1245  -1245    242  -1245 
+ -1245    237  -1245  -1245 
+    22      2  -1245     51 
+ -1245  -1245    242  -1245 
+ -1245    237  -1245  -1245 
+   -40     56    -38     11 
+ -1245     65    190  -1245 
+ -1245    237  -1245  -1245 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 8 nsites= 56 E= 3.3e-008 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.357143  0.196429  0.000000  0.446429 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.232143  0.285714  0.142857  0.339286 
+ 0.000000  0.303571  0.696429  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCWGCHGC MEME-5 regular expression
+--------------------------------------------------------------------------------
+GC[TA]GC[TCA][GC]C
+--------------------------------------------------------------------------------
+
+
+
+
+Time 113.36 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+chr3R:6409899-6410399            5.73e-03  105_[+3(1.01e-05)]_275_\
+    [+2(7.79e-05)]_104
+chr4:1183445-1183945             5.84e-01  500
+chr3L:16162581-16163081          2.54e-01  500
+chr4:1224001-1224501             6.34e-01  500
+chr2L:21574335-21574835          9.40e-01  500
+chr3R:4235364-4235864            3.24e-01  500
+chr3L:546446-546946              2.33e-01  381_[+2(7.08e-05)]_111
+chrX:6710417-6710917             2.32e-01  207_[+2(7.08e-05)]_100_\
+    [+2(9.72e-05)]_177
+chrX:10800555-10801055           5.12e-02  19_[+3(1.66e-05)]_473
+chr3L:7814088-7814588            3.96e-02  38_[+2(7.08e-05)]_416_\
+    [+3(1.66e-05)]_30
+chr2R:5683395-5683895            5.33e-04  254_[+1(1.24e-05)]_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_75_[+3(1.43e-06)]_4_[+3(1.43e-06)]_127
+chr2R:13018158-13018658          2.60e-02  211_[+2(1.15e-05)]_281
+chr3R:17897437-17897937          6.88e-07  21_[+4(1.49e-06)]_24_[+3(3.84e-06)]_\
+    124_[+5(1.20e-05)]_116_[+2(1.15e-05)]_73_[+3(4.75e-05)]_102
+chr2L:11062485-11062985          5.31e-01  235_[+1(8.52e-05)]_257
+chr3L:14540122-14540622          4.25e-02  128_[+2(7.08e-05)]_70_\
+    [+5(4.11e-05)]_286
+chr2R:7014016-7014516            4.74e-02  71_[+1(1.24e-05)]_421
+chr2L:17377625-17378125          6.98e-03  303_[+4(5.51e-06)]_189
+chr4:304859-305359               9.23e-01  500
+chr3L:7859312-7859812            2.55e-01  500
+chr3L:11259426-11259926          8.43e-02  412_[+4(4.95e-05)]_80
+chr3R:19626447-19626947          9.11e-01  500
+chr3R:29781350-29781850          6.01e-01  500
+chrX:3730446-3730946             9.87e-08  130_[+3(1.43e-06)]_11_\
+    [+4(9.95e-05)]_97_[+4(1.29e-05)]_58_[+1(1.24e-05)]_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_[+1(1.24e-05)]_17_[+2(1.15e-05)]_91_[+1(6.83e-05)]_12_\
+    [+2(1.15e-05)]_4
+chr2R:23724515-23725015          4.36e-02  476_[+1(2.75e-05)]_16
+chr3R:14650305-14650805          2.03e-03  1_[+4(1.29e-05)]_491
+chr2R:19164304-19164804          3.77e-02  133_[+2(1.15e-05)]_[+2(7.79e-05)]_\
+    351
+chr3R:30799817-30800317          5.15e-03  346_[+5(1.20e-05)]_73_\
+    [+1(1.24e-05)]_[+1(1.24e-05)]_2_[+1(1.24e-05)]_47
+chrX:12738431-12738931           8.94e-02  71_[+2(7.08e-05)]_62_[+1(2.75e-05)]_\
+    351
+chrX:12752895-12753395           6.83e-03  329_[+2(7.08e-05)]_38_\
+    [+4(1.29e-05)]_117
+chrX:3774670-3775170             2.49e-01  500
+chr2L:9567750-9568250            5.96e-02  451_[+3(3.84e-06)]_41
+chr3L:6551362-6551862            6.96e-02  500
+chr3R:23339964-23340464          5.17e-02  362_[+4(9.95e-05)]_121_\
+    [+4(3.72e-05)]_1
+chrX:6860832-6861332             7.66e-01  500
+chr3R:7106798-7107298            1.49e-05  240_[+3(1.43e-06)]_89_\
+    [+5(6.59e-05)]_108_[+4(2.58e-05)]_39
+chr3R:21620456-21620956          6.38e-02  224_[+2(1.15e-05)]_268
+chr4:57051-57551                 5.23e-01  119_[+4(6.52e-05)]_373
+chr4:851841-852341               7.73e-01  500
+chr3L:20193004-20193504          2.38e-02  360_[+4(3.72e-05)]_90_\
+    [+5(5.07e-05)]_34
+chrX:7700898-7701398             7.17e-01  500
+chrX:1263248-1263748             1.31e-01  77_[+5(4.11e-05)]_415
+chr2R:6115812-6116312            1.12e-01  227_[+5(7.33e-05)]_265
+chr3R:23336725-23337225          3.33e-04  1_[+5(3.37e-05)]_[+4(2.58e-05)]_207_\
+    [+4(9.95e-05)]_60_[+3(1.66e-05)]_200
+chr2R:13007327-13007827          1.24e-01  492_[+1(2.00e-05)]
+chr2L:3719975-3720475            3.23e-01  500
+chr3L:14758464-14758964          5.41e-01  500
+chr3L:11256900-11257400          1.92e-01  500
+chr2L:17448875-17449375          7.05e-01  500
+chr2R:18352073-18352573          8.48e-03  229_[+5(5.54e-05)]_54_\
+    [+4(5.51e-06)]_201
+chr2L:21260081-21260581          1.73e-01  500
+chr3L:549526-550026              5.02e-01  500
+chr4:247987-248487               7.85e-03  237_[+5(5.64e-06)]_123_\
+    [+2(1.86e-05)]_124
+chr3L:9567456-9567956            1.29e-02  390_[+2(9.72e-05)]_23_\
+    [+4(3.72e-05)]_71
+chr3R:5078195-5078695            4.04e-04  75_[+1(4.78e-05)]_132_\
+    [+4(5.51e-06)]_104_[+2(7.08e-05)]_165
+chr2L:18149471-18149971          1.68e-01  425_[+1(4.78e-05)]_67
+chr3L:130673-131173              2.63e-02  344_[+1(2.00e-05)]_92_\
+    [+5(4.11e-05)]_48
+chr3R:8813812-8814312            5.52e-02  365_[+2(9.72e-05)]_16_\
+    [+5(1.65e-05)]_103
+chr4:305058-305558               7.58e-01  500
+chr4:787954-788454               9.77e-01  500
+chr3R:4745425-4745925            2.35e-02  487_[+3(1.66e-05)]_5
+chr4:1026059-1026559             4.94e-02  466_[+1(2.00e-05)]_26
+chr3R:23787707-23788207          5.06e-03  105_[+5(1.20e-05)]_387
+chrX:2648348-2648848             1.54e-02  171_[+1(1.24e-05)]_[+1(1.24e-05)]_3_\
+    [+1(2.00e-05)]_136_[+3(2.86e-05)]_158
+chr3R:18915621-18916121          2.81e-01  500
+chr2R:10542595-10543095          2.99e-02  398_[+4(3.72e-05)]_94
+chrX:16104043-16104543           9.64e-03  410_[+1(1.24e-05)]_18_\
+    [+1(1.24e-05)]_56
+chrX:17076729-17077229           1.54e-02  111_[+2(1.15e-05)]_141_\
+    [+5(1.20e-05)]_41_[+5(1.20e-05)]_7_[+5(1.20e-05)]_1_[+5(1.20e-05)]_55_\
+    [+5(1.20e-05)]_96
+chrX:8058889-8059389             5.84e-03  73_[+4(5.99e-05)]_12_[+5(1.20e-05)]_\
+    109_[+5(3.37e-05)]_106_[+4(2.58e-05)]_168
+chr2L:17381812-17382312          2.47e-02  55_[+4(5.51e-06)]_40_[+4(4.11e-05)]_\
+    389
+chr2R:21379896-21380396          1.36e-01  500
+chr2R:18316374-18316874          5.78e-05  142_[+2(1.15e-05)]_[+2(1.15e-05)]_5_\
+    [+3(1.43e-06)]_6_[+3(7.69e-06)]_160_[+2(1.86e-05)]_136_[+2(3.26e-05)]_3
+chr3R:22781979-22782479          1.63e-01  76_[+2(7.08e-05)]_416
+chr2L:18144198-18144698          9.74e-03  42_[+4(2.58e-05)]_47_[+2(7.08e-05)]_\
+    395
+chr3R:14710707-14711207          1.53e-01  500
+chr3R:14019008-14019508          2.93e-01  474_[+1(4.78e-05)]_18
+chrX:521891-522391               8.59e-04  147_[+4(2.58e-05)]_297_\
+    [+1(1.24e-05)]_40
+chr2L:12004960-12005460          1.32e-01  45_[+4(9.95e-05)]_447
+chrX:6706094-6706594             1.05e-01  330_[+1(2.00e-05)]_162
+chr3R:16249078-16249578          1.56e-02  329_[+4(6.52e-05)]_92_\
+    [+5(2.66e-05)]_63
+chrX:6733401-6733901             6.38e-02  462_[+5(2.66e-05)]_30
+chr2R:19268357-19268857          9.44e-01  500
+chrX:130620-131120               5.96e-03  271_[+1(6.83e-05)]_37_\
+    [+2(7.79e-05)]_79_[+3(6.92e-05)]_89
+chr2R:9446368-9446868            2.05e-01  500
+chr3R:26103725-26104225          4.06e-01  500
+chrX:16104349-16104849           3.60e-02  104_[+1(1.24e-05)]_18_\
+    [+1(1.24e-05)]_362
+chr3R:14285844-14286344          4.00e-03  187_[+3(1.66e-05)]_131_\
+    [+4(9.95e-05)]_166
+chr3R:20264227-20264727          1.35e-01  215_[+2(9.72e-05)]_277
+chr4:1318797-1319297             5.19e-05  81_[+3(7.69e-06)]_60_[+5(1.65e-05)]_\
+    61_[+5(1.65e-05)]_39_[+2(1.15e-05)]_78_[+4(9.95e-05)]_141
+chr4:136289-136789               7.06e-01  500
+chr3L:10897478-10897978          6.95e-01  500
+chr2R:6172159-6172659            2.06e-01  367_[+3(2.86e-05)]_125
+chr2R:6119766-6120266            1.10e-01  152_[+5(1.20e-05)]_340
+chr2L:16351753-16352253          1.05e-01  136_[+1(1.24e-05)]_2_[+1(7.29e-05)]_\
+    200_[+1(4.78e-05)]_22_[+1(1.24e-05)]_108
+chr3R:24570704-24571204          2.03e-01  500
+chr2R:20597264-20597764          1.78e-01  258_[+2(7.08e-05)]_234
+chr3R:13014603-13015103          7.91e-01  500
+chrX:19578762-19579262           3.09e-04  42_[+1(2.00e-05)]_36_[+5(6.59e-05)]_\
+    133_[+1(1.24e-05)]_15_[+4(7.94e-05)]_8_[+1(1.24e-05)]_226
+chr2L:11474886-11475386          5.37e-01  500
+chr3L:7815674-7816174            2.75e-02  425_[+3(2.86e-05)]_5_[+2(7.08e-05)]_\
+    2_[+2(3.26e-05)]_44
+chr2R:11602852-11603352          5.33e-06  65_[+2(7.08e-05)]_332_\
+    [+1(1.24e-05)]_30_[+3(7.69e-06)]_12_[+5(5.54e-05)]_14_[+5(3.37e-05)]_7
+chr2R:5109289-5109789            6.12e-01  500
+chr2R:13047377-13047877          1.15e-02  5_[+4(1.29e-05)]_95_[+4(6.52e-05)]_\
+    384
+chr2L:9495771-9496271            3.96e-02  240_[+1(8.52e-05)]_252
+chr2R:20597471-20597971          1.38e-01  51_[+2(7.08e-05)]_441
+chr3R:23729547-23730047          1.61e-02  457_[+3(3.84e-06)]_35
+chr2L:12506958-12507458          7.38e-01  500
+chr3R:20265742-20266242          2.41e-02  68_[+1(4.78e-05)]_145_\
+    [+4(2.58e-05)]_271
+chr3L:10664888-10665388          1.91e-04  83_[+2(1.15e-05)]_4_[+2(7.79e-05)]_\
+    152_[+4(8.07e-06)]_165_[+5(3.37e-05)]_3_[+5(3.37e-05)]_53
+chr3R:21582068-21582568          2.94e-01  500
+chr3R:31725086-31725586          5.67e-01  500
+chr4:625486-625986               8.17e-01  500
+chr3R:21618701-21619201          8.57e-03  258_[+2(1.15e-05)]_4_[+2(1.15e-05)]_\
+    36_[+1(4.78e-05)]_178
+chr3R:25122259-25122759          2.42e-03  213_[+1(1.24e-05)]_47_\
+    [+2(7.08e-05)]_224
+chr2L:14396063-14396563          4.82e-01  500
+chr3L:10660254-10660754          6.77e-05  35_[+3(2.21e-05)]_15_[+4(5.99e-05)]_\
+    186_[+5(3.37e-05)]_79_[+2(1.15e-05)]_153
+chr2L:13296576-13297076          7.26e-02  327_[+1(9.30e-05)]_18_\
+    [+1(6.83e-05)]_139
+chrM:16972-17472                 1.00e+00  500
+chr4:415537-416037               2.50e-03  304_[+4(5.51e-06)]_59_\
+    [+4(9.95e-05)]_121
+chr3R:31223335-31223835          3.29e-01  500
+chr3R:14285556-14286056          1.54e-01  475_[+3(1.66e-05)]_17
+chrM:814-1314                    1.00e+00  500
+chr3R:6413757-6414257            7.66e-03  101_[+5(1.20e-05)]_32_\
+    [+1(2.00e-05)]_183_[+1(1.24e-05)]_[+1(1.24e-05)]_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_[+1(1.24e-05)]_[+1(1.24e-05)]_[+1(1.24e-05)]_2_\
+    [+1(4.78e-05)]_102
+chr3L:3380718-3381218            9.75e-02  500
+chr3L:628869-629369              1.13e-03  275_[+4(3.72e-05)]_117_\
+    [+3(3.84e-06)]_18_[+1(6.05e-05)]_66
+chr2R:18529690-18530190          8.53e-01  500
+chr3R:4745626-4746126            9.98e-04  286_[+3(1.66e-05)]_55_\
+    [+5(5.54e-05)]_143
+chrX:9578632-9579132             2.79e-02  209_[+5(3.37e-05)]_100_\
+    [+5(2.85e-06)]_38_[+4(7.94e-05)]_129
+chr2L:16491937-16492437          8.40e-01  500
+chrM:3786-4286                   9.94e-01  500
+chr2R:21474568-21475068          1.10e-02  278_[+1(2.75e-05)]_36_\
+    [+4(5.99e-05)]_170
+chr3L:17668278-17668778          1.70e-03  133_[+1(1.24e-05)]_16_\
+    [+1(7.29e-05)]_161_[+1(1.24e-05)]_64_[+5(8.67e-05)]_94
+chrX:13371324-13371824           4.73e-01  500
+chr3R:14026607-14027107          2.21e-01  500
+chr3R:11460575-11461075          1.12e-01  500
+chrX:16424099-16424599           1.23e-03  26_[+2(3.26e-05)]_351_\
+    [+5(1.65e-05)]_45_[+5(1.20e-05)]_54
+chr2L:16530771-16531271          2.51e-02  149_[+1(1.24e-05)]_72_\
+    [+2(9.72e-05)]_7_[+2(7.79e-05)]_248
+chr2L:23512612-23513112          1.00e+00  500
+chr2R:1513653-1514153            9.47e-02  121_[+4(4.95e-05)]_371
+chr2L:5207340-5207840            6.32e-01  500
+chr2R:18800661-18801161          2.87e-03  85_[+4(5.99e-05)]_243_\
+    [+3(3.01e-05)]_156
+chr2L:6724179-6724679            1.21e-02  156_[+2(1.86e-05)]_159_\
+    [+2(1.15e-05)]_169
+chr2R:18356857-18357357          1.45e-02  158_[+1(2.00e-05)]_22_\
+    [+4(9.95e-05)]_304
+chr3R:17706125-17706625          2.54e-04  51_[+3(6.08e-05)]_360_\
+    [+3(3.84e-06)]_63_[+5(1.20e-05)]_2
+chr3L:8441624-8442124            9.78e-02  265_[+1(1.24e-05)]_18_\
+    [+1(1.24e-05)]_14_[+1(2.75e-05)]_78_[+1(1.24e-05)]_93
+chr2R:10734453-10734953          9.24e-02  81_[+4(6.52e-05)]_411
+chr2R:11358581-11359081          5.39e-02  346_[+1(1.24e-05)]_146
+chr3L:1349684-1350184            3.37e-05  14_[+4(4.95e-05)]_1_[+2(1.15e-05)]_\
+    [+2(3.26e-05)]_237_[+1(2.75e-05)]_6_[+1(1.24e-05)]_38_[+2(1.86e-05)]_\
+    [+2(7.08e-05)]_110_[+1(2.00e-05)]_9_[+5(2.66e-05)]_13
+chr2R:13823700-13824200          1.96e-03  117_[+5(8.24e-05)]_16_\
+    [+5(1.20e-05)]_5_[+5(1.20e-05)]_10_[+5(1.20e-05)]_16_[+5(1.20e-05)]_1_\
+    [+5(1.20e-05)]_59_[+4(9.95e-05)]_220
+chr2R:10101851-10102351          1.97e-04  5_[+1(7.29e-05)]_126_[+3(1.43e-06)]_\
+    [+3(1.43e-06)]_345
+chr2L:12545941-12546441          1.41e-02  124_[+1(6.83e-05)]_32_\
+    [+5(9.80e-05)]_184_[+1(2.00e-05)]_4_[+5(3.37e-05)]_3_[+1(2.00e-05)]_28_\
+    [+1(1.24e-05)]_29_[+1(2.75e-05)]_40
+chr3L:2635897-2636397            1.97e-04  85_[+3(2.86e-05)]_126_\
+    [+1(1.24e-05)]_21_[+1(1.24e-05)]_158_[+5(5.07e-05)]_78
+chr4:960141-960641               1.81e-02  216_[+2(1.15e-05)]_276
+chrX:15312539-15313039           4.63e-03  154_[+1(9.30e-05)]_15_\
+    [+1(6.05e-05)]_33_[+2(1.86e-05)]_12_[+2(1.86e-05)]_10_[+2(1.15e-05)]_6_\
+    [+2(1.15e-05)]_222
+chr3L:17994728-17995228          8.33e-01  500
+chrX:10802119-10802619           1.07e-02  208_[+1(4.78e-05)]_91_\
+    [+2(7.08e-05)]_66_[+1(4.78e-05)]_111
+chr2L:19157037-19157537          9.68e-04  21_[+5(2.66e-05)]_16_[+5(2.66e-05)]_\
+    365_[+2(3.26e-05)]_74
+chr2L:2197637-2198137            5.54e-05  45_[+4(9.95e-05)]_5_[+5(4.40e-05)]_\
+    82_[+2(1.15e-05)]_41_[+2(7.08e-05)]_148_[+1(1.24e-05)]_139
+chr2L:7976591-7977091            3.03e-04  221_[+1(1.24e-05)]_[+1(4.78e-05)]_\
+    [+1(7.29e-05)]_12_[+1(2.00e-05)]_147_[+5(2.85e-06)]_80
+chr2L:19791029-19791529          1.96e-05  90_[+5(3.37e-05)]_63_[+2(1.15e-05)]_\
+    8_[+5(9.80e-05)]_111_[+1(1.24e-05)]_26_[+4(9.95e-05)]_162
+chrX:21281391-21281891           8.98e-02  23_[+2(3.26e-05)]_439_\
+    [+1(4.78e-05)]_22
+chrM:3095-3595                   6.69e-01  500
+chr2L:8100352-8100852            8.19e-02  91_[+2(7.79e-05)]_2_[+2(1.15e-05)]_\
+    391
+chr3R:9352577-9353077            8.51e-02  57_[+5(6.59e-05)]_435
+chr3L:18002772-18003272          1.69e-02  380_[+2(1.15e-05)]_89_\
+    [+1(1.24e-05)]_15
+chr2L:12506643-12507143          4.50e-01  500
+chr4:44535-45035                 7.25e-01  500
+chrM:328-828                     5.85e-01  229_[+5(6.59e-05)]_263
+chr4:557129-557629               4.92e-02  186_[+4(3.72e-05)]_306
+chr2R:14486710-14487210          4.88e-01  500
+chr2L:11806308-11806808          2.37e-04  [+1(1.24e-05)]_25_[+2(7.79e-05)]_\
+    306_[+2(1.86e-05)]_145
+chr3R:4738914-4739414            1.43e-01  274_[+1(6.83e-05)]_218
+chr3L:14673968-14674468          2.13e-01  397_[+3(4.35e-05)]_95
+chr2R:23746067-23746567          4.59e-04  84_[+4(7.94e-05)]_122_\
+    [+1(1.24e-05)]_208_[+1(4.78e-05)]_4_[+1(2.00e-05)]_29_[+2(1.15e-05)]_2_\
+    [+2(7.08e-05)]_3
+chr3L:11561774-11562274          8.37e-02  236_[+1(2.00e-05)]_29_\
+    [+1(7.29e-05)]_[+1(2.00e-05)]_[+1(7.29e-05)]_156_[+2(9.72e-05)]_39
+chr4:570623-571123               3.58e-01  14_[+5(4.11e-05)]_478
+chr2L:2037912-2038412            6.76e-06  [+1(6.05e-05)]_6_[+5(5.64e-06)]_18_\
+    [+1(1.24e-05)]_141_[+4(6.52e-05)]_9_[+4(3.72e-05)]_2_[+4(4.95e-05)]_36_\
+    [+1(1.24e-05)]_2_[+1(1.24e-05)]_27_[+4(2.58e-05)]_61_[+2(7.08e-05)]_118
+chr3R:15293119-15293619          5.16e-03  77_[+2(1.15e-05)]_321_\
+    [+4(2.58e-05)]_86
+chrX:11714193-11714693           3.10e-03  30_[+1(1.24e-05)]_11_[+1(9.30e-05)]_\
+    46_[+1(2.75e-05)]_3_[+1(1.24e-05)]_14_[+1(2.00e-05)]_21_[+5(3.37e-05)]_88_\
+    [+2(9.72e-05)]_60_[+1(7.29e-05)]_163
+chr3L:17994983-17995483          2.46e-04  272_[+1(2.75e-05)]_40_\
+    [+1(2.75e-05)]_14_[+3(7.69e-06)]_72_[+5(5.54e-05)]_27_[+1(2.00e-05)]_35
+chr4:1196802-1197302             9.76e-01  500
+chr2L:5209410-5209910            4.69e-01  500
+chr3R:20253991-20254491          2.29e-03  117_[+3(3.26e-05)]_169_\
+    [+2(1.86e-05)]_198
+chr2R:22561330-22561830          8.93e-06  98_[+4(3.72e-05)]_97_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_22_[+5(3.37e-05)]_198_[+5(1.20e-05)]_36_[+2(1.15e-05)]_1
+chrX:20158936-20159436           1.85e-03  145_[+1(1.24e-05)]_4_[+1(9.30e-05)]_\
+    250_[+5(1.20e-05)]_77
+chrM:2179-2679                   9.84e-01  500
+chr3L:16377650-16378150          2.49e-03  225_[+1(2.00e-05)]_21_\
+    [+1(1.24e-05)]_[+1(9.30e-05)]_13_[+2(3.26e-05)]_158_[+1(1.24e-05)]_43
+chr3L:5655437-5655937            1.16e-01  450_[+4(3.72e-05)]_3_[+4(2.58e-05)]_\
+    31
+chr3L:17967421-17967921          1.25e-04  13_[+3(1.43e-06)]_7_[+4(3.72e-05)]_\
+    1_[+2(3.26e-05)]_394_[+2(3.26e-05)]_35_[+4(6.52e-05)]_10
+chr3R:28889231-28889731          5.74e-05  8_[+4(3.72e-05)]_43_[+4(6.52e-05)]_\
+    146_[+1(4.78e-05)]_60_[+2(3.26e-05)]_4_[+2(1.86e-05)]_57_[+3(2.06e-05)]_21_\
+    [+1(8.52e-05)]_105
+chr2R:9712476-9712976            4.31e-03  208_[+5(2.66e-05)]_5_[+1(2.00e-05)]_\
+    25_[+1(1.24e-05)]_238
+chr4:63253-63753                 7.09e-01  500
+chr2R:18531263-18531763          1.87e-01  261_[+1(4.78e-05)]_231
+chr3L:21013477-21013977          1.30e-04  54_[+1(1.24e-05)]_32_[+5(3.37e-05)]_\
+    52_[+5(9.80e-05)]_29_[+4(3.72e-05)]_24_[+4(1.29e-05)]_9_[+5(2.66e-05)]_252
+chr3L:11285613-11286113          1.59e-01  500
+chrX:22432848-22433348           6.38e-01  500
+chr2R:11198507-11199007          7.93e-04  19_[+5(5.64e-06)]_139_\
+    [+1(2.75e-05)]_326
+chr3L:16052691-16053191          1.33e-03  147_[+4(9.95e-05)]_91_\
+    [+1(2.75e-05)]_[+1(7.29e-05)]_4_[+1(1.24e-05)]_57_[+5(3.37e-05)]_161
+chrM:12635-13135                 9.99e-01  500
+chr3R:14052454-14052954          9.60e-02  333_[+1(4.78e-05)]_159
+chr3L:16165867-16166367          8.88e-01  500
+chr3R:31059344-31059844          8.32e-03  31_[+2(7.08e-05)]_32_[+4(5.99e-05)]_\
+    338_[+2(7.08e-05)]_75
+chr3R:30805720-30806220          3.83e-04  203_[+1(1.24e-05)]_75_\
+    [+2(1.15e-05)]_111_[+1(1.24e-05)]_25_[+1(2.75e-05)]_6_[+1(1.24e-05)]_\
+    [+1(6.05e-05)]_32
+chrX:8412276-8412776             9.79e-03  199_[+1(2.00e-05)]_26_\
+    [+2(1.15e-05)]_259
+chr2R:17269276-17269776          5.98e-03  232_[+5(2.85e-06)]_260
+chr3R:8357562-8358062            3.67e-02  201_[+2(1.15e-05)]_[+2(7.08e-05)]_\
+    283
+chr4:313875-314375               5.04e-01  500
+chrM:9595-10095                  9.93e-01  500
+chrM:5882-6382                   9.98e-01  500
+chr2R:19229633-19230133          1.61e-03  165_[+1(2.00e-05)]_1_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_38_[+4(2.58e-05)]_264
+chrM:4297-4797                   9.75e-02  393_[+2(7.08e-05)]_43_\
+    [+1(6.05e-05)]_48
+chr2L:9176355-9176855            2.04e-01  273_[+2(7.79e-05)]_6_[+2(1.86e-05)]_\
+    2_[+2(1.15e-05)]_195
+chr4:1031000-1031500             3.07e-01  438_[+1(9.78e-05)]_54
+chr3R:30805920-30806420          4.15e-04  3_[+1(1.24e-05)]_75_[+2(1.15e-05)]_\
+    111_[+1(1.24e-05)]_25_[+1(2.75e-05)]_6_[+1(1.24e-05)]_[+1(6.05e-05)]_232
+chr3R:4232596-4233096            9.90e-01  500
+chr3R:4232392-4232892            9.02e-01  500
+chr3L:16159859-16160359          4.41e-02  13_[+4(5.99e-05)]_152_\
+    [+2(1.15e-05)]_319
+chrM:12265-12765                 9.76e-01  500
+chr3R:21630465-21630965          2.96e-04  21_[+1(6.83e-05)]_239_\
+    [+2(1.15e-05)]_194_[+1(1.24e-05)]_22
+chr2R:11182591-11183091          1.89e-02  194_[+4(1.29e-05)]_138_\
+    [+4(3.72e-05)]_152
+chr2L:16520104-16520604          2.14e-02  205_[+5(2.66e-05)]_287
+chr3R:16209259-16209759          2.95e-03  192_[+5(7.80e-05)]_18_\
+    [+1(2.00e-05)]_71_[+5(3.37e-05)]_2_[+4(4.95e-05)]_185
+chr3R:14057137-14057637          1.08e-02  405_[+2(1.15e-05)]_69_\
+    [+1(1.24e-05)]_2_[+1(1.24e-05)]
+chrM:9818-10318                  9.96e-01  500
+chr3R:9940668-9941168            5.99e-01  500
+chrM:4518-5018                   9.72e-02  172_[+2(7.08e-05)]_43_\
+    [+1(6.05e-05)]_269
+chr3L:8704754-8705254            6.57e-02  107_[+3(4.35e-05)]_385
+chrM:6778-7278                   9.71e-01  500
+chrX:2042182-2042682             2.12e-02  144_[+4(1.29e-05)]_348
+chrM:96-596                      5.82e-01  461_[+5(6.59e-05)]_31
+chrM:4720-5220                   6.46e-01  21_[+1(6.05e-05)]_471
+chrX:19682887-19683387           1.92e-03  64_[+5(5.07e-05)]_167_\
+    [+1(4.78e-05)]_25_[+1(1.24e-05)]_220
+chrM:11242-11742                 9.93e-01  500
+chr4:670704-671204               7.11e-01  500
+chr2R:10429817-10430317          1.29e-03  118_[+2(1.15e-05)]_21_\
+    [+2(3.26e-05)]_3_[+4(5.99e-05)]_30_[+2(1.15e-05)]_219_[+5(1.65e-05)]_69
+chr2L:246883-247383              2.96e-03  45_[+5(2.66e-05)]_27_[+3(1.01e-05)]_\
+    412
+chrX:3378566-3379066             2.08e-04  55_[+4(9.95e-05)]_17_[+4(9.95e-05)]_\
+    115_[+1(1.24e-05)]_[+1(1.24e-05)]_87_[+2(1.15e-05)]_[+2(1.15e-05)]_178
+chrX:12664867-12665367           3.94e-04  33_[+5(2.85e-06)]_261_\
+    [+1(9.78e-05)]_98_[+4(9.95e-05)]_84
+chrM:11034-11534                 8.93e-01  500
+chr2L:9176758-9177258            3.21e-01  320_[+1(2.00e-05)]_172
+chr4:570825-571325               7.80e-01  500
+chr4:209840-210340               1.73e-01  424_[+2(7.08e-05)]_68
+chr2R:23617654-23618154          6.25e-03  1_[+4(1.49e-06)]_491
+chrM:13945-14445                 4.41e-01  249_[+3(7.33e-05)]_243
+chrX:2294732-2295232             3.14e-04  58_[+3(1.01e-05)]_61_[+1(1.24e-05)]_\
+    [+1(1.24e-05)]_[+1(1.24e-05)]_26_[+2(9.72e-05)]_253_[+1(1.24e-05)]_54
+chr2L:5980192-5980692            2.16e-04  94_[+4(7.94e-05)]_4_[+4(9.95e-05)]_\
+    38_[+2(3.26e-05)]_223_[+5(6.59e-05)]_83_[+5(1.20e-05)]_18
+chrM:13026-13526                 7.29e-01  500
+chr2L:16533449-16533949          3.72e-05  6_[+3(1.43e-06)]_26_[+3(2.86e-05)]_\
+    16_[+3(7.69e-06)]_21_[+1(2.00e-05)]_399
+chr2L:6722812-6723312            1.83e-05  125_[+1(2.75e-05)]_[+1(2.00e-05)]_\
+    10_[+1(1.24e-05)]_6_[+1(6.83e-05)]_24_[+2(1.86e-05)]_10_[+2(9.72e-05)]_69_\
+    [+4(4.11e-05)]_60_[+5(7.80e-05)]_132
+chr3L:16955413-16955913          7.29e-02  500
+chr3L:21008979-21009479          5.62e-03  137_[+1(6.05e-05)]_15_\
+    [+2(9.72e-05)]_79_[+2(1.86e-05)]_143_[+1(2.00e-05)]_94
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (5) found.
+********************************************************************************
+
+CPU: c26n05.farnam.hpc.yale.internal
+
+********************************************************************************
