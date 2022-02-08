@@ -1,6 +1,6 @@
 
-|                    | DREME | MEME | STREME | HOMER |
-|:------------------------:|:----:|:-------------:|
+|Sample| DREME | MEME | STREME | HOMER |
+|:----:|:----:|:----:|:----:|:----:|
 | Fly | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Fly_DREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Fly_MEME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Fly_STREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Fly_HOMER/") |
 | Worm | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Worm_DREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Worm_MEME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Worm_STREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/Worm_HOMER/") |
 | GM12878 | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/GM12878_DREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/GM12878_MEME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/GM12878_STREME/") | [Download](https://github.com/gersteinlab/MOBI/raw/master/download/GM12878_HOMER/") |
