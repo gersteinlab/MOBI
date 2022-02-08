@@ -1,0 +1,126 @@
+# DREME 5.3.3
+#     command: dreme -oc ../result/final_prediction/fly/inference_raw/DREME/RankLinear4.0_20_Suvar205/ -k 8 -m 5 -e 1000 -verbosity 1 -p ../result/final_prediction/fly/fasta/RankLinear4.0_20/Suvar205.fasta
+#   positives: 250 from ../result/final_prediction/fly/fasta/RankLinear4.0_20/Suvar205.fasta (Tue Feb 08 13:13:04 EST 2022)
+#   negatives: 250 from shuffled positives
+#        host: c26n04.farnam.hpc.yale.internal
+#        when: Tue Feb 08 13:16:33 EST 2022
+
+MEME version 5.3.3
+
+ALPHABET "DNA" DNA-LIKE
+A "Adenine" CC0000 ~ T "Thymine" 008000
+C "Cytosine" 0000CC ~ G "Guanine" FFB300
+N "Any base" = ACGT
+X = ACGT
+. = ACGT
+V "Not T" = ACG
+H "Not G" = ACT
+D "Not C" = AGT
+B "Not A" = CGT
+M "Amino" = AC
+R "Purine" = AG
+W "Weak" = AT
+S "Strong" = CG
+Y "Pyrimidine" = CT
+K "Keto" = GT
+U = T
+END ALPHABET
+
+strands: + -
+
+Background letter frequencies (from dataset):
+A 0.281 C 0.218 G 0.218 T 0.282
+
+
+MOTIF ASGTGGTC DREME-1
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ASGTGGTC   GACCACST         25          0   1.6e-008   4.8e-004
+#         AGGTGGTC   GACCACCT         20          0   6.4e-007   1.9e-002
+#         ACGTGGTC   GACCACGT          7          0   7.5e-003   2.3e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 36 E= 4.8e-004
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.194444 0.805556 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000 0.000000
+
+
+MOTIF ATATRTAT DREME-2
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ATATRTAT   ATAYATAT         31          2   2.7e-008   8.2e-004
+#         ATATGTAT   ATACATAT         17          1   5.6e-005   1.7e+000
+#         ATATATAT   ATATATAT         15          1   2.1e-004   6.5e+000
+
+letter-probability matrix: alength= 4 w= 8 nsites= 34 E= 8.2e-004
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.441176 0.000000 0.558824 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+
+
+MOTIF CACTGACY DREME-3
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    CACTGACY   RGTCAGTG         31          3   1.7e-007   5.1e-003
+#         CACTGACT   AGTCAGTG         26          3   4.4e-006   1.3e-001
+#         CACTGACC   GGTCAGTG         15          0   2.5e-005   7.4e-001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 48 E= 5.1e-003
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.333333 0.000000 0.666667
+
+
+MOTIF AGGGTRTA DREME-4
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AGGGTRTA   TAYACCCT         33          4   2.2e-007   6.8e-003
+#         AGGGTATA   TATACCCT         20          2   4.4e-005   1.3e+000
+#         AGGGTGTA   TACACCCT         15          2   1.0e-003   3.0e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 40 E= 6.8e-003
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.500000 0.000000 0.500000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF GCGTTKCC DREME-5
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    GCGTTKCC   GGMAACGC         28          3   1.2e-006   3.7e-002
+#         GCGTTTCC   GGAAACGC         14          0   5.1e-005   1.5e+000
+#         GCGTTGCC   GGCAACGC         14          3   5.7e-003   1.7e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 30 E= 3.7e-002
+0.000000 0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.533333 0.466667
+0.000000 1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+
+
+# Stopping reason: target motif count reached
+#    Running time: 11.30 seconds
