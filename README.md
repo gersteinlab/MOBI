@@ -25,7 +25,7 @@ cd ..
 ### Run the scripts with your own data
 Modify line 7-14 in file MOBI.py accordingly (will be updated to argument). Then run step 4 and 5 in the previous section.
 - `data_chip`(*str*): Path to the folder containing all the ENCODE ChIP-seq files. All these files are used to calculated the C-score (see below)
-- `data_meta`(*str*): Path to the tab-seperated file. The first column is the basename of the file and the second column is the TF name. Notice the first column should be a subset of the basenames of files in `data_chip`
+- `data_meta`(*str*): Path to a tab-seperated file. The first column is the basename of the file and the second column is the TF name. Notice the first column should be a subset of the basenames of files in `data_chip`
 - `genome_fasta`(*str*): Path to the genome fasta file. The index file should be generated beforehand and located in the same folder
 - `result_main`(*str*): Path to the main result folder.
 - `width_list`(*list* of *int*): A list of binding regions length to try. 100 indicates a binding regions of +-100bp around ChIP-seq peak summit (a total of 200bp)
