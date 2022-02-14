@@ -60,10 +60,16 @@ calculate_crowdness.get_crowdness(
 for ii, jj in zip(TF_files, TF_names):
     os.rename(os.path.join(crowdness_dir, ii+".bed"), os.path.join(crowdness_dir, jj+".bed")) # rename to TF names
 
-for ii in TF_names:
-    df = pd.read_csv(os.path.join(crowdness_dir, ii+".bed"), sep="\t", header=None)
-    df[5] = 0 # add a column of 0. This column is not used in this example, but store the motif occurrence in other analysis
-    df.to_csv(os.path.join(crowdness_dir, ii+".bed"), sep="\t", header=False, index=False)
+for width in width_list:
+    os.makedirs(os.path.join(crowdness_dir, str(width)), exist_ok=True)    
+    for ii in TF_names:
+        df = pd.read_csv(os.path.join(crowdness_dir, ii+".bed"), sep="\t", header=None)
+        df[5] = 0 # add a column of 0. This column is not used in this example, but store the motif occurrence in other analysis
+        start = (df[1]+df[2])//2 - width
+        end = (df[1]+df[2])//2 + width
+        df[1] = start
+        df[2] = end
+        df.to_csv(os.path.join(crowdness_dir, str(width), ii+".bed"), sep="\t", header=False, index=False)
 
 
 #### rank all the binding sites based on the given ranking method
