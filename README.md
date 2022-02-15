@@ -1,7 +1,36 @@
 # MOBI
 MOtif inference with advanced BInding site selection.  
 
-### Requirement
+### Methods overview
+![fig1](https://github.com/gersteinlab/MOBI/blob/master/img/fig1.png "Fig1")
+
+As shown in this figure, we postulate there are several TF binding modes. In the result of a typical ChIP-seq experiment targeting a certain TF (here shown in red), the identified binding sites could either contain the target motif (fig. A) or not (fig. B). The ideal binding sites for motif inference should be those from scenario one.  
+
+Notice that among all these cases:
+- Binding site in scenario one is least "crowded", i.e. there are fewest possibly interacting proteins in the binding site window. 
+- The target binding motif should locate in or close to the peak summit (in this figure, it is the center).  
+
+Therefore, we select binding sites with low "crowdness" score and trim the binding sites to a shorter length. Using such binding sites result in more accuate motif inference.
+
+For more details, see our paper:  
+*Discovering a less-is-more effect to select transcription factor binding sites informative for motif inference  
+Jinrui Xu, Jiahao Gao, Mark Gerstein  
+bioRxiv 2020.11.29.402941; doi: https://doi.org/10.1101/2020.11.29.402941*
+
+
+### Download
+We applied MOBI to the 4 samples from ENCODE respectively with their best parameters and infer the motifs. You could download all our predicted motifs here.
+|Sample| TFs | DREME | MEME | STREME | HOMER |
+|:----:|:----:|:----:|:----:|:----:|:----:|
+| *Drosophila melanogaster* | 454 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_HOMER.md) |
+| *Caenorhabditis elegans* | 283 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_HOMER.md) |
+| GM12878 | 136 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_HOMER.md) |
+| K562 | 336 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_HOMER.md) |
+
+(Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
+
+
+### Requirement of scripts
 - python3
 - pybedtools
 - numpy
@@ -22,7 +51,7 @@ cd ..
 4. Run the scripts `python MOBI.py`. This will generate a file called `joblist_inference.sh`. All intermediate files are in `example_result/`.
 5. Make sure you have the inference tool (e.g. DREME) installed. Run the scripts `bash joblist_inference.sh`. All predicted motifs are now under `example_result/inference/`.
 
-### Run the scripts with your own data
+### Infer motifs for your own data
 Modify line 7-14 in file MOBI.py accordingly (will be updated to argument). Then run step 4 and 5 in the previous section.
 - `data_chip`(*str*): Path to the folder containing all the ENCODE ChIP-seq files. All these files are used to calculated the C-score (see below)
 - `data_meta`(*str*): Path to a tab-seperated file. The first column is the basename of the file and the second column is the TF name. Notice the first column should be a subset of the basenames of files in `data_chip`
@@ -33,30 +62,14 @@ Modify line 7-14 in file MOBI.py accordingly (will be updated to argument). Then
 - `tool_list`(*list* of *str*): Choice of `DREME`, `MEME`, `STREME` and `HOMER`.
 
 
-### Download
-We applied MOBI to the 4 samples from ENCODE respectively with their best parameters and infer the motifs. You could download all our predicted motifs here.
-|Sample| TFs | DREME | MEME | STREME | HOMER |
-|:----:|:----:|:----:|:----:|:----:|:----:|
-| *Drosophila melanogaster* | 454 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_HOMER.md) |
-| *Caenorhabditis elegans* | 283 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_HOMER.md) |
-| GM12878 | 136 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_HOMER.md) |
-| K562 | 336 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_HOMER.md) |
+### Finding optimal parameters for your own data
+In order to find the best ranking method (weights) and binding sites width, we simply do a brute force search for the parameters that give the best result:
+- Run the above section with `width_list` and `rank_list` cover all the parameters you want to try.
+- Having a list of "known" motifs in the MEME format. You could download this from [Cis-BP](http://cisbp.ccbr.utoronto.ca/) or other database.
+- Modify line 5-12 in `MOBI_tomtom.py`, run the scripts with `python MOBI_tomtom.py`. This will generate a file called `joblist_tomtom.sh`. Make sure you have meme-suite install by verifing `tomtom --help`. Run the script with `bash joblist_tomtom.sh`. This is to compare the inferred motifs to the known motifs.
+- Modify line 5-12 in `MOBI_stats.py`, run the scripts with `python MOBI_stats.py`. The best parameters will be shown in `example_result/stats/DREME_idx.txt` if you are using DREME. You can find the result for this optimal paremeters by the file names in `example_result/inference/DREME/`.
 
-(Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
-### Methods overview
-![fig1](https://github.com/gersteinlab/MOBI/blob/master/img/fig1.png "Fig1")
-
-As shown in this figure, we postulate there are several TF binding modes. In the result of a typical ChIP-seq experiment targeting a certain TF (here shown in red), the identified binding sites could either contain the target motif (fig. A) or not (fig. B). The ideal binding sites for motif inference should be those from scenario one.  
-
-Notice that among all these cases:
-- Binding site in scenario one is least "crowded", i.e. there are fewest possibly interacting proteins in the binding site window. 
-- The target binding motif should locate in or close to the peak summit (in this figure, it is the center).  
-
-Therefore, we select binding sites with low "crowdness" score and trim the binding sites to a shorter length. Using such binding sites result in more accuate motif inference.
-
-For more details, see our paper:  
-*Jinrui Xu, Jiahao Gao, Mark Gerstein. (2020) Discovering less-is-more effects to select transcription factor binding sites informative for motif inference. (in preparation)*
 
 ### Contacts
 For any questions, please contact Jiahao Gao(jiahao.gao@yale.edu)  
