@@ -1,9 +1,9 @@
 # DREME 5.3.3
 #     command: dreme -oc ../result/final_prediction/worm/inference_raw/DREME/RankLinear4.0_10_F55B11.4/ -k 8 -m 5 -e 1000 -verbosity 1 -p ../result/final_prediction/worm/fasta/RankLinear4.0_10/F55B11.4.fasta
-#   positives: 24 from ../result/final_prediction/worm/fasta/RankLinear4.0_10/F55B11.4.fasta (Tue Feb 08 13:09:44 EST 2022)
+#   positives: 24 from ../result/final_prediction/worm/fasta/RankLinear4.0_10/F55B11.4.fasta (Sat Feb 12 16:15:48 EST 2022)
 #   negatives: 24 from shuffled positives
-#        host: c26n05.farnam.hpc.yale.internal
-#        when: Tue Feb 08 13:15:33 EST 2022
+#        host: c27n03.farnam.hpc.yale.internal
+#        when: Sat Feb 12 16:20:56 EST 2022
 
 MEME version 5.3.3
 
@@ -29,90 +29,88 @@ END ALPHABET
 strands: + -
 
 Background letter frequencies (from dataset):
-A 0.298 C 0.138 G 0.190 T 0.375
+A 0.279 C 0.161 G 0.184 T 0.376
 
 
-MOTIF AGTTATTG DREME-1
-
-#             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    AGTTATTG   CAATAACT          7          0   4.7e-003   3.3e+001
-#         AGTTATTG   CAATAACT          7          0   4.7e-003   3.3e+001
-
-letter-probability matrix: alength= 4 w= 8 nsites= 8 E= 3.3e+001
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 1.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 1.000000 0.000000
-
-
-MOTIF ATGTTTTA DREME-2
+MOTIF AATAATAA DREME-1
 
 #             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    ATGTTTTA   TAAAACAT          7          0   4.7e-003   3.2e+001
-#         ATGTTTTA   TAAAACAT          7          0   4.7e-003   3.2e+001
+# BEST    AATAATAA   TTATTATT          2          0   2.4e-001   7.4e+001
 
-letter-probability matrix: alength= 4 w= 8 nsites= 8 E= 3.2e+001
+letter-probability matrix: alength= 4 w= 8 nsites= 2 E= 7.4e+001
+1.000000 0.000000 0.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
 0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
 0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
 
 
-MOTIF CTGTTAAA DREME-3
+MOTIF ACCAGTGA DREME-2
 
 #             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    CTGTTAAA   TTTAACAG          6          0   1.1e-002   7.5e+001
+# BEST    ACCAGTGA   TCACTGGT          2          0   2.4e-001   7.0e+001
 
-letter-probability matrix: alength= 4 w= 8 nsites= 7 E= 7.5e+001
-0.000000 1.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 1.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-0.000000 0.000000 0.000000 1.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-
-
-MOTIF AAAAAAAG DREME-4
-
-#             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    AAAAAAAG   CTTTTTTT          7          1   2.4e-002   1.6e+002
-
-letter-probability matrix: alength= 4 w= 8 nsites= 7 E= 1.6e+002
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 1.000000 0.000000
-
-
-MOTIF AATACTCA DREME-5
-
-#             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    AATACTCA   TGAGTATT          5          0   2.5e-002   1.7e+002
-
-letter-probability matrix: alength= 4 w= 8 nsites= 6 E= 1.7e+002
-1.000000 0.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
+letter-probability matrix: alength= 4 w= 8 nsites= 2 E= 7.0e+001
 1.000000 0.000000 0.000000 0.000000
 0.000000 1.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
 0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF ATTTTTTG DREME-3
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ATTTTTTG   CAAAAAAT          2          1   5.0e-001   1.4e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 2 E= 1.4e+002
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+MOTIF AAAAAACA DREME-4
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AAAAAACA   TGTTTTTT          1          0   5.0e-001   1.3e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 1 E= 1.3e+002
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF AAAAAAGA DREME-5
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AAAAAAGA   TCTTTTTT          1          0   5.0e-001   1.2e+002
+
+letter-probability matrix: alength= 4 w= 8 nsites= 1 E= 1.2e+002
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 1.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
 
 
 # Stopping reason: target motif count reached
-#    Running time: 1.31 seconds
+#    Running time: 0.22 seconds

@@ -1,9 +1,9 @@
 # DREME 5.3.3
 #     command: dreme -oc ../result/final_prediction/fly/inference_raw/DREME/RankLinear4.0_20_CG7556/ -k 8 -m 5 -e 1000 -verbosity 1 -p ../result/final_prediction/fly/fasta/RankLinear4.0_20/CG7556.fasta
-#   positives: 250 from ../result/final_prediction/fly/fasta/RankLinear4.0_20/CG7556.fasta (Tue Feb 08 13:12:56 EST 2022)
+#   positives: 250 from ../result/final_prediction/fly/fasta/RankLinear4.0_20/CG7556.fasta (Sat Feb 12 15:50:46 EST 2022)
 #   negatives: 250 from shuffled positives
-#        host: c29n07.farnam.hpc.yale.internal
-#        when: Tue Feb 08 13:16:36 EST 2022
+#        host: c23n07.farnam.hpc.yale.internal
+#        when: Sat Feb 12 15:55:58 EST 2022
 
 MEME version 5.3.3
 
@@ -29,105 +29,92 @@ END ALPHABET
 strands: + -
 
 Background letter frequencies (from dataset):
-A 0.313 C 0.186 G 0.185 T 0.315
+A 0.358 C 0.131 G 0.130 T 0.381
 
 
-MOTIF AHATATWT DREME-1
-
-#             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    AHATATWT   AWATATDT        156         62   9.7e-018   2.8e-013
-#         AAATATAT   ATATATTT         73         17   2.2e-011   6.2e-007
-#         AAATATTT   AAATATTT         68         19   3.4e-009   9.8e-005
-#         ATATATAT   ATATATAT         33          7   1.0e-005   2.9e-001
-#         ACATATAT   ATATATGT         34         13   9.5e-004   2.7e+001
-#         ACATATTT   AAATATGT         34         14   1.8e-003   5.0e+001
-
-letter-probability matrix: alength= 4 w= 8 nsites= 237 E= 2.8e-013
-1.000000 0.000000 0.000000 0.000000
-0.523207 0.257384 0.000000 0.219409
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 0.000000 1.000000
-0.426160 0.000000 0.000000 0.573840
-0.000000 0.000000 0.000000 1.000000
-
-
-MOTIF CCACTGTR DREME-2
+MOTIF ATATTTTA DREME-1
 
 #             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    CCACTGTR   YACAGTGG         44          0   7.1e-015   2.0e-010
-#         CCACTGTG   CACAGTGG         28          0   1.7e-009   4.7e-005
-#         CCACTGTA   TACAGTGG         19          0   1.3e-006   3.8e-002
+# BEST    ATATTTTA   TAAAATAT         14          1   4.2e-004   2.2e+000
+#         ATATTTTA   TAAAATAT         14          1   4.2e-004   2.2e+000
 
-letter-probability matrix: alength= 4 w= 8 nsites= 53 E= 2.0e-010
-0.000000 1.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
+letter-probability matrix: alength= 4 w= 8 nsites= 14 E= 2.2e+000
 1.000000 0.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
 0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+
+
+MOTIF ATATATAT DREME-2
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    ATATATAT   ATATATAT          8          0   3.7e-003   2.0e+001
+#         ATATATAT   ATATATAT          8          0   3.7e-003   2.0e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 8 E= 2.0e+001
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+
+
+MOTIF AAAAGTAT DREME-3
+
+#             Word    RC Word        Pos        Neg    P-value    E-value
+# BEST    AAAAGTAT   ATACTTTT          7          0   7.5e-003   4.0e+001
+#         AAAAGTAT   ATACTTTT          7          0   7.5e-003   4.0e+001
+
+letter-probability matrix: alength= 4 w= 8 nsites= 7 E= 4.0e+001
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
+1.000000 0.000000 0.000000 0.000000
 0.000000 0.000000 1.000000 0.000000
 0.000000 0.000000 0.000000 1.000000
-0.396226 0.000000 0.603774 0.000000
+1.000000 0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
 
 
-MOTIF ACAYACAY DREME-3
+MOTIF TCTTTAAA DREME-4
 
 #             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    ACAYACAY   RTGTRTGT         65          7   7.2e-015   2.0e-010
-#         ACACACAC   GTGTGTGT         32          2   1.4e-008   3.8e-004
-#         ACACACAT   ATGTGTGT         23          0   7.0e-008   2.0e-003
-#         ACATACAC   GTGTATGT         16          1   1.1e-004   3.1e+000
-#         ACATACAT   ATGTATGT         19          5   2.7e-003   7.6e+001
+# BEST    TCTTTAAA   TTTAAAGA          7          0   7.5e-003   3.9e+001
+#         TCTTTAAA   TTTAAAGA          7          0   7.5e-003   3.9e+001
 
-letter-probability matrix: alength= 4 w= 8 nsites= 96 E= 2.0e-010
-1.000000 0.000000 0.000000 0.000000
+letter-probability matrix: alength= 4 w= 8 nsites= 7 E= 3.9e+001
+0.000000 0.000000 0.000000 1.000000
 0.000000 1.000000 0.000000 0.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
 1.000000 0.000000 0.000000 0.000000
-0.000000 0.604167 0.000000 0.395833
 1.000000 0.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
-0.000000 0.562500 0.000000 0.437500
 
 
-MOTIF GAGAGADA DREME-4
+MOTIF TTTTAAAA DREME-5
 
 #             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    GAGAGADA   THTCTCTC         47          3   2.3e-012   6.3e-008
-#         GAGAGAAA   TTTCTCTC         27          3   2.3e-006   6.5e-002
-#         GAGAGAGA   TCTCTCTC         19          1   1.5e-005   4.1e-001
-#         GAGAGATA   TATCTCTC          8          0   3.7e-003   1.0e+002
+# BEST    TTTTAAAA   TTTTAAAA          9          1   1.0e-002   5.3e+001
 
-letter-probability matrix: alength= 4 w= 8 nsites= 54 E= 6.3e-008
-0.000000 0.000000 1.000000 0.000000
+letter-probability matrix: alength= 4 w= 8 nsites= 9 E= 5.3e+001
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
+0.000000 0.000000 0.000000 1.000000
 1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 1.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
-0.000000 0.000000 1.000000 0.000000
 1.000000 0.000000 0.000000 0.000000
-0.444444 0.000000 0.407407 0.148148
 1.000000 0.000000 0.000000 0.000000
-
-
-MOTIF CCACCCHC DREME-5
-
-#             Word    RC Word        Pos        Neg    P-value    E-value
-# BEST    CCACCCHC   GDGGGTGG         34          0   1.7e-011   4.9e-007
-#         CCACCCAC   GTGGGTGG         18          0   2.8e-006   7.8e-002
-#         CCACCCCC   GGGGGTGG         10          0   8.9e-004   2.5e+001
-#         CCACCCTC   GAGGGTGG          9          0   1.8e-003   5.1e+001
-
-letter-probability matrix: alength= 4 w= 8 nsites= 39 E= 4.9e-007
-0.000000 1.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
-1.000000 0.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
-0.000000 1.000000 0.000000 0.000000
-0.512821 0.256410 0.000000 0.230769
-0.000000 1.000000 0.000000 0.000000
 
 
 # Stopping reason: target motif count reached
-#    Running time: 16.23 seconds
+#    Running time: 1.27 seconds
