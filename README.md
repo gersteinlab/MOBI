@@ -30,7 +30,7 @@ We applied MOBI to the 4 samples from ENCODE respectively with their best parame
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
 ### Download C-score files
-We provide the C-score we used in the paper in bigWig format for users to download.
+We provide the C-score we used in the paper in bigWig format for users to download.  
 [Fly](http://files.gersteinlab.org/public-docs/2022/02.15/Fly_C-score.bw)  
 [Worm](http://files.gersteinlab.org/public-docs/2022/02.15/Worm_C-score.bw)  
 [GM12878](http://files.gersteinlab.org/public-docs/2022/02.15/GM12878_C-score.bw)  
