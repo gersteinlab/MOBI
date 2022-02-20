@@ -29,6 +29,9 @@ We applied MOBI to the 4 samples from ENCODE respectively with their best parame
 
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
+### Examples output motifs
+See [here](http://archive2.gersteinlab.org/proj/MOBI/fly.html) for a few examples of the inferred motifs.
+
 ### Download C-score files
 We provide the C-score we used in the paper in bigWig format for users to download.  
 [Fly](http://files.gersteinlab.org/public-docs/2022/02.15/Fly_C-score.bw)  
