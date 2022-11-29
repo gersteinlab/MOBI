@@ -33,7 +33,7 @@ We applied MOBI to the 4 samples from ENCODE respectively with their best parame
 See [here](http://archive2.gersteinlab.org/proj/MOBI/fly.html) for a few examples of the inferred motifs.
 
 ### Download C-score files
-We provide the C-score we used in the paper in bigWig format for users to download.  
+We provide the C-score we used in the paper in bigWig format for users to download. (If the download didn't start, right click to copy the link and paste into the browser manually).  
 [Fly](http://files.gersteinlab.org/public-docs/2022/02.15/Fly_C-score.bw)  
 [Worm](http://files.gersteinlab.org/public-docs/2022/02.15/Worm_C-score.bw)  
 [GM12878](http://files.gersteinlab.org/public-docs/2022/02.15/GM12878_C-score.bw)  
