@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Worm_DESSO.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Worm_DESSO.tar.gz)  
 Download each motifs individually (meme format):  
 [atf-7](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Worm_DESSO/atf-7.meme)  
 [cebp-1](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Worm_DESSO/cebp-1.meme)  

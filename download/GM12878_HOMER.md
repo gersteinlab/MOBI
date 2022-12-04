@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/GM12878_HOMER.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/GM12878_HOMER.tar.gz)  
 Download each motifs individually (meme format):  
 [ARID3A](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/GM12878_HOMER/ARID3A.meme)  
 [ARNT](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/GM12878_HOMER/ARNT.meme)  

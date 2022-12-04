@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Worm_HOMER.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Worm_HOMER.tar.gz)  
 Download each motifs individually (meme format):  
 [B0035.1](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Worm_HOMER/B0035.1.meme)  
 [B0261.1](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Worm_HOMER/B0261.1.meme)  

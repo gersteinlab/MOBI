@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/GM12878_DESSO.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/GM12878_DESSO.tar.gz)  
 Download each motifs individually (meme format):  
 [ATF2](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/GM12878_DESSO/ATF2.meme)  
 [ATF7](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/GM12878_DESSO/ATF7.meme)  

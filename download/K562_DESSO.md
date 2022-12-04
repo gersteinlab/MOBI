@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/K562_DESSO.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/K562_DESSO.tar.gz)  
 Download each motifs individually (meme format):  
 [ATF2](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/K562_DESSO/ATF2.meme)  
 [ATF3](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/K562_DESSO/ATF3.meme)  

@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Fly_DREME.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/Fly_DREME.tar.gz)  
 Download each motifs individually (meme format):  
 [ATbp](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Fly_DREME/ATbp.meme)  
 [Abd-B](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/Fly_DREME/Abd-B.meme)  

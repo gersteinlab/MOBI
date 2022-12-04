@@ -1,4 +1,4 @@
-[Download all motifs (tar.gz)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/K562_STREME.tar.gz)  
+[Download all motifs (tar.gz) (If the download didn't start, right click to copy the link and paste into the browser manually)](http://archive2.gersteinlab.org/proj/MOBI/motifs_all/K562_STREME.tar.gz)  
 Download each motifs individually (meme format):  
 [ADNP](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/K562_STREME/ADNP.meme)  
 [AFF1](http://archive2.gersteinlab.org/proj/MOBI/motifs_individual/K562_STREME/AFF1.meme)  
