@@ -34,10 +34,10 @@ See [here](http://archive2.gersteinlab.org/proj/MOBI/fly.html) for a few example
 
 ### Download C-score files
 We provide the C-score we used in the paper in bigWig format for users to download. (If the download didn't start, right click to copy the link and paste into the browser manually).  
-[Fly](http://files.gersteinlab.org/public-docs/2022/02.15/Fly_C-score.bw)  
-[Worm](http://files.gersteinlab.org/public-docs/2022/02.15/Worm_C-score.bw)  
-[GM12878](http://files.gersteinlab.org/public-docs/2022/02.15/GM12878_C-score.bw)  
-[K562](http://files.gersteinlab.org/public-docs/2022/02.15/K562_C-score.bw)
+[Fly](http://archive2.gersteinlab.org/proj/MOBI/bw/fly_C-score.bw)  
+[Worm](http://archive2.gersteinlab.org/proj/MOBI/bw/worm_C-score.bw)  
+[GM12878](http://archive2.gersteinlab.org/proj/MOBI/bw/GM12878_C-score.bw)  
+[K562](http://archive2.gersteinlab.org/proj/MOBI/bw/K562_C-score.bw)
 
 
 ### Requirement of scripts
