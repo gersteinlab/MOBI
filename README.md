@@ -84,3 +84,4 @@ In order to find the best ranking method (weights) and binding sites width, we s
 ### Contacts
 For any questions, please contact Jiahao Gao(jiahao.gao@yale.edu)  
 [Gerstein Lab](http://www.gersteinlab.org/) 2022
+MIT License
