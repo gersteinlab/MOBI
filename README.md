@@ -13,9 +13,8 @@ Notice that among all these cases:
 Therefore, we select binding sites with low "crowdness" score and trim the binding sites to a shorter length. Using such binding sites result in more accuate motif inference.
 
 For more details, see our paper:  
-*Discovering a less-is-more effect to select transcription factor binding sites informative for motif inference  
-Jinrui Xu, Jiahao Gao, Mark Gerstein  
-bioRxiv 2020.11.29.402941; doi: https://doi.org/10.1101/2020.11.29.402941*
+[Xu, J., Gao, J., Ni, P., & Gerstein, M. (2024). Less-is-more: selecting transcription factor binding regions informative for motif inference. Nucleic Acids Research, gkad1240.](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkad1240/7517490)
+
 
 
 ### Download
