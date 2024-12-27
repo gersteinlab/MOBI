@@ -2,7 +2,7 @@
 MOtif inference with advanced BInding site selection.  
 
 ### Methods overview
-![fig1](https://github.com/gersteinlab/MOBI/blob/master/img/fig1.png "Fig1")
+![fig1](https://github.com/gersteinlab/MOBI/blob/main/img/fig1.png "Fig1")
 
 As shown in this figure, we postulate there are several TF binding modes. In the result of a typical ChIP-seq experiment targeting a certain TF (here shown in red), the identified binding sites could either contain the target motif (fig. A) or not (fig. B). The ideal binding sites for motif inference should be those from scenario one.  
 
@@ -21,10 +21,10 @@ For more details, see our paper:
 We applied MOBI to the 4 samples from ENCODE respectively with their best parameters and infer the motifs. You could download all our predicted motifs here.
 |Sample| TFs | DREME | MEME | STREME | HOMER | DESSO |
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| *Drosophila melanogaster* | 454 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_HOMER.md) | [52 TFs](https://github.com/gersteinlab/MOBI/blob/master/download/Fly_DESSO.md) |
-| *Caenorhabditis elegans* | 283 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_HOMER.md) | [33 TFs](https://github.com/gersteinlab/MOBI/blob/master/download/Worm_DESSO.md) |
-| GM12878 | 136 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_HOMER.md) | [56 TFs](https://github.com/gersteinlab/MOBI/blob/master/download/GM12878_DESSO.md) |
-| K562 | 336 | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/master/download/K562_HOMER.md) | [89 TFs](https://github.com/gersteinlab/MOBI/blob/master/download/K562_DESSO.md) |
+| *Drosophila melanogaster* | 454 | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Fly_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Fly_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Fly_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Fly_HOMER.md) | [52 TFs](https://github.com/gersteinlab/MOBI/blob/main/download/Fly_DESSO.md) |
+| *Caenorhabditis elegans* | 283 | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Worm_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Worm_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Worm_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/Worm_HOMER.md) | [33 TFs](https://github.com/gersteinlab/MOBI/blob/main/download/Worm_DESSO.md) |
+| GM12878 | 136 | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/GM12878_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/GM12878_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/GM12878_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/GM12878_HOMER.md) | [56 TFs](https://github.com/gersteinlab/MOBI/blob/main/download/GM12878_DESSO.md) |
+| K562 | 336 | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/K562_DREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/K562_MEME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/K562_STREME.md) | [Download](https://github.com/gersteinlab/MOBI/blob/main/download/K562_HOMER.md) | [89 TFs](https://github.com/gersteinlab/MOBI/blob/main/download/K562_DESSO.md) |
 
 (Note that files will be in [MEME format](http://meme-suite.org/doc/meme-format.html). File name is the TF name but any "(", ")" and ":" characters in the TF name will be omitted, e.g. TF name A(B)C will have motif file named ABC.meme)
 
